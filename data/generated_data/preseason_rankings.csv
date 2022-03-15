@@ -1,0 +1,1007 @@
+TeamID,Season,school,preseason_pts
+1104,2003,alabama,1295
+1112,2003,arizona,1773
+1113,2003,arizona state,4
+1123,2003,ball state,7
+1130,2003,boston college,56
+1143,2003,california,3
+1153,2003,cincinnati,303
+1166,2003,creighton,49
+1181,2003,duke,1394
+1196,2003,florida,1298
+1207,2003,georgetown,6
+1208,2003,georgia,703
+1210,2003,georgia tech,22
+1211,2003,gonzaga,381
+1218,2003,hawai'i,5
+1221,2003,holy cross,1
+1228,2003,illinois,47
+1231,2003,indiana,415
+1242,2003,kansas,1715
+1246,2003,kentucky,627
+1257,2003,louisville,32
+1261,2003,lsu,13
+1266,2003,marquette,509
+1268,2003,maryland,789
+1272,2003,memphis,2
+1277,2003,michigan state,1117
+1278,2003,minnesota,183
+1280,2003,mississippi state,800
+1281,2003,missouri,506
+1301,2003,nc state,41
+1323,2003,notre dame,58
+1325,2003,ohio,3
+1326,2003,ohio state,48
+1328,2003,oklahoma,1640
+1329,2003,oklahoma state,30
+1279,2003,ole miss,9
+1332,2003,oregon,995
+1335,2003,pennsylvania,7
+1337,2003,pepperdine,36
+1338,2003,pittsburgh,1404
+1356,2003,southern illinois,2
+1385,2003,st. john's,3
+1390,2003,stanford,8
+1393,2003,syracuse,79
+1396,2003,temple,21
+1400,2003,texas,1422
+1403,2003,texas tech,26
+1409,2003,tulsa,146
+1417,2003,ucla,747
+1163,2003,uconn,722
+1424,2003,unlv,13
+1425,2003,usc,20
+1428,2003,utah,1
+1437,2003,villanova,92
+1438,2003,virginia,120
+1443,2003,western kentucky,480
+1458,2003,wisconsin,95
+1461,2003,wyoming,61
+1462,2003,xavier,1016
+1104,2004,alabama,7
+1112,2004,arizona,1494
+1113,2004,arizona state,15
+1116,2004,arkansas,2
+1120,2004,auburn,15
+1139,2004,butler,5
+1140,2004,byu,23
+1143,2004,california,61
+1153,2004,cincinnati,538
+1160,2004,colorado,12
+1173,2004,dayton,1
+1181,2004,duke,1677
+1196,2004,florida,1217
+1208,2004,georgia,3
+1211,2004,gonzaga,714
+1228,2004,illinois,946
+1231,2004,indiana,1
+1242,2004,kansas,1414
+1246,2004,kentucky,1115
+1257,2004,louisville,615
+1261,2004,lsu,14
+1264,2004,manhattan,5
+1266,2004,marquette,226
+1268,2004,maryland,64
+1272,2004,memphis,12
+1276,2004,michigan,6
+1277,2004,michigan state,1623
+1280,2004,mississippi state,8
+1281,2004,missouri,1438
+1301,2004,nc state,118
+1305,2004,nevada,3
+1314,2004,north carolina,1172
+1296,2004,northern illinois,3
+1323,2004,notre dame,427
+1326,2004,ohio state,39
+1328,2004,oklahoma,862
+1329,2004,oklahoma state,102
+1332,2004,oregon,57
+1338,2004,pittsburgh,348
+1344,2004,providence,13
+1345,2004,purdue,7
+1386,2004,saint joseph's,865
+1371,2004,seton hall,1
+1390,2004,stanford,521
+1393,2004,syracuse,1334
+1396,2004,temple,5
+1400,2004,texas,1100
+1417,2004,ucla,13
+1163,2004,uconn,1796
+1227,2004,uic,2
+1425,2004,usc,8
+1428,2004,utah,30
+1436,2004,vermont,2
+1448,2004,wake forest,528
+1455,2004,wichita state,3
+1458,2004,wisconsin,719
+1462,2004,xavier,63
+1104,2005,alabama,510
+1112,2005,arizona,1061
+1130,2005,boston college,7
+1150,2005,charlotte,37
+1153,2005,cincinnati,30
+1177,2005,depaul,1
+1181,2005,duke,981
+1190,2005,east tennessee state,4
+1196,2005,florida,337
+1203,2005,george washington,6
+1210,2005,georgia tech,1567
+1211,2005,gonzaga,215
+1228,2005,illinois,1457
+1231,2005,indiana,1
+1235,2005,iowa state,2
+1242,2005,kansas,1697
+1246,2005,kentucky,1177
+1257,2005,louisville,876
+1261,2005,lsu,4
+1268,2005,maryland,765
+1272,2005,memphis,283
+1276,2005,michigan,74
+1277,2005,michigan state,910
+1280,2005,mississippi state,913
+1301,2005,nc state,490
+1314,2005,north carolina,1558
+1323,2005,notre dame,429
+1328,2005,oklahoma,28
+1329,2005,oklahoma state,1342
+1332,2005,oregon,2
+1338,2005,pittsburgh,596
+1344,2005,providence,32
+1349,2005,rice,2
+1356,2005,southern illinois,31
+1390,2005,stanford,90
+1393,2005,syracuse,1452
+1397,2005,tennessee,4
+1400,2005,texas,671
+1405,2005,toledo,4
+1412,2005,uab,6
+1417,2005,ucla,4
+1163,2005,uconn,1281
+1424,2005,unlv,4
+1428,2005,utah,31
+1431,2005,utep,7
+1435,2005,vanderbilt,1
+1433,2005,vcu,1
+1436,2005,vermont,1
+1448,2005,wake forest,1680
+1449,2005,washington,355
+1458,2005,wisconsin,378
+1462,2005,xavier,5
+1104,2006,alabama,621
+1112,2006,arizona,1212
+1116,2006,arkansas,3
+1130,2006,boston college,1093
+1137,2006,bucknell,5
+1143,2006,california,1
+1150,2006,charlotte,44
+1153,2006,cincinnati,2
+1181,2006,duke,1785
+1196,2006,florida,6
+1203,2006,george washington,304
+1207,2006,georgetown,46
+1211,2006,gonzaga,1275
+1218,2006,hawai'i,1
+1222,2006,houston,1
+1228,2006,illinois,563
+1231,2006,indiana,273
+1234,2006,iowa,395
+1235,2006,iowa state,251
+1242,2006,kansas,96
+1246,2006,kentucky,1255
+1257,2006,louisville,1319
+1261,2006,lsu,54
+1268,2006,maryland,258
+1272,2006,memphis,920
+1276,2006,michigan,24
+1277,2006,michigan state,1572
+1454,2006,milwaukee,2
+1301,2006,nc state,74
+1305,2006,nevada,291
+1314,2006,north carolina,38
+1320,2006,northern iowa,21
+1323,2006,notre dame,1
+1325,2006,ohio,4
+1326,2006,ohio state,74
+1328,2006,oklahoma,1378
+1329,2006,oklahoma state,16
+1330,2006,old dominion,13
+1356,2006,southern illinois,3
+1390,2006,stanford,842
+1393,2006,syracuse,586
+1400,2006,texas,1652
+1403,2006,texas tech,142
+1417,2006,ucla,499
+1163,2006,uconn,1578
+1429,2006,utah state,2
+1437,2006,villanova,1413
+1448,2006,wake forest,524
+1449,2006,washington,144
+1452,2006,west virginia,652
+1458,2006,wisconsin,56
+1274,2006,miami,16
+1103,2007,akron,1
+1104,2007,alabama,1106
+1112,2007,arizona,1157
+1116,2007,arkansas,20
+1130,2007,boston college,772
+1137,2007,bucknell,6
+1140,2007,byu,1
+1166,2007,creighton,384
+1177,2007,depaul,16
+1181,2007,duke,1051
+1196,2007,florida,1788
+1199,2007,florida state,65
+1206,2007,george mason,1
+1207,2007,georgetown,1271
+1210,2007,georgia tech,262
+1211,2007,gonzaga,129
+1220,2007,hofstra,24
+1222,2007,houston,5
+1228,2007,illinois,31
+1231,2007,indiana,16
+1242,2007,kansas,1636
+1243,2007,kansas state,4
+1246,2007,kentucky,332
+1257,2007,louisville,62
+1261,2007,lsu,1399
+1266,2007,marquette,554
+1272,2007,memphis,811
+1276,2007,michigan,6
+1283,2007,missouri state,1
+1305,2007,nevada,212
+1314,2007,north carolina,1704
+1326,2007,ohio state,1391
+1329,2007,oklahoma state,13
+1332,2007,oregon,1
+1338,2007,pittsburgh,1407
+1361,2007,san diego state,19
+1356,2007,southern illinois,131
+1393,2007,syracuse,367
+1397,2007,tennessee,203
+1400,2007,texas,366
+1401,2007,texas a&m,868
+1417,2007,ucla,1394
+1163,2007,uconn,399
+1425,2007,usc,5
+1437,2007,villanova,37
+1439,2007,virginia tech,8
+1449,2007,washington,487
+1455,2007,wichita state,181
+1458,2007,wisconsin,1197
+1462,2007,xavier,99
+1103,2008,akron,2
+1104,2008,alabama,14
+1112,2008,arizona,499
+1116,2008,arkansas,468
+1139,2008,butler,114
+1140,2008,byu,3
+1155,2008,clemson,83
+1172,2008,davidson,50
+1181,2008,duke,868
+1196,2008,florida,35
+1206,2008,george mason,1
+1207,2008,georgetown,1504
+1211,2008,gonzaga,711
+1222,2008,houston,1
+1228,2008,illinois,2
+1231,2008,indiana,1145
+1242,2008,kansas,1568
+1243,2008,kansas state,216
+1246,2008,kentucky,372
+1257,2008,louisville,1380
+1266,2008,marquette,1002
+1268,2008,maryland,6
+1272,2008,memphis,1680
+1277,2008,michigan state,1296
+1280,2008,mississippi state,38
+1281,2008,missouri,8
+1301,2008,nc state,338
+1305,2008,nevada,6
+1308,2008,new mexico state,4
+1314,2008,north carolina,1728
+1323,2008,notre dame,18
+1326,2008,ohio state,128
+1332,2008,oregon,918
+1338,2008,pittsburgh,293
+1344,2008,providence,3
+1356,2008,southern illinois,222
+1379,2008,southern miss,2
+1390,2008,stanford,290
+1393,2008,syracuse,103
+1397,2008,tennessee,1371
+1400,2008,texas,638
+1401,2008,texas a&m,623
+1417,2008,ucla,1710
+1163,2008,uconn,50
+1425,2008,usc,480
+1429,2008,utah state,4
+1435,2008,vanderbilt,6
+1433,2008,vcu,19
+1437,2008,villanova,144
+1438,2008,virginia,19
+1449,2008,washington,6
+1450,2008,washington state,1103
+1452,2008,west virginia,20
+1458,2008,wisconsin,15
+1462,2008,xavier,73
+1104,2009,alabama,16
+1110,2009,american university,1
+1112,2009,arizona,11
+1113,2009,arizona state,645
+1124,2009,baylor,128
+1139,2009,butler,7
+1140,2009,byu,16
+1155,2009,clemson,11
+1156,2009,cleveland state,2
+1166,2009,creighton,7
+1169,2009,csu northridge,1
+1172,2009,davidson,347
+1179,2009,drake,1
+1181,2009,duke,1250
+1196,2009,florida,403
+1207,2009,georgetown,311
+1211,2009,gonzaga,1162
+1242,2009,kansas,233
+1246,2009,kentucky,75
+1257,2009,louisville,1638
+1261,2009,lsu,31
+1266,2009,marquette,592
+1272,2009,memphis,977
+1275,2009,miami (oh),1
+1277,2009,michigan state,1311
+1307,2009,new mexico,3
+1314,2009,north carolina,1800
+1323,2009,notre dame,1243
+1326,2009,ohio state,64
+1328,2009,oklahoma,987
+1338,2009,pittsburgh,1319
+1345,2009,purdue,1099
+1386,2009,saint joseph's,1
+1388,2009,saint mary's,112
+1360,2009,san diego,1
+1373,2009,siena,13
+1390,2009,stanford,2
+1393,2009,syracuse,83
+1396,2009,temple,10
+1397,2009,tennessee,920
+1400,2009,texas,1259
+1401,2009,texas a&m,30
+1412,2009,uab,2
+1417,2009,ucla,1487
+1163,2009,uconn,1661
+1424,2009,unlv,143
+1425,2009,usc,414
+1435,2009,vanderbilt,11
+1433,2009,vcu,8
+1437,2009,villanova,256
+1439,2009,virginia tech,16
+1448,2009,wake forest,312
+1449,2009,washington,19
+1450,2009,washington state,11
+1452,2009,west virginia,17
+1458,2009,wisconsin,196
+1462,2009,xavier,154
+1274,2009,miami,570
+1130,2010,boston college,6
+1139,2010,butler,864
+1140,2010,byu,21
+1143,2010,california,800
+1155,2010,clemson,217
+1173,2010,dayton,318
+1181,2010,duke,1064
+1196,2010,florida,53
+1199,2010,florida state,92
+1207,2010,georgetown,326
+1210,2010,georgia tech,301
+1211,2010,gonzaga,37
+1221,2010,holy cross,1
+1228,2010,illinois,282
+1242,2010,kansas,1612
+1243,2010,kansas state,24
+1246,2010,kentucky,1372
+1257,2010,louisville,335
+1268,2010,maryland,171
+1276,2010,michigan,578
+1277,2010,michigan state,1515
+1278,2010,minnesota,172
+1280,2010,mississippi state,393
+1281,2010,missouri,8
+1314,2010,north carolina,1320
+1320,2010,northern iowa,16
+1323,2010,notre dame,107
+1326,2010,ohio state,465
+1328,2010,oklahoma,410
+1329,2010,oklahoma state,65
+1330,2010,old dominion,1
+1279,2010,ole miss,15
+1338,2010,pittsburgh,4
+1345,2010,purdue,1284
+1373,2010,siena,112
+1376,2010,south carolina,28
+1393,2010,syracuse,83
+1397,2010,tennessee,897
+1400,2010,texas,1397
+1401,2010,texas a&m,10
+1409,2010,tulsa,16
+1417,2010,ucla,63
+1163,2010,uconn,844
+1429,2010,utah state,2
+1435,2010,vanderbilt,90
+1433,2010,vcu,2
+1437,2010,villanova,1347
+1448,2010,wake forest,50
+1449,2010,washington,776
+1452,2010,west virginia,1115
+1443,2010,western kentucky,2
+1462,2010,xavier,42
+1112,2011,arizona,2
+1140,2011,byu,55
+1143,2011,california,5
+1173,2011,dayton,2
+1199,2011,florida state,31
+1208,2011,georgia,9
+1257,2011,louisville,3
+1266,2011,marquette,2
+1268,2011,maryland,2
+1278,2011,minnesota,41
+1280,2011,mississippi state,7
+1293,2011,murray state,4
+1301,2011,nc state,10
+1307,2011,new mexico,4
+1321,2011,northwestern,1
+1350,2011,richmond,9
+1388,2011,saint mary's,2
+1361,2011,san diego state,73
+1401,2011,texas a&m,5
+1417,2011,ucla,12
+1424,2011,unlv,19
+1429,2011,utah state,6
+1435,2011,vanderbilt,11
+1452,2011,west virginia,49
+1455,2011,wichita state,13
+1462,2011,xavier,8
+1104,2012,alabama,395
+1112,2012,arizona,616
+1124,2012,baylor,892
+1125,2012,belmont,8
+1139,2012,butler,25
+1143,2012,california,230
+1153,2012,cincinnati,353
+1166,2012,creighton,12
+1180,2012,drexel,8
+1181,2012,duke,1301
+1196,2012,florida,1086
+1199,2012,florida state,131
+1206,2012,george mason,5
+1211,2012,gonzaga,283
+1217,2012,harvard,2
+1228,2012,illinois,2
+1242,2012,kansas,755
+1246,2012,kentucky,1501
+1253,2012,long beach state,3
+1257,2012,louisville,1055
+1266,2012,marquette,335
+1267,2012,marshall,1
+1272,2012,memphis,997
+1276,2012,michigan,401
+1277,2012,michigan state,128
+1278,2012,minnesota,1
+1281,2012,missouri,139
+1307,2012,new mexico,33
+1314,2012,north carolina,1620
+1326,2012,ohio state,1482
+1338,2012,pittsburgh,1027
+1345,2012,purdue,10
+1388,2012,saint mary's,6
+1361,2012,san diego state,1
+1393,2012,syracuse,1338
+1396,2012,temple,69
+1400,2012,texas,21
+1401,2012,texas a&m,357
+1417,2012,ucla,404
+1163,2012,uconn,1433
+1424,2012,unlv,7
+1435,2012,vanderbilt,1120
+1437,2012,villanova,14
+1449,2012,washington,44
+1452,2012,west virginia,4
+1458,2012,wisconsin,720
+1462,2012,xavier,747
+1274,2012,miami,3
+1104,2013,alabama,5
+1112,2013,arizona,902
+1124,2013,baylor,486
+1137,2013,bucknell,1
+1139,2013,butler,33
+1153,2013,cincinnati,120
+1161,2013,colorado state,1
+1166,2013,creighton,622
+1172,2013,davidson,5
+1180,2013,drexel,5
+1181,2013,duke,1094
+1196,2013,florida,936
+1199,2013,florida state,101
+1207,2013,georgetown,9
+1211,2013,gonzaga,384
+1231,2013,indiana,1592
+1242,2013,kansas,1210
+1243,2013,kansas state,12
+1246,2013,kentucky,1453
+1250,2013,lehigh,2
+1257,2013,louisville,1568
+1266,2013,marquette,23
+1268,2013,maryland,1
+1272,2013,memphis,539
+1276,2013,michigan,1290
+1277,2013,michigan state,789
+1278,2013,minnesota,40
+1281,2013,missouri,664
+1293,2013,murray state,59
+1301,2013,nc state,1270
+1307,2013,new mexico,9
+1314,2013,north carolina,904
+1320,2013,northern iowa,5
+1323,2013,notre dame,297
+1325,2013,ohio,9
+1326,2013,ohio state,1292
+1329,2013,oklahoma state,14
+1331,2013,oral roberts,1
+1338,2013,pittsburgh,32
+1386,2013,saint joseph's,25
+1387,2013,saint louis,46
+1388,2013,saint mary's,6
+1361,2013,san diego state,463
+1390,2013,stanford,2
+1393,2013,syracuse,1062
+1397,2013,tennessee,15
+1400,2013,texas,46
+1417,2013,ucla,840
+1163,2013,uconn,262
+1424,2013,unlv,488
+1434,2013,valparaiso,3
+1433,2013,vcu,58
+1452,2013,west virginia,6
+1458,2013,wisconsin,285
+1274,2013,miami,8
+1112,2014,arizona,1311
+1113,2014,arizona state,11
+1124,2014,baylor,180
+1129,2014,boise state,22
+1130,2014,boston college,5
+1153,2014,cincinnati,1
+1160,2014,colorado,83
+1166,2014,creighton,145
+1181,2014,duke,1435
+1196,2014,florida,1048
+1207,2014,georgetown,11
+1211,2014,gonzaga,538
+1217,2014,harvard,46
+1231,2014,indiana,111
+1234,2014,iowa,83
+1242,2014,kansas,1357
+1246,2014,kentucky,1546
+1247,2014,la salle,4
+1257,2014,louisville,1501
+1261,2014,lsu,6
+1266,2014,marquette,510
+1272,2014,memphis,741
+1276,2014,michigan,1120
+1277,2014,michigan state,1543
+1281,2014,missouri,3
+1307,2014,new mexico,213
+1314,2014,north carolina,954
+1323,2014,notre dame,332
+1326,2014,ohio state,1036
+1329,2014,oklahoma state,1093
+1332,2014,oregon,408
+1338,2014,pittsburgh,6
+1387,2014,saint louis,3
+1385,2014,st. john's,3
+1390,2014,stanford,6
+1393,2014,syracuse,1093
+1397,2014,tennessee,176
+1417,2014,ucla,244
+1163,2014,uconn,448
+1424,2014,unlv,8
+1433,2014,vcu,680
+1437,2014,villanova,14
+1438,2014,virginia,189
+1449,2014,washington,8
+1455,2014,wichita state,512
+1458,2014,wisconsin,338
+1112,2015,arizona,1518
+1116,2015,arkansas,21
+1124,2015,baylor,1
+1140,2015,byu,2
+1153,2015,cincinnati,8
+1160,2015,colorado,57
+1173,2015,dayton,6
+1181,2015,duke,1415
+1196,2015,florida,1153
+1199,2015,florida state,5
+1203,2015,george washington,7
+1207,2015,georgetown,5
+1211,2015,gonzaga,840
+1217,2015,harvard,98
+1228,2015,illinois,3
+1234,2015,iowa,58
+1235,2015,iowa state,781
+1242,2015,kansas,1346
+1243,2015,kansas state,27
+1246,2015,kentucky,1604
+1256,2015,louisiana tech,9
+1257,2015,louisville,1114
+1261,2015,lsu,8
+1268,2015,maryland,3
+1272,2015,memphis,15
+1276,2015,michigan,167
+1277,2015,michigan state,521
+1278,2015,minnesota,34
+1301,2015,nc state,14
+1304,2015,nebraska,309
+1314,2015,north carolina,1274
+1323,2015,notre dame,6
+1326,2015,ohio state,340
+1328,2015,oklahoma,426
+1329,2015,oklahoma state,6
+1338,2015,pittsburgh,20
+1361,2015,san diego state,560
+1374,2015,smu,285
+1390,2015,stanford,71
+1372,2015,stephen f. austin,1
+1393,2015,syracuse,178
+1400,2015,texas,1061
+1417,2015,ucla,35
+1163,2015,uconn,552
+1424,2015,unlv,2
+1428,2015,utah,98
+1431,2015,utep,1
+1433,2015,vcu,574
+1437,2015,villanova,885
+1438,2015,virginia,1090
+1452,2015,west virginia,1
+1455,2015,wichita state,1027
+1458,2015,wisconsin,1483
+1112,2016,arizona,917
+1124,2016,baylor,265
+1129,2016,boise state,4
+1139,2016,butler,223
+1140,2016,byu,5
+1143,2016,california,757
+1141,2016,central michigan,1
+1153,2016,cincinnati,63
+1173,2016,dayton,12
+1181,2016,duke,1350
+1199,2016,florida state,18
+1207,2016,georgetown,23
+1211,2016,gonzaga,1047
+1231,2016,indiana,755
+1233,2016,iona,1
+1234,2016,iowa,6
+1235,2016,iowa state,1185
+1242,2016,kansas,1410
+1246,2016,kentucky,1520
+1257,2016,louisville,46
+1261,2016,lsu,268
+1268,2016,maryland,1487
+1276,2016,michigan,126
+1277,2016,michigan state,838
+1301,2016,nc state,19
+1314,2016,north carolina,1566
+1323,2016,notre dame,360
+1328,2016,oklahoma,1088
+1329,2016,oklahoma state,2
+1330,2016,old dominion,3
+1332,2016,oregon,116
+1344,2016,providence,10
+1345,2016,purdue,236
+1348,2016,rhode island,17
+1361,2016,san diego state,2
+1374,2016,smu,112
+1400,2016,texas,18
+1401,2016,texas a&m,72
+1414,2016,uc irvine,1
+1417,2016,ucla,2
+1163,2016,uconn,307
+1428,2016,utah,499
+1434,2016,valparaiso,5
+1435,2016,vanderbilt,393
+1437,2016,villanova,1013
+1438,2016,virginia,1347
+1452,2016,west virginia,84
+1455,2016,wichita state,1032
+1458,2016,wisconsin,433
+1462,2016,xavier,12
+1463,2016,yale,1
+1274,2016,miami,48
+1112,2017,arizona,1004
+1139,2017,butler,21
+1143,2017,california,74
+1153,2017,cincinnati,110
+1160,2017,colorado,10
+1166,2017,creighton,231
+1173,2017,dayton,98
+1181,2017,duke,1612
+1196,2017,florida,18
+1199,2017,florida state,88
+1211,2017,gonzaga,699
+1217,2017,harvard,1
+1231,2017,indiana,917
+1235,2017,iowa state,168
+1242,2017,kansas,1476
+1246,2017,kentucky,1479
+1257,2017,louisville,755
+1268,2017,maryland,144
+1276,2017,michigan,8
+1277,2017,michigan state,903
+1280,2017,mississippi state,14
+1284,2017,monmouth,7
+1301,2017,nc state,29
+1314,2017,north carolina,1314
+1323,2017,notre dame,6
+1325,2017,ohio,1
+1326,2017,ohio state,18
+1328,2017,oklahoma,11
+1332,2017,oregon,1343
+1343,2017,princeton,2
+1345,2017,purdue,672
+1348,2017,rhode island,199
+1388,2017,saint mary's,512
+1361,2017,san diego state,48
+1371,2017,seton hall,5
+1393,2017,syracuse,464
+1400,2017,texas,250
+1401,2017,texas a&m,14
+1417,2017,ucla,540
+1163,2017,uconn,504
+1435,2017,vanderbilt,1
+1437,2017,villanova,1465
+1438,2017,virginia,1149
+1439,2017,virginia tech,18
+1449,2017,washington,5
+1452,2017,west virginia,360
+1455,2017,wichita state,21
+1458,2017,wisconsin,1135
+1462,2017,xavier,1167
+1274,2017,miami,35
+1104,2018,alabama,86
+1112,2018,arizona,1506
+1123,2018,ball state,4
+1124,2018,baylor,163
+1139,2018,butler,13
+1153,2018,cincinnati,837
+1173,2018,dayton,5
+1181,2018,duke,1572
+1196,2018,florida,1100
+1211,2018,gonzaga,500
+1217,2018,harvard,1
+1242,2018,kansas,1439
+1246,2018,kentucky,1340
+1257,2018,louisville,570
+1268,2018,maryland,7
+1276,2018,michigan,6
+1277,2018,michigan state,1520
+1292,2018,middle tennessee,4
+1278,2018,minnesota,642
+1281,2018,missouri,19
+1305,2018,nevada,7
+1314,2018,north carolina,1047
+1321,2018,northwestern,473
+1323,2018,notre dame,814
+1324,2018,oakland,2
+1328,2018,oklahoma,7
+1332,2018,oregon,2
+1344,2018,providence,34
+1345,2018,purdue,362
+1348,2018,rhode island,49
+1388,2018,saint mary's,333
+1371,2018,seton hall,274
+1374,2018,smu,3
+1376,2018,south carolina,1
+1395,2018,tcu,46
+1400,2018,texas,10
+1401,2018,texas a&m,130
+1416,2018,ucf,1
+1417,2018,ucla,340
+1425,2018,usc,995
+1437,2018,villanova,1284
+1438,2018,virginia,57
+1439,2018,virginia tech,16
+1452,2018,west virginia,840
+1455,2018,wichita state,1270
+1458,2018,wisconsin,14
+1462,2018,xavier,544
+1274,2018,miami,836
+1104,2019,alabama,15
+1112,2019,arizona,14
+1113,2019,arizona state,3
+1120,2019,auburn,974
+1138,2019,buffalo,14
+1139,2019,butler,6
+1153,2019,cincinnati,21
+1155,2019,clemson,268
+1172,2019,davidson,1
+1181,2019,duke,1452
+1196,2019,florida,71
+1199,2019,florida state,530
+1211,2019,gonzaga,1461
+1231,2019,indiana,98
+1242,2019,kansas,1581
+1243,2019,kansas state,922
+1246,2019,kentucky,1529
+1257,2019,louisville,11
+1260,2019,loyola chicago,162
+1261,2019,lsu,187
+1266,2019,marquette,124
+1267,2019,marshall,1
+1268,2019,maryland,28
+1276,2019,michigan,437
+1277,2019,michigan state,1024
+1280,2019,mississippi state,451
+1281,2019,missouri,1
+1301,2019,nc state,1
+1304,2019,nebraska,35
+1305,2019,nevada,1230
+1314,2019,north carolina,1221
+1323,2019,notre dame,22
+1332,2019,oregon,638
+1344,2019,providence,2
+1345,2019,purdue,170
+1361,2019,san diego state,9
+1385,2019,st. john's,3
+1393,2019,syracuse,620
+1395,2019,tcu,311
+1397,2019,tennessee,1268
+1400,2019,texas,5
+1403,2019,texas tech,6
+1416,2019,ucf,15
+1417,2019,ucla,297
+1425,2019,usc,6
+1437,2019,villanova,1085
+1438,2019,virginia,1286
+1439,2019,virginia tech,630
+1449,2019,washington,165
+1452,2019,west virginia,678
+1458,2019,wisconsin,24
+1462,2019,xavier,2
+1274,2019,miami,10
+1104,2020,alabama,2
+1112,2020,arizona,265
+1120,2020,auburn,210
+1124,2020,baylor,523
+1153,2020,cincinnati,8
+1159,2020,colgate,1
+1160,2020,colorado,152
+1166,2020,creighton,4
+1172,2020,davidson,34
+1173,2020,dayton,1
+1181,2020,duke,1399
+1196,2020,florida,1313
+1199,2020,florida state,36
+1207,2020,georgetown,11
+1211,2020,gonzaga,1096
+1217,2020,harvard,24
+1222,2020,houston,11
+1228,2020,illinois,14
+1242,2020,kansas,1457
+1246,2020,kentucky,1497
+1251,2020,liberty,2
+1257,2020,louisville,1386
+1261,2020,lsu,234
+1266,2020,marquette,68
+1268,2020,maryland,1134
+1272,2020,memphis,773
+1276,2020,michigan,2
+1277,2020,michigan state,1619
+1280,2020,mississippi state,12
+1281,2020,missouri,13
+1301,2020,nc state,3
+1314,2020,north carolina,1060
+1323,2020,notre dame,7
+1326,2020,ohio state,407
+1332,2020,oregon,742
+1344,2020,providence,1
+1345,2020,purdue,230
+1388,2020,saint mary's,330
+1371,2020,seton hall,863
+1393,2020,syracuse,3
+1397,2020,tennessee,78
+1403,2020,texas tech,837
+1425,2020,usc,2
+1429,2020,utah state,491
+1433,2020,vcu,193
+1436,2020,vermont,2
+1437,2020,villanova,1048
+1438,2020,virginia,1007
+1449,2020,washington,164
+1462,2020,xavier,356
+1104,2021,alabama,50
+1113,2021,arizona state,402
+1120,2021,auburn,8
+1124,2021,baylor,1540
+1140,2021,byu,4
+1166,2021,creighton,922
+1181,2021,duke,1073
+1196,2021,florida,69
+1199,2021,florida state,351
+1211,2021,gonzaga,1541
+1222,2021,houston,438
+1228,2021,illinois,1105
+1231,2021,indiana,48
+1234,2021,iowa,1273
+1242,2021,kansas,1221
+1246,2021,kentucky,1038
+1257,2021,louisville,41
+1260,2021,loyola chicago,3
+1261,2021,lsu,146
+1272,2021,memphis,69
+1276,2021,michigan,160
+1277,2021,michigan state,820
+1314,2021,north carolina,465
+1320,2021,northern iowa,1
+1326,2021,ohio state,270
+1332,2021,oregon,375
+1344,2021,providence,9
+1350,2021,richmond,40
+1353,2021,rutgers,190
+1387,2021,saint louis,8
+1361,2021,san diego state,6
+1371,2021,seton hall,2
+1390,2021,stanford,14
+1397,2021,tennessee,919
+1400,2021,texas,380
+1403,2021,texas tech,790
+1417,2021,ucla,336
+1163,2021,uconn,6
+1422,2021,unc greensboro,1
+1437,2021,villanova,1501
+1438,2021,virginia,1364
+1452,2021,west virginia,651
+1458,2021,wisconsin,1150
+1104,2022,alabama,713
+1112,2022,arizona,26
+1116,2022,arkansas,673
+1120,2022,auburn,267
+1124,2022,baylor,992
+1125,2022,belmont,7
+1140,2022,byu,3
+1160,2022,colorado,4
+1161,2022,colorado state,11
+1179,2022,drake,4
+1181,2022,duke,963
+1199,2022,florida state,381
+1211,2022,gonzaga,1562
+1222,2022,houston,694
+1228,2022,illinois,861
+1231,2022,indiana,41
+1242,2022,kansas,1427
+1246,2022,kentucky,894
+1257,2022,louisville,3
+1261,2022,lsu,7
+1268,2022,maryland,294
+1272,2022,memphis,831
+1276,2022,michigan,1255
+1277,2022,michigan state,87
+1280,2022,mississippi state,5
+1314,2022,north carolina,547
+1323,2022,notre dame,3
+1326,2022,ohio state,581
+1329,2022,oklahoma state,25
+1332,2022,oregon,775
+1345,2022,purdue,1213
+1350,2022,richmond,13
+1353,2022,rutgers,11
+1361,2022,san diego state,5
+1382,2022,st. bonaventure,238
+1385,2022,st. john's,5
+1393,2022,syracuse,5
+1397,2022,tennessee,563
+1400,2022,texas,1315
+1403,2022,texas tech,17
+1417,2022,ucla,1459
+1163,2022,uconn,161
+1425,2022,usc,30
+1437,2022,villanova,1332
+1438,2022,virginia,125
+1439,2022,virginia tech,25
+1462,2022,xavier,22
