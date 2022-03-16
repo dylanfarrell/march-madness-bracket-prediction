@@ -348,3 +348,55 @@ export default function MiniBracket(props) {
     </Stack>
   );
 }
+
+
+
+const updateTeams = (game, idx, new_val) => {
+    if (idx == 1) {
+      if (games[game][0].value == games[game][0].team1) {
+        games[game][1](
+          (state) => ({
+            ...state,
+            team1: new_val,
+            value: null,
+            expected_points: 0,
+          }),
+          function () {
+            if (hasChild(game)) {
+              updateTeams(getChild(game), getChildIdx(game), blank);
+            }
+          }
+        );
+      } else {
+        games[game][1]((state) => ({
+          ...state,
+          team1_w_prob: getWProb(new_val, state.team2),
+          team1: new_val,
+          expected_points: new_val * getWProb(new_val, state.team2),
+        }));
+      }
+    } else {
+      if (games[game][0].value == games[game][0].team2) {
+        games[game][1](
+          (state) => ({
+            ...state,
+            team2: new_val,
+            value: null,
+            expected_points: 0,
+          }),
+          function () {
+            if (hasChild(game)) {
+              updateTeams(getChild(game), getChildIdx(game), blank);
+            }
+          }
+        );
+      } else {
+        games[game][1]((state) => ({
+          ...state,
+          team1_w_prob: getWProb(state.team1, new_val),
+          team2: new_val,
+          expected_points: new_val * getWProb(state.team1, new_val),
+        }));
+      }
+    }
+  };

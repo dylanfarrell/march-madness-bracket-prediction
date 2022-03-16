@@ -32,26 +32,25 @@ const scoring = {
 }
 
 export default function Game(props) {
-    const team1_label = props.team1.concat(" (",Math.round(100*props.team1WinProb).toString(),"%)")
-    const team2_label = props.team2.concat(" (",Math.round(100*(1-props.team1WinProb)).toString(),"%)")
+    const team1_label = props.team1.concat(" (",Math.round(100*props.team1_w_prob).toString(),"%)")
+    const team2_label = props.team2.concat(" (",Math.round(100*(1-props.team1_w_prob)).toString(),"%)")
 
   return (
-    <Card variant="outlined" sx={{ width: 250, height: 150, bgcolor:orange['50']}}>
+    <Card variant="outlined" sx={{ width: 150, height: 90, bgcolor:orange['50']}}>
       <CardContent>
+        {/*<Typography variant="body2">Expected points: {props.expected_points > 0 ? (props.expected_points).toFixed(2) : ""}</Typography>*/}
         <FormControl>
           <RadioGroup
             name="controlled-radio-buttons-group"
             value={props.value}
             onChange={props.handleChange}
           >
-            <FormControlLabel value={props.team1} control={<Radio />} label={team1_label} />
+            <FormControlLabel value={props.team1} control={<Radio sx={{'& .MuiSvgIcon-root': {fontSize: 16}}}/>} label={<Typography variant="body2">{team1_label}</Typography>} />
             <Divider sx={{width:220}}/>
-            <FormControlLabel value={props.team2} control={<Radio />} label={team2_label} />
+            <FormControlLabel value={props.team2} control={<Radio sx={{'& .MuiSvgIcon-root': {fontSize: 16}}}/>} label={<Typography variant="body2">{team2_label}</Typography>} />
           </RadioGroup>
         </FormControl>
-        <Typography>Expected points: {props.expectedPoints > 0 ? (props.expected_points).toFixed(2) : ""}</Typography>
       </CardContent>
-      <CardActions></CardActions>
     </Card>
   );
 }

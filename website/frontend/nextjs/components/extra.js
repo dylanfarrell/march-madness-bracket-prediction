@@ -93,3 +93,97 @@ export default function Bracket() {
       </Stack>
   );
 }
+
+
+
+
+
+<Stack direction="row" justifyContent='center' spacing={2.5}>
+<Stack
+  alignItems="center"
+  justifyContent="center"
+  spacing={2}
+  sx={{ height: 800 }}
+>
+  {Array(8)
+    .fill(0)
+    .map((x, i) => {
+      return renderGame(i);
+    })}
+</Stack>
+<Stack
+  alignItems="center"
+  justifyContent="center"
+  spacing={14}
+  sx={{ height: 800 }}
+>
+  {Array(4)
+    .fill(0)
+    .map((x, i) => {
+      return renderGame(i + 8 + 32);
+    })}
+</Stack>
+<Stack
+  alignItems="center"
+  justifyContent="center"
+  spacing={40}
+  sx={{ height: 800 }}
+>
+  {Array(2)
+    .fill(0)
+    .map((x, i) => {
+      return renderGame(i + 12);
+    })}
+</Stack>
+<Stack alignItems="center" justifyContent="center" sx={{ height: 800 }}>
+  {Array(1)
+    .fill(0)
+    .map((x, i) => {
+      return renderGame(i + 14);
+    })}
+</Stack>
+
+<Stack alignItems="center" justifyContent="center" sx={{ height: 800 }}>
+  {Array(1)
+    .fill(0)
+    .map((x, i) => {
+      return renderGame(i + 14 + 15);
+    })}
+</Stack>
+<Stack
+  alignItems="center"
+  justifyContent="center"
+  spacing={40}
+  sx={{ height: 800 }}
+>
+  {Array(2)
+    .fill(0)
+    .map((x, i) => {
+      return renderGame(i + 12 + 15);
+    })}
+</Stack>
+<Stack
+  alignItems="center"
+  justifyContent="center"
+  spacing={14}
+  sx={{ height: 800 }}
+>
+  {Array(4)
+    .fill(0)
+    .map((x, i) => {
+      return renderGame(i + 8 + 15);
+    })}
+</Stack>
+<Stack
+  alignItems="center"
+  justifyContent="center"
+  spacing={2}
+  sx={{ height: 800 }}
+>
+  {Array(8)
+    .fill(0)
+    .map((x, i) => {
+      return renderGame(i + 15);
+    })}
+</Stack>
+</Stack>
