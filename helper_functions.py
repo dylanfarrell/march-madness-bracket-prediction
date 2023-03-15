@@ -11,6 +11,7 @@ def team_lookup(id_num):
     :param id_num: kaggle team id (int)
     :return: team name (str)
     """
+    print(f"{KAGGLE_DIR}/MTeams.csv")
     teams = pd.read_csv(f"{KAGGLE_DIR}/MTeams.csv")
     return teams[teams["TeamID"] == id_num]["TeamName"].values[0]
 
@@ -24,7 +25,9 @@ def update_team_spellings_file(unmatched_spellings_lst):
     :param unmatched_spellings_lst: list of (team spelling, team id) tuples
     :return: nothing, just updates the MTeamSpellings csv
     """
-    team_spellings = pd.read_csv(f"{KAGGLE_DIR}/MTeamSpellings.csv")
+    team_spellings = pd.read_csv(
+        f"{KAGGLE_DIR}/MTeamSpellings.csv", encoding="unicode_escape"
+    )
     unmatched_spellings = pd.DataFrame(
         {
             "TeamNameSpelling": [spelling for spelling, _ in unmatched_spellings_lst],
@@ -48,7 +51,9 @@ def scraped_df_join_to_team_spellings(scraped_df, team_col):
     :param team_col: the school/team name (i.e. 'team' or 'school' or 'TeamName') to join on
     :return: a joined table with kaggle ids
     """
-    team_spellings = pd.read_csv("data/kaggle_data/MTeamSpellings.csv")
+    team_spellings = pd.read_csv(
+        f"{KAGGLE_DIR}/MTeamSpellings.csv", encoding="unicode_escape"
+    )
     joined_df = team_spellings.merge(
         scraped_df, left_on="TeamNameSpelling", right_on=team_col
     )
