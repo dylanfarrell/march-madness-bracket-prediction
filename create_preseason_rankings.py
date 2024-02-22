@@ -1,15 +1,10 @@
 from bs4 import BeautifulSoup
 import urllib.request
-import numpy as np
 import pandas as pd
 
 
 def get_preseason_rankings(yr):
-    link = (
-        "https://www.espn.com/mens-college-basketball/rankings/_/week/1/year/"
-        + str(yr)
-        + "/seasontype/2"
-    )
+    link = f"https://www.espn.com/mens-college-basketball/rankings/_/week/1/year/{str(yr)}/seasontype/2"
     with urllib.request.urlopen(link) as url:
         page = url.read()
     soup = BeautifulSoup(page, "html.parser")
