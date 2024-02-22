@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import urllib.request
 import pandas as pd
+import helper_functions as hf
+from constants import CURRENT_YR
 
 
 def get_preseason_rankings(yr):
@@ -31,3 +33,27 @@ def get_preseason_rankings(yr):
         new_row.loc[0] = [yr, team, pts]
         preseason_rk_df = pd.concat([preseason_rk_df, new_row], ignore_index=True)
     return preseason_rk_df
+
+
+def get_all_preseason_rankings():
+    preseason_rankings = get_preseason_rankings(2003)
+    preseason_joined = hf.scraped_df_join_to_team_spellings(preseason_rankings)
+    for yr in range(2004, CURRENT_YR + 1):
+        # print(yr)
+        new_preseason_rankings = get_preseason_rankings(yr)
+        new_preseason_joined = hf.scraped_df_join_to_team_spellings(
+            new_preseason_rankings
+        )
+        preseason_joined = pd.concat(
+            [preseason_joined, new_preseason_joined], ignore_index=True
+        )
+        # print(check_for_missing_spellings(new_preseason_rankings, new_preseason_joined))
+    preseason_joined.drop("TeamNameSpelling", axis=1, inplace=True)
+
+
+def main():
+    get_all_preseason_rankings()
+
+
+if __name__ == "__main__":
+    main()
