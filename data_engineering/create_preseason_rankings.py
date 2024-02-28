@@ -1,8 +1,14 @@
 from bs4 import BeautifulSoup
 import urllib.request
 import pandas as pd
-import helper_functions as hf
-from constants import CURRENT_YR
+import argparse
+import data_engineering.helper_functions as hf
+from data_engineering.constants import (
+    CURRENT_YR,
+    DATA_START_YR,
+    GENERATED_DIR,
+    GENERATED_DIR_LAST_YR,
+)
 
 
 def get_preseason_rankings(yr):
@@ -35,24 +41,49 @@ def get_preseason_rankings(yr):
     return preseason_rk_df
 
 
-def get_all_preseason_rankings():
-    preseason_rankings = get_preseason_rankings(2003)
-    preseason_joined = hf.scraped_df_join_to_team_spellings(preseason_rankings)
-    for yr in range(2004, CURRENT_YR + 1):
-        # print(yr)
-        new_preseason_rankings = get_preseason_rankings(yr)
-        new_preseason_joined = hf.scraped_df_join_to_team_spellings(
-            new_preseason_rankings
+def get_all_preseason_rankings(backfill: bool = False) -> None:
+    if backfill:
+        preseason_rankings = get_preseason_rankings(DATA_START_YR)
+        preseason_joined = hf.scraped_df_join_to_team_spellings(preseason_rankings)
+        for yr in range(DATA_START_YR, CURRENT_YR + 1):
+            # print(yr)
+            new_preseason_rankings = get_preseason_rankings(yr)
+            new_preseason_joined = hf.scraped_df_join_to_team_spellings(
+                new_preseason_rankings
+            )
+            preseason_joined = pd.concat(
+                [preseason_joined, new_preseason_joined], ignore_index=True
+            )
+            # print(check_for_missing_spellings(new_preseason_rankings, new_preseason_joined))
+    else:
+        preseason_rankings = get_preseason_rankings(CURRENT_YR)
+        preseason_joined = hf.scraped_df_join_to_team_spellings(preseason_rankings)
+        preseason_rankings_historic = pd.read_csv(
+            f"{GENERATED_DIR_LAST_YR}/preseason_rankings.csv"
         )
         preseason_joined = pd.concat(
-            [preseason_joined, new_preseason_joined], ignore_index=True
+            [preseason_joined, preseason_rankings_historic], ignore_index=True
         )
-        # print(check_for_missing_spellings(new_preseason_rankings, new_preseason_joined))
     preseason_joined.drop("TeamNameSpelling", axis=1, inplace=True)
+    preseason_joined.to_csv(f"{GENERATED_DIR}/preseason_rankings_test.csv", index=False)
 
 
 def main():
-    get_all_preseason_rankings()
+    # Create the parser
+    parser = argparse.ArgumentParser(description="Process preseason rankings.")
+
+    # Add an argument for the backfill parameter
+    parser.add_argument(
+        "--backfill",
+        action="store_true",
+        help="Whether to backfill data or not. Defaults to False.",
+    )
+
+    # Parse the command-line arguments
+    args = parser.parse_args()
+
+    # Call the function with the command-line arguments
+    get_all_preseason_rankings(backfill=args.backfill)
 
 
 if __name__ == "__main__":
