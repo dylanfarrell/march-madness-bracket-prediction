@@ -4,6 +4,14 @@ from datetime import datetime
 from constants import KAGGLE_DIR, KAGGLE_DIR_LAST_YR, CURRENT_YR
 
 
+def get_kaggle_dir(yr: int) -> str:
+    return f"../data/{yr}/kaggle_data"
+
+
+def get_generated_dir(yr: int) -> str:
+    return f"../data/{yr}/generated_data"
+
+
 # retrieve team name by id
 def team_lookup(id: int) -> str:
     """
@@ -52,7 +60,7 @@ def scraped_df_join_to_team_spellings(
     :param team_col: the school/team name (i.e. 'team' or 'school' or 'TeamName') to join on
     :return: a joined table with kaggle ids
     """
-    team_spellings = load_kaggle_table("MTeamSpellings")
+    team_spellings = load_kaggle_data("MTeamSpellings")
     joined_df = team_spellings.merge(
         scraped_df, left_on="TeamNameSpelling", right_on=team_col
     )
