@@ -16,7 +16,14 @@ def get_preseason_rankings(yr):
     with urllib.request.urlopen(link) as url:
         page = url.read()
     soup = BeautifulSoup(page, "html.parser")
-    rk_table = soup.find("table", {"class": "Table"})
+    rk_tables = soup.find_all("table", {"class": "Table"})
+    # for some reason 2011 doesn't have an AP preseason poll
+    # adding in logic to fall back on coaches poll instead
+    if len(rk_tables[0].find_all("tr")) < 25:
+        print(f"AP Top 25 not found for {yr}. Using Coaches Poll instead.")
+        rk_table = rk_tables[1]
+    else:
+        rk_table = rk_tables[0]
     trs = rk_table.find_all("tr")
     cols = ["Season", "school", "preseason_pts"]
     preseason_rk_df = pd.DataFrame(columns=cols)
