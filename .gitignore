@@ -3,4 +3,5 @@
 .ipynb_checkpoints/*
 .venv
 .python-version
+data_engineering/notebooks/*
 *.pyc
