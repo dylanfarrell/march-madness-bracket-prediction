@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from datetime import datetime
-from data_engineering.constants import KAGGLE_DIR
+from .constants import KAGGLE_DIR, KAGGLE_DIR_LAST_YR, CURRENT_YR
 
 
 # retrieve team name by id
@@ -41,10 +41,9 @@ def update_team_spellings_file(unmatched_spellings_lst: list[tuple[str, int]]) -
 
 # join outside data source to team spellings csv to get kaggle team id
 def scraped_df_join_to_team_spellings(
-    scraped_df: pd.DataFrame, team_col: str = "season"
+    scraped_df: pd.DataFrame, team_col: str = "school"
 ) -> pd.DataFrame:
-    """
-    Joins a scraped table without kaggle team ids to the kaggle team spellings file
+    """Joins a scraped table without kaggle team ids to the kaggle team spellings file
     to get the associated team id
     Note: if the team spelling doesn't exist in the kaggle team spelling table,
     it will drop that team from the table
@@ -53,13 +52,11 @@ def scraped_df_join_to_team_spellings(
     :param team_col: the school/team name (i.e. 'team' or 'school' or 'TeamName') to join on
     :return: a joined table with kaggle ids
     """
-    team_spellings = pd.read_csv(
-        f"{KAGGLE_DIR}/MTeamSpellings.csv", encoding="unicode_escape"
-    )
+    team_spellings = load_kaggle_table("MTeamSpellings")
     joined_df = team_spellings.merge(
         scraped_df, left_on="TeamNameSpelling", right_on=team_col
     )
-    joined_df.drop("TeamNameSpelling", axis=1, inplace=True)
+    # joined_df.drop("TeamNameSpelling", axis=1, inplace=True)
     return joined_df
 
 
@@ -73,3 +70,24 @@ def check_for_missing_spellings(
     """
     comp = scraped_df.merge(joined_df, on=team_col, how="left")
     return list(np.unique(comp[comp["TeamID"].isna()][team_col]))
+
+
+def load_kaggle_table(table_name: str) -> pd.DataFrame:
+    """Try loading kaggle data from this year. If it fails, load from last year."""
+    try:
+        # Try loading the file from this year's data
+        df = pd.read_csv(f"{KAGGLE_DIR}/{table_name}.csv")
+        return df
+    except FileNotFoundError:
+        # If the file is not found, try loading from last year's data
+        try:
+            df = pd.read_csv(f"{KAGGLE_DIR_LAST_YR}/{table_name}.csv")
+            print(
+                f"File for {table_name} from {CURRENT_YR} not found. Loaded {CURRENT_YR - 1} data instead."
+            )
+            return df
+        # If neither is found, let user know
+        except FileNotFoundError:
+            print(
+                f"File for {table_name} not found in {CURRENT_YR} or {CURRENT_YR - 1}. Please check table name spelling."
+            )
