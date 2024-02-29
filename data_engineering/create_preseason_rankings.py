@@ -65,7 +65,7 @@ def get_all_preseason_rankings(backfill: bool = False) -> None:
             [preseason_joined, preseason_rankings_historic], ignore_index=True
         )
     preseason_joined.drop("TeamNameSpelling", axis=1, inplace=True)
-    preseason_joined.to_csv(f"{GENERATED_DIR}/preseason_rankings_test.csv", index=False)
+    preseason_joined.to_csv(f"{GENERATED_DIR}/preseason_rankings.csv", index=False)
 
 
 def main():
