@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup
 import urllib.request
 import pandas as pd
 import argparse
-import data_engineering.helper_functions as hf
-from data_engineering.constants import (
+import helper_functions as hf
+from constants import (
     CURRENT_YR,
     DATA_START_YR,
     GENERATED_DIR,
