@@ -90,11 +90,21 @@ def main():
         help="Whether to backfill data or not. Defaults to False.",
     )
 
+    parser.add_argument(
+        "--year",
+        type=int,
+        help="Specify the year to process rankings for.",
+        default=None,
+    )
+
     # Parse the command-line arguments
     args = parser.parse_args()
 
     # Call the function with the command-line arguments
-    get_all_preseason_rankings(backfill=args.backfill)
+    if args.year is None:
+        get_all_preseason_rankings(backfill=args.backfill)
+    else:
+        get_all_preseason_rankings(end_year=args.year, backfill=args.backfill)
 
 
 if __name__ == "__main__":
