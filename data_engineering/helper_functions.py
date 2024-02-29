@@ -72,7 +72,7 @@ def check_for_missing_spellings(
     return list(np.unique(comp[comp["TeamID"].isna()][team_col]))
 
 
-def load_kaggle_table(table_name: str) -> pd.DataFrame:
+def load_kaggle_data(table_name: str) -> pd.DataFrame:
     """Try loading kaggle data from this year. If it fails, load from last year."""
     try:
         # Try loading the file from this year's data
