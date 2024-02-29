@@ -1,6 +1,11 @@
 # march-madness-bracket-prediction
 
 ## Data Collection
-Run the following from the `data_engineering` directory. All data generated will write to the `data/[year]/` directory.
-- To generate preseason rankings data, run `python create_preseason_rankings.py`. This will append the newest year's data to last year's data.
-  - To generate and rescrape all preseason rankings data, run `python create_preseason_rankings.py --backfill`.
+
+High-level
+- Run the following from the `data_engineering` directory.
+- All data generated will write to the `data/[year]/` directory.
+- To only generate data for this year and append it to last year's data, run the commands without the `--backfill` flag. This approach will be much faster and have less room for error. To re-generate/re-scrape data for all years including this one, use the `--backfill` flag.
+
+Generating new data
+- To generate preseason rankings data, run `python create_preseason_rankings.py [--backfill]`.
