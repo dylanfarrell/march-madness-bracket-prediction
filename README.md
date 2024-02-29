@@ -1,5 +1,4 @@
-# march-madness-bracket-prediction
-
+# March Madness Bracket Predictions
 ## Data Collection
 
 High-level
