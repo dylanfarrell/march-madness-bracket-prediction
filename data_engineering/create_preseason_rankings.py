@@ -48,11 +48,13 @@ def get_preseason_rankings(yr):
     return preseason_rk_df
 
 
-def get_all_preseason_rankings(backfill: bool = False) -> None:
+def get_all_preseason_rankings(
+    end_year: int = CURRENT_YR, backfill: bool = False
+) -> None:
     if backfill:
         preseason_rankings = get_preseason_rankings(DATA_START_YR)
         preseason_joined = hf.scraped_df_join_to_team_spellings(preseason_rankings)
-        for yr in range(DATA_START_YR, CURRENT_YR + 1):
+        for yr in range(DATA_START_YR + 1, end_year + 1):
             # print(yr)
             new_preseason_rankings = get_preseason_rankings(yr)
             new_preseason_joined = hf.scraped_df_join_to_team_spellings(
@@ -63,16 +65,18 @@ def get_all_preseason_rankings(backfill: bool = False) -> None:
             )
             # print(check_for_missing_spellings(new_preseason_rankings, new_preseason_joined))
     else:
-        preseason_rankings = get_preseason_rankings(CURRENT_YR)
+        preseason_rankings = get_preseason_rankings(end_year)
         preseason_joined = hf.scraped_df_join_to_team_spellings(preseason_rankings)
         preseason_rankings_historic = pd.read_csv(
-            f"{GENERATED_DIR_LAST_YR}/preseason_rankings.csv"
+            f"{hf.get_generated_dir(end_year - 1)}/preseason_rankings.csv"
         )
         preseason_joined = pd.concat(
             [preseason_joined, preseason_rankings_historic], ignore_index=True
         )
     preseason_joined.drop("TeamNameSpelling", axis=1, inplace=True)
-    preseason_joined.to_csv(f"{GENERATED_DIR}/preseason_rankings.csv", index=False)
+    preseason_joined.to_csv(
+        f"{hf.get_generated_dir(end_year)}/preseason_rankings.csv", index=False
+    )
 
 
 def main():
