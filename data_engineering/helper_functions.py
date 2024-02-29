@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from datetime import datetime
-from .constants import KAGGLE_DIR, KAGGLE_DIR_LAST_YR, CURRENT_YR
+from constants import KAGGLE_DIR, KAGGLE_DIR_LAST_YR, CURRENT_YR
 
 
 # retrieve team name by id
