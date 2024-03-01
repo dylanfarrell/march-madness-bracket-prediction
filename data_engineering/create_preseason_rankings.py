@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup
 import urllib.request
 import pandas as pd
-import argparse
 import os
 import helper_functions as hf
+from argparser_config import get_parsed_args
 from constants import (
     CURRENT_YR,
     DATA_START_YR,
@@ -87,33 +87,8 @@ def get_all_preseason_rankings(
 
 
 def main():
-    # Create the parser
-    parser = argparse.ArgumentParser(description="Process preseason rankings.")
-
-    parser.add_argument(
-        "--year",
-        type=int,
-        help="Specify the year to process rankings for.",
-        default=CURRENT_YR,
-    )
-
-    # Add an argument for the backfill parameter
-    parser.add_argument(
-        "--backfill",
-        action="store_true",
-        help="Whether to backfill data or not. Defaults to False.",
-    )
-
-    # Add an argument for the backfill parameter
-    parser.add_argument(
-        "--overwrite",
-        action="store_true",
-        help="Whether to overwrite the data if it exists or not. Defaults to False.",
-        default=False,
-    )
-
     # Parse the command-line arguments
-    args = parser.parse_args()
+    args = get_parsed_args()
 
     # Call the function with the command-line arguments
     get_all_preseason_rankings(
