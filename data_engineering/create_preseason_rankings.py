@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import urllib.request
 import pandas as pd
 import argparse
+import os
 import helper_functions as hf
 from constants import (
     CURRENT_YR,
@@ -49,7 +50,7 @@ def get_preseason_rankings(yr):
 
 
 def get_all_preseason_rankings(
-    end_year: int = CURRENT_YR, backfill: bool = False
+    end_year: int = CURRENT_YR, backfill: bool = False, overwrite: bool = False
 ) -> None:
     if backfill:
         preseason_rankings = get_preseason_rankings(DATA_START_YR)
@@ -74,14 +75,29 @@ def get_all_preseason_rankings(
             [preseason_joined, preseason_rankings_historic], ignore_index=True
         )
     preseason_joined.drop("TeamNameSpelling", axis=1, inplace=True)
-    preseason_joined.to_csv(
-        f"{hf.get_generated_dir(end_year)}/preseason_rankings.csv", index=False
-    )
+
+    file_path = f"{hf.get_generated_dir(end_year)}/preseason_rankings.csv"
+    if not os.path.exists(file_path):
+        preseason_joined.to_csv(file_path, index=False)
+    else:
+        if overwrite:
+            preseason_joined.to_csv(file_path, index=False)
+        else:
+            print(
+                "This file already exists. The overwrite flag is set to False so the existing file was not overwritten."
+            )
 
 
 def main():
     # Create the parser
     parser = argparse.ArgumentParser(description="Process preseason rankings.")
+
+    parser.add_argument(
+        "--year",
+        type=int,
+        help="Specify the year to process rankings for.",
+        default=CURRENT_YR,
+    )
 
     # Add an argument for the backfill parameter
     parser.add_argument(
@@ -90,21 +106,21 @@ def main():
         help="Whether to backfill data or not. Defaults to False.",
     )
 
+    # Add an argument for the backfill parameter
     parser.add_argument(
-        "--year",
-        type=int,
-        help="Specify the year to process rankings for.",
-        default=None,
+        "--overwrite",
+        action="store_true",
+        help="Whether to overwrite the data if it exists or not. Defaults to False.",
+        default=False,
     )
 
     # Parse the command-line arguments
     args = parser.parse_args()
 
     # Call the function with the command-line arguments
-    if args.year is None:
-        get_all_preseason_rankings(backfill=args.backfill)
-    else:
-        get_all_preseason_rankings(end_year=args.year, backfill=args.backfill)
+    get_all_preseason_rankings(
+        end_year=args.year, backfill=args.backfill, overwrite=args.overwrite
+    )
 
 
 if __name__ == "__main__":
