@@ -4,12 +4,7 @@ import pandas as pd
 import os
 import helper_functions as hf
 from argparser_config import get_parsed_args
-from constants import (
-    CURRENT_YR,
-    DATA_START_YR,
-    GENERATED_DIR,
-    GENERATED_DIR_LAST_YR,
-)
+from constants import CURRENT_YR, DATA_START_YR
 
 
 def get_preseason_rankings(yr):
