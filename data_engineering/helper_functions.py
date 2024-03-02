@@ -3,6 +3,8 @@ import pandas as pd
 from datetime import datetime
 from constants import KAGGLE_DIR, KAGGLE_DIR_LAST_YR, CURRENT_YR
 
+## DATA LOADING
+
 
 def get_kaggle_dir(yr: int) -> str:
     return f"../data/{yr}/kaggle_data"
@@ -10,6 +12,35 @@ def get_kaggle_dir(yr: int) -> str:
 
 def get_generated_dir(yr: int) -> str:
     return f"../data/{yr}/generated_data"
+
+
+def load_kaggle_data(table_name: str) -> pd.DataFrame:
+    """Try loading kaggle data from this year. If it fails, load from last year."""
+    try:
+        # Try loading the file from this year's data
+        df = pd.read_csv(f"{KAGGLE_DIR}/{table_name}.csv")
+        return df
+    except FileNotFoundError:
+        # If the file is not found, try loading from last year's data
+        try:
+            df = pd.read_csv(f"{KAGGLE_DIR_LAST_YR}/{table_name}.csv")
+            print(
+                f"File for {table_name} from {CURRENT_YR} not found. Loaded {CURRENT_YR - 1} data instead."
+            )
+            return df
+        # If neither is found, let user know
+        except FileNotFoundError:
+            print(
+                f"File for {table_name} not found in {CURRENT_YR} or {CURRENT_YR - 1}. Please check table name spelling."
+            )
+
+
+def load_and_trim(
+    table_name: str, start_yr: int, season_col: str = "Season"
+) -> pd.DataFrame:
+    df = load_kaggle_data(table_name)
+    print(f"Trimming data to {start_yr}.")
+    return df[df[season_col] >= start_yr].reset_index(drop=True)
 
 
 # retrieve team name by id
@@ -78,24 +109,3 @@ def check_for_missing_spellings(
     """
     comp = scraped_df.merge(joined_df, on=team_col, how="left")
     return list(np.unique(comp[comp["TeamID"].isna()][team_col]))
-
-
-def load_kaggle_data(table_name: str) -> pd.DataFrame:
-    """Try loading kaggle data from this year. If it fails, load from last year."""
-    try:
-        # Try loading the file from this year's data
-        df = pd.read_csv(f"{KAGGLE_DIR}/{table_name}.csv")
-        return df
-    except FileNotFoundError:
-        # If the file is not found, try loading from last year's data
-        try:
-            df = pd.read_csv(f"{KAGGLE_DIR_LAST_YR}/{table_name}.csv")
-            print(
-                f"File for {table_name} from {CURRENT_YR} not found. Loaded {CURRENT_YR - 1} data instead."
-            )
-            return df
-        # If neither is found, let user know
-        except FileNotFoundError:
-            print(
-                f"File for {table_name} not found in {CURRENT_YR} or {CURRENT_YR - 1}. Please check table name spelling."
-            )
