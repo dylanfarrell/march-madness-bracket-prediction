@@ -7,7 +7,7 @@ from argparser_config import get_parsed_args
 from constants import CURRENT_YR, DATA_START_YR
 
 
-def get_preseason_rankings(yr):
+def get_preseason_rankings(yr: int) -> pd.DataFrame:
     link = f"https://www.espn.com/mens-college-basketball/rankings/_/week/1/year/{str(yr)}/seasontype/2"
     with urllib.request.urlopen(link) as url:
         page = url.read()
