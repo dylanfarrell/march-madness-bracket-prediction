@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: my_source  # Name of your source, can be anything meaningful
+    database: march_madness  # This is a placeholder and not used by SQLite
+    schema: main  # Default schema for SQLite
+    tables:
+      - name: regular_season_detailed_results  # The name of the table you imported the CSV into
