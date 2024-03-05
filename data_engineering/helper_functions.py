@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from datetime import datetime
+import os
 from constants import KAGGLE_DIR, KAGGLE_DIR_LAST_YR, CURRENT_YR
 
 ## DATA LOADING
@@ -41,6 +42,16 @@ def load_and_trim(
     df = load_kaggle_data(table_name)
     print(f"Trimming data to {start_yr}.")
     return df[df[season_col] >= start_yr].reset_index(drop=True)
+
+
+def write_to_csv(df: pd.DataFrame, file_path: str, overwrite: bool) -> None:
+    if not os.path.exists(file_path) or overwrite:
+        df.to_csv(file_path, index=False)
+        print(f"Data written to {file_path}.")
+    else:
+        print(
+            "This file already exists. The overwrite flag is set to False so the existing file was not overwritten."
+        )
 
 
 # retrieve team name by id
