@@ -72,13 +72,7 @@ def get_all_preseason_rankings(
     preseason_joined.drop("TeamNameSpelling", axis=1, inplace=True)
 
     file_path = f"{hf.get_generated_dir(end_year)}/preseason_rankings.csv"
-    if not os.path.exists(file_path) or overwrite:
-        preseason_joined.to_csv(file_path, index=False)
-        print(f"Data written to {file_path}.")
-    else:
-        print(
-            "This file already exists. The overwrite flag is set to False so the existing file was not overwritten."
-        )
+    hf.write_to_csv(preseason_joined, file_path, overwrite)
 
 
 def main():
