@@ -19,7 +19,7 @@ def get_parsed_args():
     )
 
     parser.add_argument(
-        "--backfill",
+        "--recompute",
         action="store_true",
         help="Whether to reprocess data or not. Defaults to False.",
         default=False,
