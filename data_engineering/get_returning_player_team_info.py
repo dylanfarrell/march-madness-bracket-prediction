@@ -48,7 +48,6 @@ def main():
     # Call the function with the command-line arguments
     all_teams = hf.get_all_sports_ref_teams(year=args.year)
     df = get_all_returning_info(all_teams, year=args.year, output_failures=True)
-
     file_path = f"{hf.get_generated_dir(args.year)}/returning_player_team_stats.csv"
     hf.write_to_csv(df, file_path, args.overwrite)
 
