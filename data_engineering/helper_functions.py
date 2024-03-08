@@ -1,20 +1,23 @@
+import os
 import time
+from typing import Callable
+
 import numpy as np
 import pandas as pd
-from datetime import datetime
-import os
 import urllib.request
 from bs4 import BeautifulSoup
-from typing import Callable
+
 from constants import DATA_START_YR, KAGGLE_DIR, KAGGLE_DIR_LAST_YR, CURRENT_YR
 
 ## DATA LOADING
 
 
+# returns kaggle data directory stub for a given year
 def get_kaggle_dir(year: int) -> str:
     return f"../data/{year}/kaggle_data"
 
 
+# returns generated data directory stub for a given year
 def get_generated_dir(year: int) -> str:
     return f"../data/{year}/generated_data"
 
