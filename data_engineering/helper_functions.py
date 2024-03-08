@@ -59,6 +59,12 @@ def get_soup(link: str, rate_limit: bool = True) -> BeautifulSoup:
     return BeautifulSoup(page, "html.parser")
 
 
+# function to return all sports reference team names in list form
+def get_all_sports_ref_teams(yr: int = CURRENT_YR) -> list[str]:
+    all_teams = pd.read_pickle(f"{get_generated_dir(yr)}/all_schools.pkl")
+    return all_teams["school_id"].tolist()
+
+
 ## DATA WRITING
 
 
