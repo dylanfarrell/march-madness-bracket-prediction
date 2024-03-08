@@ -1,4 +1,6 @@
 import helper_functions as hf
+from argparser_config import get_parsed_args
+from constants import CURRENT_YR
 
 
 def add_kaggle_id(df, team_col: str = "team"):
@@ -25,6 +27,8 @@ def add_kaggle_id(df, team_col: str = "team"):
 
 
 def main():
+    args = get_parsed_args()
+
     datasets = [
         "coaches_data",
         # "preseason_rankings",
@@ -34,9 +38,11 @@ def main():
     ]
 
     for dataset in datasets:
-        print(dataset)
+        print(f"Adding kaggle ids to: {dataset}")
         df = hf.load_generated_data(dataset)
-        hf.add_kaggle_id(df)
+        df_silver = add_kaggle_id(df)
+        file_path = f"{hf.get_silver_dir(args.year)}/{dataset}_silver.csv"
+        hf.write_to_csv(df_silver, file_path, args.overwrite)
 
 
 if __name__ == "__main__":
