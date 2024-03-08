@@ -5,11 +5,11 @@ from argparser_config import get_parsed_args
 from constants import SPORTS_REF_STUB, CURRENT_YR
 
 
-def create_team_stats(year: int = CURRENT_YR, overwrite: bool = False):
+def create_team_stats(year: int = CURRENT_YR) -> pd.DataFrame:
     link = f"{SPORTS_REF_STUB}/cbb/seasons/men/{year}-school-stats.html"
     soup = hf.get_soup(link)
 
-    schools_data = []
+    teams_data = []
 
     # Identify the header row to get column names (excluding the first "Rk" and last "School" headers as they're processed separately)
     header_row = soup.find("thead").find_all("tr")[
@@ -38,21 +38,20 @@ def create_team_stats(year: int = CURRENT_YR, overwrite: bool = False):
             for column_name, data_point in zip(column_names, data_points):
                 # print(column_name)
                 row_data[column_name] = data_point.text.strip()
-            schools_data.append(row_data)
+            teams_data.append(row_data)
 
     # Display the data
-    for school in schools_data:
+    for school in teams_data:
         print(school)
 
-    df = pd.DataFrame(schools_data, columns=["school_id"] + column_names)
+    df = pd.DataFrame(teams_data, columns=["school_id"] + column_names)
     df = df.dropna(subset=["School"]).reset_index(drop=True)
-
-    file_path = f"{hf.get_generated_dir(year)}/sports_reference_team_stats.csv"
-    hf.write_to_csv(df, file_path, overwrite)
 
     all_schools = get_all_schools(df)
     all_schools = pd.DataFrame(all_schools, columns=["school_id"])
     all_schools.to_pickle(f"{hf.get_generated_dir(year)}/all_schools.pkl")
+
+    return df
 
 
 def get_all_schools(df):
@@ -64,7 +63,9 @@ def main():
     args = get_parsed_args()
 
     # Call the function with the command-line arguments
-    create_team_stats(year=args.year, overwrite=args.overwrite)
+    df = create_team_stats(year=args.year, overwrite=args.overwrite)
+    file_path = f"{hf.get_generated_dir(args.year)}/sports_reference_team_stats.csv"
+    hf.write_to_csv(df, file_path, args.overwrite)
 
 
 if __name__ == "__main__":
