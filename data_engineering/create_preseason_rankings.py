@@ -40,9 +40,10 @@ def get_preseason_rankings(year: int) -> pd.DataFrame:
 
 
 def main():
-    # Parse the command-line arguments
+    # parse the command-line arguments
     args = get_parsed_args()
 
+    # call the function with the command-line arguments
     df = hf.generate_data_all_years(
         get_preseason_rankings,
         year=args.year,
@@ -50,7 +51,7 @@ def main():
         table_name="preseason_rankings",
     )
 
-    # Call the function with the command-line arguments
+    # write the dataframe to a csv
     file_path = f"{hf.get_generated_dir(args.year)}/preseason_rankings.csv"
     hf.write_to_csv(df, file_path, args.overwrite)
 
