@@ -1,9 +1,8 @@
 import helper_functions as hf
 from argparser_config import get_parsed_args
-from constants import CURRENT_YR
 
 
-def add_kaggle_id(df, team_col: str = "team"):
+def add_kaggle_id(df, team_col: str = "team") -> pd.DataFrame:
     team_spellings = hf.load_kaggle_data("MTeamSpellings")
     merged_df = df.merge(
         team_spellings, how="inner", left_on=team_col, right_on="TeamNameSpelling"

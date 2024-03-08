@@ -2,10 +2,10 @@ import pandas as pd
 
 import helper_functions as hf
 from argparser_config import get_parsed_args
-from constants import SPORTS_REF_STUB, CURRENT_YR
+from constants import SPORTS_REF_STUB
 
 
-def create_team_stats(year: int = CURRENT_YR) -> pd.DataFrame:
+def create_team_stats(year: int) -> pd.DataFrame:
     link = f"{SPORTS_REF_STUB}/cbb/seasons/men/{year}-school-stats.html"
     soup = hf.get_soup(link)
 
@@ -50,7 +50,7 @@ def create_team_stats(year: int = CURRENT_YR) -> pd.DataFrame:
     return df
 
 
-def get_all_schools(df):
+def get_all_schools(df: pd.DataFrame) -> list[str]:
     return list(df["team"].unique())
 
 

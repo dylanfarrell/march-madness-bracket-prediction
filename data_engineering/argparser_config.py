@@ -2,7 +2,7 @@ import argparse
 from constants import CURRENT_YR
 
 
-def get_parsed_args():
+def get_parsed_args() -> argparse.Namespace:
     # Create the parser
     parser = argparse.ArgumentParser(
         description="""This script scrapes relevant March Madness data. It supports operations for 

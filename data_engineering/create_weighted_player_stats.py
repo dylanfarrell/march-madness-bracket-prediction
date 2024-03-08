@@ -1,16 +1,17 @@
-import time
 import pandas as pd
-import urllib.request
+from typing import Tuple
+
 from bs4 import BeautifulSoup
-from constants import SPORTS_REF_STUB, CURRENT_YR
-from argparser_config import get_parsed_args
-import helper_functions as hf
 from tqdm import tqdm
+
+import helper_functions as hf
+from argparser_config import get_parsed_args
+from constants import SPORTS_REF_STUB, CURRENT_YR
 
 YR_TO_NUM = {"FR": 1, "SO": 2, "JR": 3, "SR": 4}
 
 
-def get_player_id(row, tag_type):
+def get_player_id(row, tag_type: str) -> str:
     player_link = row.find(tag_type, {"data-stat": "player"}).find("a")["href"]
     player_id = player_link.split("/")[-1].replace(".html", "")
     return player_id
@@ -56,7 +57,7 @@ def get_height_and_year(soup):
     return df_info
 
 
-def get_minutes_played(soup):
+def get_minutes_played(soup: BeautifulSoup) -> pd.DataFrame:
     # Find the table by ID or class
     table = soup.find("table", {"id": "per_game"})
 
@@ -79,13 +80,13 @@ def get_minutes_played(soup):
     return df_minutes
 
 
-def get_minute_weighted_avg(df, col):
+def get_minute_weighted_avg(df: pd.DataFrame, col: str) -> float:
     return sum([m * h for m, h in zip(df[col], df["min_per_game"])]) / sum(
         df["min_per_game"]
     )
 
 
-def get_team_info(team, year=CURRENT_YR):
+def get_team_info(team: str, year: int = CURRENT_YR) -> Tuple[float, float]:
     link = f"{SPORTS_REF_STUB}/cbb/schools/{team}/men/{year}.html"
     soup = hf.get_soup(link, rate_limit=True)
     df_info = get_height_and_year(soup)
@@ -98,7 +99,9 @@ def get_team_info(team, year=CURRENT_YR):
     return avg_yr, avg_height
 
 
-def get_all_team_info(teams, year=CURRENT_YR, output_failures=True) -> pd.DataFrame:
+def get_all_team_info(
+    teams: list[str], year: int = CURRENT_YR, output_failures: bool = True
+) -> pd.DataFrame:
     team_info = []
     failed_teams = []
     for team in tqdm(teams, desc="Getting team info"):

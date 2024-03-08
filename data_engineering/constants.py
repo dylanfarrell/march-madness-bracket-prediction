@@ -1,5 +1,3 @@
-from datetime import datetime
-
 # Years
 CURRENT_YR = 2024
 DATA_START_YR = 2003

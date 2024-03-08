@@ -8,7 +8,7 @@ import helper_functions as hf
 from constants import SPORTS_REF_STUB, CURRENT_YR
 
 
-def get_returning_team_stats(team, year=CURRENT_YR):
+def get_returning_team_stats(team: str, year: int) -> Tuple[float, float]:
     link = f"{SPORTS_REF_STUB}/cbb/schools/{team}/men/{year}.html"
     soup = hf.get_soup(link, rate_limit=True)
     text_div = soup.find("div", {"id": "tfooter_roster"}).text
@@ -19,7 +19,7 @@ def get_returning_team_stats(team, year=CURRENT_YR):
 
 
 def get_all_returning_info(
-    teams, year=CURRENT_YR, output_failures=True
+    teams: list[str], year: int = CURRENT_YR, output_failures: bool = True
 ) -> pd.DataFrame:
     # list to log teams that failed to get data
     failed_teams = []
