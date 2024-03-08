@@ -175,27 +175,6 @@ def update_team_spellings_file(unmatched_spellings_lst: list[tuple[str, int]]) -
     full_spellings.to_csv(f"{KAGGLE_DIR}/MTeamSpellings.csv", index=False)
 
 
-# join outside data source to team spellings csv to get kaggle team id
-def scraped_df_join_to_team_spellings(
-    scraped_df: pd.DataFrame, team_col: str = "school"
-) -> pd.DataFrame:
-    """Joins a scraped table without kaggle team ids to the kaggle team spellings file
-    to get the associated team id
-    Note: if the team spelling doesn't exist in the kaggle team spelling table,
-    it will drop that team from the table
-
-    :param scraped_table: the outside data source table you want ids for
-    :param team_col: the school/team name (i.e. 'team' or 'school' or 'TeamName') to join on
-    :return: a joined table with kaggle ids
-    """
-    team_spellings = load_kaggle_data("MTeamSpellings")
-    joined_df = team_spellings.merge(
-        scraped_df, left_on="TeamNameSpelling", right_on=team_col
-    )
-    # joined_df.drop("TeamNameSpelling", axis=1, inplace=True)
-    return joined_df
-
-
 # outputs the team spellings from the scraped table that don't appear in the kaggle table
 def check_for_missing_spellings(
     scraped_df: pd.DataFrame, joined_df: pd.DataFrame, team_col: str = "season"
