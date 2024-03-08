@@ -115,35 +115,27 @@ def write_to_csv(df: pd.DataFrame, file_path: str, overwrite: bool) -> None:
         )
 
 
-# WIP
+# function to write data by either recomputing the data for all years
+# or by appending the new year's data to the existing data
 def generate_data_all_years(
     function: Callable,
     year: int,
     start_year: int = DATA_START_YR,
-    backfill: bool = False,
+    recompute: bool = False,
+    table_name: str | None = None,
 ) -> None:
-    if backfill:
-        preseason_rankings = function(DATA_START_YR)
-        preseason_joined = scraped_df_join_to_team_spellings(preseason_rankings)
-        for year in range(DATA_START_YR + 1, year + 1):
-            new_preseason_rankings = function(year)
-            new_preseason_joined = scraped_df_join_to_team_spellings(
-                new_preseason_rankings
-            )
-            preseason_joined = pd.concat(
-                [preseason_joined, new_preseason_joined], ignore_index=True
-            )
-            # print(check_for_missing_spellings(new_preseason_rankings, new_preseason_joined))
+    if not recompute and table_name is None:
+        raise ValueError("If recompute is False, you must provide a table name.")
+    if recompute:
+        base_df = function(start_year)
+        for year in range(start_year + 1, year + 1):
+            next_year_df = function(year)
+            base_df = pd.concat([base_df, next_year_df], ignore_index=True)
     else:
-        preseason_rankings = function(year)
-        preseason_joined = scraped_df_join_to_team_spellings(preseason_rankings)
-        preseason_rankings_historic = pd.read_csv(
-            f"{get_generated_dir(year - 1)}/{filler}.csv"
-        )
-        preseason_joined = pd.concat(
-            [preseason_joined, preseason_rankings_historic], ignore_index=True
-        )
-    preseason_joined.drop("TeamNameSpelling", axis=1, inplace=True)
+        new_year_df = function(year)
+        base_df = pd.read_csv(f"{get_generated_dir(year - 1)}/{table_name}.csv")
+        base_df = pd.concat([base_df, new_year_df], ignore_index=True)
+    return base_df
 
 
 # retrieve team name by id
