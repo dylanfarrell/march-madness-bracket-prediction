@@ -32,7 +32,7 @@ def create_team_stats(year: int = CURRENT_YR) -> pd.DataFrame:
                 school_name = school_tag.text
                 school_id = school_tag["href"].split("/")[3]  # Extract school ID
                 row_data["School Name"] = school_name
-                row_data["school_id"] = school_id
+                row_data["team"] = school_id
             # Extracting other columns
             data_points = row.find_all("td")
             for column_name, data_point in zip(column_names, data_points):
@@ -40,18 +40,18 @@ def create_team_stats(year: int = CURRENT_YR) -> pd.DataFrame:
                 row_data[column_name] = data_point.text.strip()
             teams_data.append(row_data)
 
-    df = pd.DataFrame(teams_data, columns=["school_id"] + column_names)
+    df = pd.DataFrame(teams_data, columns=["team"] + column_names)
     df = df.dropna(subset=["School"]).reset_index(drop=True)
 
     all_schools = get_all_schools(df)
-    all_schools = pd.DataFrame(all_schools, columns=["school_id"])
+    all_schools = pd.DataFrame(all_schools, columns=["team"])
     all_schools.to_pickle(f"{hf.get_generated_dir(year)}/all_schools.pkl")
 
     return df
 
 
 def get_all_schools(df):
-    return list(df["school_id"].unique())
+    return list(df["team"].unique())
 
 
 def main():
