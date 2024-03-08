@@ -7,7 +7,14 @@ import pandas as pd
 import urllib.request
 from bs4 import BeautifulSoup
 
-from constants import DATA_START_YR, KAGGLE_DIR, KAGGLE_DIR_LAST_YR, CURRENT_YR
+from constants import (
+    DATA_START_YR,
+    KAGGLE_DIR,
+    KAGGLE_DIR_LAST_YR,
+    CURRENT_YR,
+    GENERATED_DIR,
+    GENERATED_DIR_LAST_YR,
+)
 
 ## DATA LOADING
 
@@ -49,6 +56,27 @@ def load_and_trim(
     df = load_kaggle_data(table_name)
     print(f"Trimming data to {start_yr}.")
     return df[df[season_col] >= start_yr].reset_index(drop=True)
+
+
+def load_generated_data(table_name: str) -> pd.DataFrame:
+    """Try loading generated data from this year. If it fails, load from last year."""
+    try:
+        # Try loading the file from this year's data
+        df = pd.read_csv(f"{GENERATED_DIR}/{table_name}.csv")
+        return df
+    except FileNotFoundError:
+        # If the file is not found, try loading from last year's data
+        try:
+            df = pd.read_csv(f"{GENERATED_DIR_LAST_YR}/{table_name}.csv")
+            print(
+                f"File for {table_name} from {CURRENT_YR} not found. Loaded {CURRENT_YR - 1} data instead."
+            )
+            return df
+        # If neither is found, let user know
+        except FileNotFoundError:
+            print(
+                f"File for {table_name} not found in {CURRENT_YR} or {CURRENT_YR - 1}. Please check table name spelling."
+            )
 
 
 def get_soup(link: str, rate_limit: bool = True) -> BeautifulSoup:
