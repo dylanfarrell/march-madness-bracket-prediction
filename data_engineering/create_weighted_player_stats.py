@@ -98,7 +98,7 @@ def get_team_info(team, year=CURRENT_YR):
     return avg_yr, avg_height
 
 
-def get_all_team_info(teams, year=CURRENT_YR, overwrite=False) -> list[str]:
+def get_all_team_info(teams, year=CURRENT_YR, output_failures=True) -> pd.DataFrame:
     team_info = []
     failed_teams = []
     for team in tqdm(teams, desc="Getting team info"):
@@ -109,21 +109,21 @@ def get_all_team_info(teams, year=CURRENT_YR, overwrite=False) -> list[str]:
             # Catch any other errors that occur and log the team's name
             failed_teams.append(team)
     df = pd.DataFrame(team_info, columns=["team", "avg_yr", "avg_height"])
-    file_path = f"{hf.get_generated_dir(year)}/team_weighted_info.csv"
-    hf.write_to_csv(df, file_path, overwrite)
-    return failed_teams
+
+    if output_failures:
+        print(f"The following teams failed to get data: {failed_teams}")
+
+    return df
 
 
 def main():
     # Parse the command-line arguments
     args = get_parsed_args()
 
-    all_teams_df = pd.read_pickle(f"{hf.get_generated_dir(CURRENT_YR)}/all_schools.pkl")
-    all_teams = all_teams_df["school_id"].tolist()
-    failed_teams = get_all_team_info(
-        all_teams, year=args.year, overwrite=args.overwrite
-    )
-    print(f"Failed teams: {failed_teams}")
+    all_teams = hf.get_all_sports_ref_teams(year=args.year)
+    df = get_all_team_info(all_teams, year=args.year)
+    file_path = f"{hf.get_generated_dir(args.year)}/team_weighted_info.csv"
+    hf.write_to_csv(df, file_path, args.overwrite)
 
 
 if __name__ == "__main__":
