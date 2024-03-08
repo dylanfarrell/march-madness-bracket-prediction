@@ -1,13 +1,19 @@
 import re
-import time
-import urllib.request
-
-from bs4 import BeautifulSoup
 import pandas as pd
 
 from argparser_config import get_parsed_args
 import helper_functions as hf
 from constants import SPORTS_REF_STUB
+
+
+def get_returning_team_stats(team):
+    link = f"{SPORTS_REF_STUB}/cbb/schools/{team}/men/2024.html"
+    soup = hf.get_soup(link, rate_limit=True)
+    text_div = soup.find("div", {"id": "tfooter_roster"}).text
+    decimals = re.findall("\d+\.\d", text_div)
+    returning_min_pct = float(decimals[0])
+    returning_score_pct = float(decimals[1])
+    return (returning_min_pct, returning_score_pct)
 
 
 def get_returning_player_team_info(yr):
@@ -27,12 +33,7 @@ def get_returning_player_team_info(yr):
             school = team_stub.split("/")[3]
             team_link = f"{SPORTS_REF_STUB}{team_stub}"
             print(school)
-            with urllib.request.urlopen(team_link) as url:
-                page = url.read()
-                # sports reference has a limit of 20 requests per minute
-                # limiting to 15 requests to be safe
-                time.sleep(4)
-            team_soup = BeautifulSoup(page, "html.parser")
+            team_soup = hf.get_soup(team_link, rate_limit=True)
             text_div = team_soup.find("div", {"id": "tfooter_roster"}).text
             decimals = re.findall("\d+\.\d", text_div)
             returning_min_pct = float(decimals[0])
@@ -49,7 +50,9 @@ def main():
 
     # Call the function with the command-line arguments
     df = get_returning_player_team_info(yr=args.year)
-    df.to_csv(f"{hf.get_generated_dir(args.year)}/preseason_rankings.csv")
+
+    file_path = f"{hf.get_generated_dir(args.year)}/returning_player_team_stats.csv"
+    hf.write_to_csv(df, file_path, args.overwrite)
 
 
 if __name__ == "__main__":
