@@ -10,12 +10,6 @@ from tqdm import tqdm
 YR_TO_NUM = {"FR": 1, "SO": 2, "JR": 3, "SR": 4}
 
 
-def get_soup(link):
-    with urllib.request.urlopen(link) as url:
-        page = url.read()
-    return BeautifulSoup(page, "html.parser")
-
-
 def get_player_id(row, tag_type):
     player_link = row.find(tag_type, {"data-stat": "player"}).find("a")["href"]
     player_id = player_link.split("/")[-1].replace(".html", "")
@@ -93,7 +87,7 @@ def get_minute_weighted_avg(df, col):
 
 def get_team_info(team, year=CURRENT_YR):
     link = f"{SPORTS_REF_STUB}/cbb/schools/{team}/men/{year}.html"
-    soup = get_soup(link)
+    soup = hf.get_soup(link)
     # 20 calls/min is max, so sleep for 3 seconds (plus script will add time to run anyway)
     time.sleep(3)
     df_info = get_height_and_year(soup)

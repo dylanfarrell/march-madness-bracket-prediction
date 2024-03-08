@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 import os
+import urllib.request
+from bs4 import BeautifulSoup
 from typing import Callable
 from constants import DATA_START_YR, KAGGLE_DIR, KAGGLE_DIR_LAST_YR, CURRENT_YR
 
@@ -43,6 +45,12 @@ def load_and_trim(
     df = load_kaggle_data(table_name)
     print(f"Trimming data to {start_yr}.")
     return df[df[season_col] >= start_yr].reset_index(drop=True)
+
+
+def get_soup(link):
+    with urllib.request.urlopen(link) as url:
+        page = url.read()
+    return BeautifulSoup(page, "html.parser")
 
 
 ## DATA WRITING
