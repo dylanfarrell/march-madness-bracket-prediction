@@ -103,7 +103,7 @@ def get_all_sports_ref_teams(year: int = CURRENT_YR) -> list[str]:
 def write_to_csv(df: pd.DataFrame, file_path: str, overwrite: bool) -> None:
     if not os.path.exists(file_path) or overwrite:
         df.to_csv(file_path, index=False)
-        print(f"Data written to {file_path}.")
+        print(f"Success: data written to {file_path}.")
     else:
         print(
             "This file already exists. The overwrite flag is set to False so the existing file was not overwritten."
