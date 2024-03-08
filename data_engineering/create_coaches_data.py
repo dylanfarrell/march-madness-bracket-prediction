@@ -12,8 +12,8 @@ def create_coaches_data(year: int = CURRENT_YR) -> pd.DataFrame:
     coach_tbody = coach_table.find("tbody")
     coach_rows = coach_tbody.find_all("tr")
     cols = [
-        "Season",
-        "school",
+        "season",
+        "team",
         "is_ap_pre_top_5",
         "is_ap_pre_top_15",
         "is_ap_pre_top_25",
@@ -28,7 +28,7 @@ def create_coaches_data(year: int = CURRENT_YR) -> pd.DataFrame:
         tds = coach_row.find_all("td")
         if len(tds) > 10:
             try:
-                school = tds[0].find("a")["href"].split("/")[3]
+                team = tds[0].find("a")["href"].split("/")[3]
                 is_ap_pre_top_5 = False if tds[6].text == "" else int(tds[6].text) <= 5
                 is_ap_pre_top_15 = (
                     False if tds[6].text == "" else 5 < int(tds[6].text) <= 15
@@ -45,7 +45,7 @@ def create_coaches_data(year: int = CURRENT_YR) -> pd.DataFrame:
                 new_row = pd.DataFrame(columns=cols)
                 new_row.loc[0] = [
                     year,
-                    school,
+                    team,
                     is_ap_pre_top_5,
                     is_ap_pre_top_15,
                     is_ap_pre_top_25,
