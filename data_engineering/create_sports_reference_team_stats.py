@@ -40,10 +40,6 @@ def create_team_stats(year: int = CURRENT_YR) -> pd.DataFrame:
                 row_data[column_name] = data_point.text.strip()
             teams_data.append(row_data)
 
-    # Display the data
-    for school in teams_data:
-        print(school)
-
     df = pd.DataFrame(teams_data, columns=["school_id"] + column_names)
     df = df.dropna(subset=["School"]).reset_index(drop=True)
 
@@ -63,7 +59,7 @@ def main():
     args = get_parsed_args()
 
     # Call the function with the command-line arguments
-    df = create_team_stats(year=args.year, overwrite=args.overwrite)
+    df = create_team_stats(year=args.year)
     file_path = f"{hf.get_generated_dir(args.year)}/sports_reference_team_stats.csv"
     hf.write_to_csv(df, file_path, args.overwrite)
 
