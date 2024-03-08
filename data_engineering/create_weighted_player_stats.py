@@ -87,9 +87,7 @@ def get_minute_weighted_avg(df, col):
 
 def get_team_info(team, year=CURRENT_YR):
     link = f"{SPORTS_REF_STUB}/cbb/schools/{team}/men/{year}.html"
-    soup = hf.get_soup(link)
-    # 20 calls/min is max, so sleep for 3 seconds (plus script will add time to run anyway)
-    time.sleep(3)
+    soup = hf.get_soup(link, rate_limit=True)
     df_info = get_height_and_year(soup)
     df_min = get_minutes_played(soup)
     df_joined = df_info.merge(df_min)
