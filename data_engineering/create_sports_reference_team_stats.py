@@ -8,11 +8,9 @@ from argparser_config import get_parsed_args
 import helper_functions as hf
 
 
-def create_team_stats(yr: int = CURRENT_YR, overwrite: bool = False):
-    link = f"{SPORTS_REF_STUB}/cbb/seasons/men/{yr}-school-stats.html"
-    with urllib.request.urlopen(link) as url:
-        page = url.read()
-    soup = BeautifulSoup(page, "html.parser")
+def create_team_stats(year: int = CURRENT_YR, overwrite: bool = False):
+    link = f"{SPORTS_REF_STUB}/cbb/seasons/men/{year}-school-stats.html"
+    soup = hf.get_soup(link)
 
     schools_data = []
 
@@ -52,12 +50,12 @@ def create_team_stats(yr: int = CURRENT_YR, overwrite: bool = False):
     df = pd.DataFrame(schools_data, columns=["school_id"] + column_names)
     df = df.dropna(subset=["School"]).reset_index(drop=True)
 
-    file_path = f"{hf.get_generated_dir(yr)}/sports_reference_team_stats.csv"
+    file_path = f"{hf.get_generated_dir(year)}/sports_reference_team_stats.csv"
     hf.write_to_csv(df, file_path, overwrite)
 
     all_schools = get_all_schools(df)
     all_schools = pd.DataFrame(all_schools, columns=["school_id"])
-    all_schools.to_pickle(f"{hf.get_generated_dir(yr)}/all_schools.pkl")
+    all_schools.to_pickle(f"{hf.get_generated_dir(year)}/all_schools.pkl")
 
 
 def get_all_schools(df):
@@ -69,7 +67,7 @@ def main():
     args = get_parsed_args()
 
     # Call the function with the command-line arguments
-    create_team_stats(yr=args.year, overwrite=args.overwrite)
+    create_team_stats(year=args.year, overwrite=args.overwrite)
 
 
 if __name__ == "__main__":

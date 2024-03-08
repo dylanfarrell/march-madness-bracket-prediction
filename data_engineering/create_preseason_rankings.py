@@ -14,7 +14,7 @@ def get_preseason_rankings(year: int) -> pd.DataFrame:
     # for some reason 2011 doesn't have an AP preseason poll
     # adding in logic to fall back on coaches poll instead
     if len(rk_tables[0].find_all("tr")) < 25:
-        print(f"AP Top 25 not found for {yr}. Using Coaches Poll instead.")
+        print(f"AP Top 25 not found for {year}. Using Coaches Poll instead.")
         rk_table = rk_tables[1]
     else:
         rk_table = rk_tables[0]
@@ -49,7 +49,6 @@ def get_all_preseason_rankings(
         preseason_rankings = get_preseason_rankings(DATA_START_YR)
         preseason_joined = hf.scraped_df_join_to_team_spellings(preseason_rankings)
         for year in range(DATA_START_YR + 1, end_year + 1):
-            # print(yr)
             new_preseason_rankings = get_preseason_rankings(year)
             new_preseason_joined = hf.scraped_df_join_to_team_spellings(
                 new_preseason_rankings

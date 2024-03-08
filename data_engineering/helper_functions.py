@@ -11,12 +11,12 @@ from constants import DATA_START_YR, KAGGLE_DIR, KAGGLE_DIR_LAST_YR, CURRENT_YR
 ## DATA LOADING
 
 
-def get_kaggle_dir(yr: int) -> str:
-    return f"../data/{yr}/kaggle_data"
+def get_kaggle_dir(year: int) -> str:
+    return f"../data/{year}/kaggle_data"
 
 
-def get_generated_dir(yr: int) -> str:
-    return f"../data/{yr}/generated_data"
+def get_generated_dir(year: int) -> str:
+    return f"../data/{year}/generated_data"
 
 
 def load_kaggle_data(table_name: str) -> pd.DataFrame:
@@ -89,9 +89,8 @@ def generate_data_all_years(
     if backfill:
         preseason_rankings = function(DATA_START_YR)
         preseason_joined = scraped_df_join_to_team_spellings(preseason_rankings)
-        for yr in range(DATA_START_YR + 1, year + 1):
-            # print(yr)
-            new_preseason_rankings = function(yr)
+        for year in range(DATA_START_YR + 1, year + 1):
+            new_preseason_rankings = function(year)
             new_preseason_joined = scraped_df_join_to_team_spellings(
                 new_preseason_rankings
             )
