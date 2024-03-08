@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 import urllib.request
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 from constants import (
     DATA_START_YR,
@@ -123,12 +124,13 @@ def generate_data_all_years(
     start_year: int = DATA_START_YR,
     recompute: bool = False,
     table_name: str | None = None,
-) -> None:
+) -> pd.DataFrame:
     if not recompute and table_name is None:
         raise ValueError("If recompute is False, you must provide a table name.")
     if recompute:
+        print(f"Recomputing data starting from {start_year}.")
         base_df = function(start_year)
-        for year in range(start_year + 1, year + 1):
+        for year in tqdm(range(start_year + 1, year + 1)):
             next_year_df = function(year)
             base_df = pd.concat([base_df, next_year_df], ignore_index=True)
     else:
