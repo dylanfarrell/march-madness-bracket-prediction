@@ -2,10 +2,10 @@ import pandas as pd
 
 import helper_functions as hf
 from argparser_config import get_parsed_args
-from constants import KAGGLE_DIR, SPORTS_REF_STUB
+from constants import SPORTS_REF_STUB, CURRENT_YR
 
 
-def create_coaches_data(year: int) -> pd.DataFrame:
+def create_coaches_data(year: int = CURRENT_YR) -> pd.DataFrame:
     link = f"{SPORTS_REF_STUB}/cbb/seasons/{year}-coaches.html"
     soup = hf.get_soup(link, rate_limit=False)
     coach_table = soup.find("table", {"id": "coaches"})
