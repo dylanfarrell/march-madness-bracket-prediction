@@ -43,8 +43,8 @@ def get_preseason_rankings(year: int) -> pd.DataFrame:
 
 
 def get_all_preseason_rankings(
-    end_year: int = CURRENT_YR, backfill: bool = False, overwrite: bool = False
-) -> None:
+    end_year: int = CURRENT_YR, backfill: bool = False
+) -> pd.DataFrame:
     if backfill:
         preseason_rankings = get_preseason_rankings(DATA_START_YR)
         preseason_joined = hf.scraped_df_join_to_team_spellings(preseason_rankings)
@@ -68,8 +68,7 @@ def get_all_preseason_rankings(
         )
     preseason_joined.drop("TeamNameSpelling", axis=1, inplace=True)
 
-    file_path = f"{hf.get_generated_dir(end_year)}/preseason_rankings.csv"
-    hf.write_to_csv(preseason_joined, file_path, overwrite)
+    return preseason_joined
 
 
 def main():
@@ -77,9 +76,9 @@ def main():
     args = get_parsed_args()
 
     # Call the function with the command-line arguments
-    get_all_preseason_rankings(
-        end_year=args.year, backfill=args.backfill, overwrite=args.overwrite
-    )
+    df = get_all_preseason_rankings(end_year=args.year, backfill=args.backfill)
+    file_path = f"{hf.get_generated_dir(args.year)}/preseason_rankings.csv"
+    hf.write_to_csv(df, file_path, args.overwrite)
 
 
 if __name__ == "__main__":
