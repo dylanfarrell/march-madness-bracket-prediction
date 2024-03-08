@@ -1,3 +1,4 @@
+import time
 import numpy as np
 import pandas as pd
 from datetime import datetime
@@ -47,9 +48,14 @@ def load_and_trim(
     return df[df[season_col] >= start_yr].reset_index(drop=True)
 
 
-def get_soup(link):
+def get_soup(link: str, rate_limit: bool = True) -> BeautifulSoup:
     with urllib.request.urlopen(link) as url:
         page = url.read()
+    # handle rate limiting inside the request function
+    # 20 calls/min is max, so sleep for 3 seconds (plus script will add time to run anyway)
+    # set to True out of precaution, can set to False for one-offs
+    if rate_limit:
+        time.sleep(3)
     return BeautifulSoup(page, "html.parser")
 
 
