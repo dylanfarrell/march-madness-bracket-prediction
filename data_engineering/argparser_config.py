@@ -22,6 +22,7 @@ def get_parsed_args():
         "--backfill",
         action="store_true",
         help="Whether to reprocess data or not. Defaults to False.",
+        default=False,
     )
 
     parser.add_argument(
