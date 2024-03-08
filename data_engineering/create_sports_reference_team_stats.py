@@ -1,11 +1,8 @@
-import numpy as np
 import pandas as pd
-import urllib.request
-from bs4 import BeautifulSoup
-from constants import SPORTS_REF_STUB, CURRENT_YR
 
-from argparser_config import get_parsed_args
 import helper_functions as hf
+from argparser_config import get_parsed_args
+from constants import SPORTS_REF_STUB, CURRENT_YR
 
 
 def create_team_stats(year: int = CURRENT_YR, overwrite: bool = False):
