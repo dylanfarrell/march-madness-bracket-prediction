@@ -29,6 +29,11 @@ def get_generated_dir(year: int) -> str:
     return f"../data/{year}/generated_data"
 
 
+# returns silver data directory stub for a given year
+def get_silver_dir(year: int) -> str:
+    return f"../data/{year}/silver_data"
+
+
 def load_kaggle_data(table_name: str) -> pd.DataFrame:
     """Try loading kaggle data from this year. If it fails, load from last year."""
     try:
