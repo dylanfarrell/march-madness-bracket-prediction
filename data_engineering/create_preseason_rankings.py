@@ -7,11 +7,9 @@ from argparser_config import get_parsed_args
 from constants import CURRENT_YR, DATA_START_YR
 
 
-def get_preseason_rankings(yr: int) -> pd.DataFrame:
-    link = f"https://www.espn.com/mens-college-basketball/rankings/_/week/1/year/{str(yr)}/seasontype/2"
-    with urllib.request.urlopen(link) as url:
-        page = url.read()
-    soup = BeautifulSoup(page, "html.parser")
+def get_preseason_rankings(year: int) -> pd.DataFrame:
+    link = f"https://www.espn.com/mens-college-basketball/rankings/_/week/1/year/{year}/seasontype/2"
+    soup = hf.get_soup(link)
     rk_tables = soup.find_all("table", {"class": "Table"})
     # for some reason 2011 doesn't have an AP preseason poll
     # adding in logic to fall back on coaches poll instead
@@ -30,7 +28,7 @@ def get_preseason_rankings(yr: int) -> pd.DataFrame:
             tds[1].find("div").find("span").find("a").find("img").get("title").lower()
         )
         new_row = pd.DataFrame(columns=cols)
-        new_row.loc[0] = [yr, team, pts]
+        new_row.loc[0] = [year, team, pts]
         preseason_rk_df = pd.concat([preseason_rk_df, new_row], ignore_index=True)
     votes_text = soup.find("p", {"class": "TableDetails__Paragraph"}).text
     team_votes_str_lst = votes_text.split(":")[1].split(",")
@@ -39,7 +37,7 @@ def get_preseason_rankings(yr: int) -> pd.DataFrame:
         pts = int(team_vote_lst[len(team_vote_lst) - 1])
         team = " ".join(team_vote_lst[: len(team_vote_lst) - 1]).lower().strip()
         new_row = pd.DataFrame(columns=cols)
-        new_row.loc[0] = [yr, team, pts]
+        new_row.loc[0] = [year, team, pts]
         preseason_rk_df = pd.concat([preseason_rk_df, new_row], ignore_index=True)
     return preseason_rk_df
 
@@ -50,9 +48,9 @@ def get_all_preseason_rankings(
     if backfill:
         preseason_rankings = get_preseason_rankings(DATA_START_YR)
         preseason_joined = hf.scraped_df_join_to_team_spellings(preseason_rankings)
-        for yr in range(DATA_START_YR + 1, end_year + 1):
+        for year in range(DATA_START_YR + 1, end_year + 1):
             # print(yr)
-            new_preseason_rankings = get_preseason_rankings(yr)
+            new_preseason_rankings = get_preseason_rankings(year)
             new_preseason_joined = hf.scraped_df_join_to_team_spellings(
                 new_preseason_rankings
             )

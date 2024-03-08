@@ -25,7 +25,7 @@ def get_all_returning_info(
     failed_teams = []
 
     team_info = []
-    for team in tqdm(teams, desc="Iterating throughs all teams:"):
+    for team in tqdm(teams, desc="Iterating throughs all teams"):
         try:
             info = get_returning_team_stats(team, year)
             team_info.append([team, *info])
