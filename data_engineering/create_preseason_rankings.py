@@ -1,10 +1,7 @@
-from bs4 import BeautifulSoup
-import urllib.request
 import pandas as pd
-import os
+
 import helper_functions as hf
 from argparser_config import get_parsed_args
-from constants import CURRENT_YR, DATA_START_YR
 
 
 def get_preseason_rankings(year: int) -> pd.DataFrame:
@@ -19,7 +16,7 @@ def get_preseason_rankings(year: int) -> pd.DataFrame:
     else:
         rk_table = rk_tables[0]
     trs = rk_table.find_all("tr")
-    cols = ["Season", "school", "preseason_pts"]
+    cols = ["season", "team", "preseason_pts"]
     preseason_rk_df = pd.DataFrame(columns=cols)
     for tr in trs[1:]:
         tds = tr.find_all("td")
