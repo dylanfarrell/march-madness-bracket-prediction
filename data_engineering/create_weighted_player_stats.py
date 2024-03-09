@@ -78,7 +78,8 @@ def get_minutes_played(soup: BeautifulSoup) -> pd.DataFrame:
     for row in table.find_all("tr")[1:]:  # Skipping the header row
         # Extract player's unique part of the URL and MP
         player_id = get_player_id(row, "td")
-        mp = float(row.find("td", {"data-stat": "mp_per_g"}).text)
+        mp_str = row.find("td", {"data-stat": "mp_per_g"}).text
+        mp = hf.try_cast(mp_str, float, None)
 
         player_ids.append(player_id)
         minutes_played.append(mp)
