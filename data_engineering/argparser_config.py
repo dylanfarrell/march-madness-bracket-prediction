@@ -32,5 +32,12 @@ def get_parsed_args() -> argparse.Namespace:
         default=False,
     )
 
+    parser.add_argument(
+        "--dry_run",
+        action="store_true",
+        help="Flag for testing a dataflow for a one-off year. Defaults to False.",
+        default=False,
+    )
+
     # Parse and return the command-line arguments
     return parser.parse_args()
