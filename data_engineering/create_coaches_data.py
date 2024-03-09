@@ -1,7 +1,7 @@
 import pandas as pd
 
 import helper_functions as hf
-from argparser_config import get_parsed_args
+from argparser_config import get_parser
 from constants import SPORTS_REF_STUB
 
 
@@ -122,7 +122,8 @@ def dedupe_coaches_data(df: pd.DataFrame) -> pd.DataFrame:
 
 def main():
     # parse the command-line arguments
-    args = get_parsed_args()
+    parser = get_parser()
+    args = parser.parse_args()
 
     table_name = "coaches_data"
 

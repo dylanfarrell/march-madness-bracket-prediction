@@ -2,7 +2,7 @@ import argparse
 from constants import CURRENT_YR
 
 
-def get_parsed_args() -> argparse.Namespace:
+def get_parser() -> argparse.ArgumentParser:
     # Create the parser
     parser = argparse.ArgumentParser(
         description="""This script scrapes relevant March Madness data. It supports operations for 
@@ -10,7 +10,6 @@ def get_parsed_args() -> argparse.Namespace:
         existing data."""
     )
 
-    # Add "year" arguments
     parser.add_argument(
         "--year",
         type=int,
@@ -39,5 +38,5 @@ def get_parsed_args() -> argparse.Namespace:
         default=False,
     )
 
-    # Parse and return the command-line arguments
-    return parser.parse_args()
+    # return the command-line arguments unparsed
+    return parser
