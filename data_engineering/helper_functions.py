@@ -127,7 +127,7 @@ def generate_data_all_years(
 ) -> pd.DataFrame:
     if not recompute and table_name is None:
         raise ValueError("If recompute is False, you must provide a table name.")
-    if recompute:
+    elif recompute:
         print(f"Recomputing data starting from {start_year}.")
         base_df = function(start_year)
         for year in tqdm(range(start_year + 1, year + 1), desc="Processing years"):
