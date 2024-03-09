@@ -107,7 +107,12 @@ def try_cast(value: str, cast_type, fallback_value):
 def get_sports_ref_teams(
     year: int = CURRENT_YR, tourney_teams_only: bool = False
 ) -> list[str]:
-    all_teams = pd.read_pickle(f"{get_generated_dir(year)}/all_teams.pkl")
+    if year < 2022:
+        dir_year = 2022
+    else:
+        dir_year = year
+
+    all_teams = pd.read_pickle(f"{get_generated_dir(dir_year)}/all_teams.pkl")
     if not tourney_teams_only:
         return list(all_teams["team"])
     else:
@@ -145,17 +150,18 @@ def generate_data_all_years(
     start_year: int = DATA_START_YR,
     recompute: bool = False,
     table_name: str | None = None,
+    **kwargs,
 ) -> pd.DataFrame:
     if not recompute and table_name is None:
         raise ValueError("If recompute is False, you must provide a table name.")
     elif recompute:
         print(f"Recomputing data starting from {start_year}.")
-        base_df = function(start_year)
+        base_df = function(start_year, **kwargs)
         for year in tqdm(range(start_year + 1, year + 1), desc="Processing years"):
-            next_year_df = function(year)
+            next_year_df = function(year, **kwargs)
             base_df = pd.concat([base_df, next_year_df], ignore_index=True)
     else:
-        new_year_df = function(year)
+        new_year_df = function(year, **kwargs)
         base_df = pd.read_csv(f"{get_generated_dir(year - 1)}/{table_name}.csv")
         base_df = pd.concat([base_df, new_year_df], ignore_index=True)
     return base_df
