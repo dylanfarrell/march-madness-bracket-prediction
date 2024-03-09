@@ -130,7 +130,7 @@ def generate_data_all_years(
     if recompute:
         print(f"Recomputing data starting from {start_year}.")
         base_df = function(start_year)
-        for year in tqdm(range(start_year + 1, year + 1)):
+        for year in tqdm(range(start_year + 1, year + 1), desc="Processing years"):
             next_year_df = function(year)
             base_df = pd.concat([base_df, next_year_df], ignore_index=True)
     else:
