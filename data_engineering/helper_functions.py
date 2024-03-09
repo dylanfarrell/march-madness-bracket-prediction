@@ -104,9 +104,23 @@ def try_cast(value: str, cast_type, fallback_value):
 
 
 # function to return all sports reference team names in list form
-def get_all_sports_ref_teams(year: int = CURRENT_YR) -> list[str]:
-    all_teams = pd.read_pickle(f"{get_generated_dir(year)}/all_schools.pkl")
-    return all_teams["team"].tolist()
+def get_sports_ref_teams(
+    year: int = CURRENT_YR, tourney_teams_only: bool = False
+) -> list[str]:
+    all_teams = pd.read_pickle(f"{get_generated_dir(year)}/all_teams.pkl")
+    if not tourney_teams_only:
+        return list(all_teams["team"])
+    else:
+        team_spellings = load_kaggle_data("MTeamSpellings")
+        # filter team_spellings down to only the sports ref spellings
+        # team_spellings also has kaggle_ids
+        df_joined = team_spellings.merge(
+            all_teams, how="inner", left_on="TeamNameSpelling", right_on="team"
+        )
+        tourney_seeds = load_kaggle_data("MNCAATourneySeeds")
+        tourney_seeds = tourney_seeds[tourney_seeds["Season"] == year]
+        tourney_teams = df_joined.merge(tourney_seeds, how="inner", on="TeamID")
+        return list(tourney_teams["team"])
 
 
 ## DATA WRITING
