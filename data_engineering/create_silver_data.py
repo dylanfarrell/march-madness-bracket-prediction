@@ -1,3 +1,5 @@
+import pandas as pd
+
 import helper_functions as hf
 from argparser_config import get_parsed_args
 

@@ -26,7 +26,7 @@ def convert_height_to_inches(height: str) -> int | None:
     return None
 
 
-def get_height_and_year(soup):
+def get_height_and_year(soup: BeautifulSoup) -> pd.DataFrame:
     # Find the table by ID or class
     table = soup.find("table", {"id": "roster"})
 
@@ -96,7 +96,7 @@ def get_team_info(team: str, year: int = CURRENT_YR) -> Tuple[float, float]:
     df_joined.dropna(inplace=True)
     avg_yr = get_minute_weighted_avg(df_joined, "year")
     avg_height = get_minute_weighted_avg(df_joined, "height")
-    return avg_yr, avg_height
+    return (avg_yr, avg_height)
 
 
 def get_all_team_info(
