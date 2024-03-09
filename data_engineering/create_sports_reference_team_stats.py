@@ -11,39 +11,31 @@ def create_team_stats(year: int) -> pd.DataFrame:
 
     teams_data = []
 
-    # Identify the header row to get column names (excluding the first "Rk" and last "School" headers as they're processed separately)
-    header_row = soup.find("thead").find_all("tr")[
-        1
-    ]  # Assuming the second row in thead is the relevant one
-    column_names = [header.text for header in header_row.find_all("th")][
-        1:
-    ]  # Skip 'Rk', include 'School' and onwards
-
-    # Find the table body
     table_body = soup.find("tbody")
-    if table_body:
-        # Find all rows in the table body
-        rows = table_body.find_all("tr")
-        for row in rows:
+
+    # Find all rows in the table body
+    rows = table_body.find_all("tr")
+    for row in rows:
+        # non-data rows have class = "over_header" or "thead"
+        # data rows have no class attribtue and return None
+        if row.get("class") is None:
             row_data = {}
             # Extracting School Name and ID
             school_tag = row.find("a")
             if school_tag:
-                school_name = school_tag.text
                 school_id = school_tag["href"].split("/")[3]  # Extract school ID
-                row_data["School Name"] = school_name
                 row_data["team"] = school_id
             # Extracting other columns
-            data_points = row.find_all("td")
-            for column_name, data_point in zip(column_names, data_points):
-                # print(column_name)
-                row_data[column_name] = data_point.text.strip()
+            tds = row.find_all("td")
+            for td in tds:
+                column_name = td.get("data-stat")
+                if column_name != "DUMMY":
+                    row_data[column_name] = td.text.strip()
+                # print(row_data)
             teams_data.append(row_data)
 
-    df = pd.DataFrame(teams_data, columns=["team"] + column_names)
+    df = pd.DataFrame(teams_data, columns=list(teams_data[0].keys()))
     df["year"] = year
-    df = df.dropna(subset=["School"]).reset_index(drop=True)
-
     return df
 
 
