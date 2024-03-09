@@ -30,12 +30,12 @@ def create_coaches_data(year: int) -> pd.DataFrame:
                 wins_cur = int(row.find("td", {"data-stat": "wins_cur"}).text)
                 losses_cur = int(row.find("td", {"data-stat": "losses_cur"}).text)
                 games_cur = wins_cur + losses_cur
-                coach_wl_cur = float(row.find("td", {"data-stat": "wl_pct_cur"}).text)
+                coach_wl_cur = row.find("td", {"data-stat": "wl_pct_cur"}).text
 
                 wins_car = int(row.find("td", {"data-stat": "wins_car"}).text)
                 losses_car = int(row.find("td", {"data-stat": "losses_car"}).text)
                 games_car = wins_car + losses_car
-                coach_wl_car = float(row.find("td", {"data-stat": "wl_pct_car"}).text)
+                coach_wl_car = row.find("td", {"data-stat": "wl_pct_car"}).text
 
                 tourneys_car = row.find("td", {"data-stat": "ncaa_car"}).text
                 sw16_car = row.find("td", {"data-stat": "sw16_car"}).text
@@ -92,7 +92,8 @@ def create_coaches_data(year: int) -> pd.DataFrame:
             "champ_car",
         ],
     )
-    return coach_df
+    coach_df_deduped = dedupe_coaches_data(coach_df)
+    return coach_df_deduped
 
 
 # coalesce empty string to 0
@@ -101,9 +102,22 @@ def coalesce_empty_string_and_cast(value: str, cast_type) -> int:
 
 
 def dedupe_coaches_data(df: pd.DataFrame) -> pd.DataFrame:
-    # dedupe the data, keeping team with max years coached since
-    df = df.drop_duplicates(subset=["season", "team", "coach_name"])
-    return df
+    # dedupe the data, keeping the most recent coach for each team
+    # if there is a tie (multiple coaches started coaching in the same year), keep the coach with
+    # the highest win percentage
+    df_sorted = df.sort_values(
+        by=["year", "team", "coach_since", "games_cur"],
+        ascending=[True, True, False, False],
+    )
+
+    df_deduped = df_sorted.drop_duplicates(
+        subset=["year", "team"], keep="first"
+    ).reset_index(drop=True)
+
+    year = df["year"].iloc[0]
+    print(f"{year}: Dropped {len(df) - len(df_deduped)} duplicate team rows.")
+
+    return df_deduped
 
 
 def main():
