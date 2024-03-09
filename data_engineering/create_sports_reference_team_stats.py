@@ -41,27 +41,45 @@ def create_team_stats(year: int) -> pd.DataFrame:
             teams_data.append(row_data)
 
     df = pd.DataFrame(teams_data, columns=["team"] + column_names)
+    df["year"] = year
     df = df.dropna(subset=["School"]).reset_index(drop=True)
-
-    all_schools = get_all_schools(df)
-    all_schools = pd.DataFrame(all_schools, columns=["team"])
-    all_schools.to_pickle(f"{hf.get_generated_dir(year)}/all_schools.pkl")
 
     return df
 
 
-def get_all_schools(df: pd.DataFrame) -> list[str]:
-    return list(df["team"].unique())
+def get_all_teams(df: pd.DataFrame, year: int) -> pd.DataFrame:
+    df_year = df[df["year"] == year]
+    all_teams_lst = list(df_year["team"].unique())
+    return pd.DataFrame(all_teams_lst, columns=["team"])
 
 
 def main():
     # Parse the command-line arguments
     args = get_parsed_args()
 
-    # Call the function with the command-line arguments
-    df = create_team_stats(year=args.year)
-    file_path = f"{hf.get_generated_dir(args.year)}/sports_reference_team_stats.csv"
+    table_name = "sports_ref_team_stats"
+
+    if args.dry_run:
+        print(f"Running in dry-run mode for {args.year}.")
+        df = create_team_stats(args.year)
+        print(df)
+        return
+
+    # call the function with the command-line arguments
+    df = hf.generate_data_all_years(
+        create_team_stats,
+        year=args.year,
+        recompute=args.recompute,
+        table_name=table_name,
+    )
+
+    # write the dataframe to a csv
+    file_path = f"{hf.get_generated_dir(args.year)}/{table_name}.csv"
     hf.write_to_csv(df, file_path, args.overwrite)
+
+    # create a pickled dataframe of all teams for given year
+    all_teams = get_all_teams(df, args.year)
+    all_teams.to_pickle(f"{hf.get_generated_dir(args.year)}/all_teams.pkl")
 
 
 if __name__ == "__main__":
