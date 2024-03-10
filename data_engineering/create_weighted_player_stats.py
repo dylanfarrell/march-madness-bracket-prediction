@@ -122,7 +122,7 @@ def get_all_team_info(
 
     team_info = []
     failed_teams = []
-    for team in tqdm(all_teams, desc="Getting team info"):
+    for team in tqdm(all_teams, desc=f"Getting {year} team info"):
         try:
             info = get_team_info(team, year)
             team_info.append([team, *info])
@@ -130,6 +130,7 @@ def get_all_team_info(
             # Catch any other errors that occur and log the team's name
             failed_teams.append(team)
     df = pd.DataFrame(team_info, columns=["team", "avg_yr", "avg_height", "avg_weight"])
+    df["year"] = year
 
     if output_failures:
         print(f"The following teams failed to get data: {failed_teams}")
