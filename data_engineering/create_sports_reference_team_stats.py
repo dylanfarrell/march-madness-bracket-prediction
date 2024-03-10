@@ -1,7 +1,7 @@
 import pandas as pd
 
 import helper_functions as hf
-from argparser_config import get_parsed_args
+from argparser_config import get_parser
 from constants import SPORTS_REF_STUB
 
 
@@ -49,7 +49,8 @@ def get_all_teams(df: pd.DataFrame, year: int) -> pd.DataFrame:
 
 def main():
     # Parse the command-line arguments
-    args = get_parsed_args()
+    parser = get_parser()
+    args = parser.parse_args()
 
     table_name = "sports_ref_team_stats"
 
