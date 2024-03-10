@@ -3,7 +3,7 @@ from typing import List, Tuple
 import pandas as pd
 from tqdm import tqdm
 
-from argparser_config import get_parsed_args
+from argparser_config import get_parser
 import helper_functions as hf
 from constants import SPORTS_REF_STUB, CURRENT_YR
 
@@ -43,7 +43,8 @@ def get_all_returning_info(
 
 def main():
     # Parse the command-line arguments
-    args = get_parsed_args()
+    parser = get_parser()
+    args = parser.parse_args()
 
     # Call the function with the command-line arguments
     all_teams = hf.get_all_sports_ref_teams(year=args.year)
