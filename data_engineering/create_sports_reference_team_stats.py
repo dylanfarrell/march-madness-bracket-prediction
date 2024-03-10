@@ -21,15 +21,17 @@ def create_team_stats(year: int) -> pd.DataFrame:
         if row.get("class") is None:
             row_data = {}
             # Extracting School Name and ID
-            school_tag = row.find("a")
-            if school_tag:
-                school_id = school_tag["href"].split("/")[3]  # Extract school ID
-                row_data["team"] = school_id
+            team_tag = row.find("a")
+            if team_tag:
+                team = team_tag["href"].split("/")[3]  # Extract school ID
+                row_data["team"] = team
+                row_data["school_name"] = team_tag.text
             # Extracting other columns
             tds = row.find_all("td")
             for td in tds:
                 column_name = td.get("data-stat")
-                if column_name != "DUMMY":
+                # skip columns: DUMMY is a set of empty columns, school_name is already extracted
+                if column_name not in ["DUMMY", "school_name"]:
                     row_data[column_name] = td.text.strip()
                 # print(row_data)
             teams_data.append(row_data)
