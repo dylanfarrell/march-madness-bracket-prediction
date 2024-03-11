@@ -1,0 +1,192 @@
+[
+    {
+        "col": "diff_total_games",
+        "name": "Total Games",
+        "description": ""
+    },
+    {
+        "col": "diff_win_pct",
+        "name": "Win Pct",
+        "description": ""
+    },
+    {
+        "col": "diff_avg_points_for",
+        "name": "Avg Points For",
+        "description": ""
+    },
+    {
+        "col": "diff_avg_points_against",
+        "name": "Avg Points Against",
+        "description": ""
+    },
+    {
+        "col": "diff_avg_game_margin",
+        "name": "Avg Game Margin",
+        "description": ""
+    },
+    {
+        "col": "diff_std_game_margin",
+        "name": "Std Game Margin",
+        "description": ""
+    },
+    {
+        "col": "diff_non_home_wins",
+        "name": "Non Home Wins",
+        "description": ""
+    },
+    {
+        "col": "diff_home_losses",
+        "name": "Home Losses",
+        "description": ""
+    },
+    {
+        "col": "diff_close_wins",
+        "name": "Close Wins",
+        "description": ""
+    },
+    {
+        "col": "diff_close_losses",
+        "name": "Close Losses",
+        "description": ""
+    },
+    {
+        "col": "diff_3FGA_pg",
+        "name": "3Fga Pg",
+        "description": ""
+    },
+    {
+        "col": "diff_3_pct",
+        "name": "3 Pct",
+        "description": ""
+    },
+    {
+        "col": "diff_FTA_pg",
+        "name": "Fta Pg",
+        "description": ""
+    },
+    {
+        "col": "diff_FT_pct",
+        "name": "Ft Pct",
+        "description": ""
+    },
+    {
+        "col": "diff_TOV_pg",
+        "name": "Tov Pg",
+        "description": ""
+    },
+    {
+        "col": "diff_avg_pace",
+        "name": "Avg Pace",
+        "description": ""
+    },
+    {
+        "col": "diff_off_eff",
+        "name": "Off Eff",
+        "description": ""
+    },
+    {
+        "col": "diff_def_eff",
+        "name": "Def Eff",
+        "description": ""
+    },
+    {
+        "col": "diff_pythag_win_pct",
+        "name": "Pythag Win Pct",
+        "description": ""
+    },
+    {
+        "col": "diff_luck",
+        "name": "Luck",
+        "description": ""
+    },
+    {
+        "col": "diff_wins_vs_tourney_teams",
+        "name": "Wins Vs Tourney Teams",
+        "description": ""
+    },
+    {
+        "col": "diff_away_wins_vs_tourney_teams",
+        "name": "Away Wins Vs Tourney Teams",
+        "description": ""
+    },
+    {
+        "col": "diff_losses_vs_tourney_teams",
+        "name": "Losses Vs Tourney Teams",
+        "description": ""
+    },
+    {
+        "col": "diff_losses_vs_non_tourney_teams",
+        "name": "Losses Vs Non Tourney Teams",
+        "description": ""
+    },
+    {
+        "col": "diff_games_vs_tourney_teams",
+        "name": "Games Vs Tourney Teams",
+        "description": ""
+    },
+    {
+        "col": "diff_final_net",
+        "name": "Final Net",
+        "description": ""
+    },
+    {
+        "col": "diff_net_improvement",
+        "name": "Net Improvement",
+        "description": ""
+    },
+    {
+        "col": "diff_final_pom",
+        "name": "Final Pom",
+        "description": ""
+    },
+    {
+        "col": "diff_pom_improvement",
+        "name": "Pom Improvement",
+        "description": ""
+    },
+    {
+        "col": "diff_pi_i",
+        "name": "Pi I",
+        "description": ""
+    },
+    {
+        "col": "diff_coach_WL_car",
+        "name": "Coach Wl Car",
+        "description": ""
+    },
+    {
+        "col": "diff_tourneys_car",
+        "name": "Tourneys Car",
+        "description": ""
+    },
+    {
+        "col": "diff_sw16_car",
+        "name": "Sw16 Car",
+        "description": ""
+    },
+    {
+        "col": "diff_ff_car",
+        "name": "Ff Car",
+        "description": ""
+    },
+    {
+        "col": "diff_champ_car",
+        "name": "Champ Car",
+        "description": ""
+    },
+    {
+        "col": "diff_returning_min_pct",
+        "name": "Returning Min Pct",
+        "description": ""
+    },
+    {
+        "col": "diff_returning_score_pct",
+        "name": "Returning Score Pct",
+        "description": ""
+    },
+    {
+        "col": "diff_preseason_pts",
+        "name": "Preseason Pts",
+        "description": ""
+    }
+]
