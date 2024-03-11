@@ -1,5 +1,5 @@
 import re
-from typing import List, Tuple
+from typing import Any, List, Tuple
 import pandas as pd
 from tqdm import tqdm
 
@@ -19,13 +19,19 @@ def get_returning_team_stats(team: str, year: int) -> Tuple[float, float]:
 
 
 def get_all_returning_info(
-    teams: list[str], year: int = CURRENT_YR, output_failures: bool = True
+    year: int = CURRENT_YR,
+    output_failures: bool = True,
+    **kwargs: Any,
 ) -> pd.DataFrame:
-    # list to log teams that failed to get data
-    failed_teams = []
+    tourney_teams_only = kwargs.get("tourney_teams_only", True)
 
+    # if tourney_teams_only is True, then we only want to get the teams that made the tournament
+    all_teams = hf.get_sports_ref_teams(year, tourney_teams_only)
+
+    # list to log teams that failed to get data
     team_info = []
-    for team in tqdm(teams, desc="Iterating throughs all teams"):
+    failed_teams = []
+    for team in tqdm(all_teams, desc=f"Getting {year} data"):
         try:
             info = get_returning_team_stats(team, year)
             team_info.append([team, *info])
@@ -34,6 +40,7 @@ def get_all_returning_info(
             failed_teams.append(team)
     cols = ["team", "returning_min_pct", "returning_score_pct"]
     df = pd.DataFrame(team_info, columns=cols)
+    df["year"] = year
 
     if output_failures:
         print(f"The following teams failed to get data: {failed_teams}")
@@ -44,12 +51,35 @@ def get_all_returning_info(
 def main():
     # Parse the command-line arguments
     parser = get_parser()
+    parser.add_argument(
+        "--tourney_teams_only",
+        action="store_true",
+        help="Whether to loop through all teams or only teams that made the tournament. Defaults to False.",
+        default=False,
+    )
     args = parser.parse_args()
 
-    # Call the function with the command-line arguments
-    all_teams = hf.get_all_sports_ref_teams(year=args.year)
-    df = get_all_returning_info(all_teams, year=args.year, output_failures=True)
-    file_path = f"{hf.get_generated_dir(args.year)}/returning_player_team_stats.csv"
+    table_name = f"returning_player_team_stats{'_tourney' if args.tourney_teams_only else '_all'}"
+
+    if args.dry_run:
+        print(
+            f"""Running in dry-run mode for {args.year} for 
+            {'tourney teams only' if args.tourney_teams_only else 'all teams'}."""
+        )
+        get_all_returning_info(args.year, args.tourney_teams_only)
+        return
+
+    # call the function with the command-line arguments
+    df = hf.generate_data_all_years(
+        get_all_returning_info,
+        year=args.year,
+        recompute=args.recompute,
+        tourney_teams_only=args.tourney_teams_only,
+        table_name=table_name,
+    )
+
+    # write the dataframe to a csv
+    file_path = f"{hf.get_generated_dir(args.year)}/{table_name}.csv"
     hf.write_to_csv(df, file_path, args.overwrite)
 
 
