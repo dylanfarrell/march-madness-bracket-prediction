@@ -122,7 +122,7 @@ def get_all_team_info(
 
     team_info = []
     failed_teams = []
-    for team in tqdm(all_teams, desc=f"Getting {year} team info"):
+    for team in tqdm(all_teams, desc=f"Getting {year} data"):
         try:
             info = get_team_info(team, year)
             team_info.append([team, *info])
