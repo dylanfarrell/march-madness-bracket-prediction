@@ -1,7 +1,7 @@
 import pandas as pd
 
 import helper_functions as hf
-from argparser_config import get_parsed_args
+from argparser_config import get_parser
 
 
 def add_kaggle_id(df, team_col: str = "team") -> pd.DataFrame:
@@ -28,13 +28,14 @@ def add_kaggle_id(df, team_col: str = "team") -> pd.DataFrame:
 
 
 def main():
-    args = get_parsed_args()
+    parser = get_parser()
+    args = parser.parse_args()
 
     datasets = [
         "coaches_data",
-        # "preseason_rankings",
+        "preseason_rankings",
         "returning_player_team_stats",
-        "sports_reference_team_stats",
+        "sports_ref_team_stats",
         "team_weighted_info",
     ]
 
