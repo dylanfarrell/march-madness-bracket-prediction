@@ -1,7 +1,7 @@
 import pandas as pd
 
 import helper_functions as hf
-from argparser_config import get_parsed_args
+from argparser_config import get_parser
 
 
 def get_preseason_rankings(year: int) -> pd.DataFrame:
@@ -16,7 +16,7 @@ def get_preseason_rankings(year: int) -> pd.DataFrame:
     else:
         rk_table = rk_tables[0]
     trs = rk_table.find_all("tr")
-    cols = ["season", "team", "preseason_pts"]
+    cols = ["year", "team", "preseason_pts"]
     preseason_rk_df = pd.DataFrame(columns=cols)
     for tr in trs[1:]:
         tds = tr.find_all("td")
@@ -41,7 +41,8 @@ def get_preseason_rankings(year: int) -> pd.DataFrame:
 
 def main():
     # parse the command-line arguments
-    args = get_parsed_args()
+    parser = get_parser()
+    args = parser.parse_args()
 
     table_name = "preseason_rankings"
 
