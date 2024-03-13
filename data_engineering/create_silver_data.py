@@ -34,15 +34,19 @@ def main():
     datasets = [
         "coaches_data",
         "preseason_rankings",
-        "returning_player_team_stats",
+        "returning_player_team_stats_tourney",
         "sports_ref_team_stats",
-        "team_weighted_info",
+        "team_weighted_info_tourney",
+        "stationary_probabilities",
     ]
 
     for dataset in datasets:
-        print(f"Adding kaggle ids to: {dataset}")
         df = hf.load_generated_data(dataset)
-        df_silver = add_kaggle_id(df)
+        if dataset != "stationary_probabilities":
+            print(f"Adding kaggle ids to: {dataset}")
+            df_silver = add_kaggle_id(df)
+        else:
+            df_silver = df
         file_path = f"{hf.get_silver_dir(args.year)}/{dataset}_silver.csv"
         hf.write_to_csv(df_silver, file_path, args.overwrite)
 
