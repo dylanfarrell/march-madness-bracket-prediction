@@ -35,6 +35,11 @@ def get_silver_dir(year: int) -> str:
     return f"../data/{year}/silver_data"
 
 
+# returns gold data directory stub for a given year
+def get_gold_dir(year: int) -> str:
+    return f"../data/{year}/gold_data"
+
+
 def load_kaggle_data(table_name: str) -> pd.DataFrame:
     """Try loading kaggle data from this year. If it fails, load from last year."""
     try:
@@ -54,6 +59,17 @@ def load_kaggle_data(table_name: str) -> pd.DataFrame:
             print(
                 f"File for {table_name} not found in {CURRENT_YR} or {CURRENT_YR - 1}. Please check table name spelling."
             )
+
+
+def load_silver_data(table_name: str, year: int = CURRENT_YR) -> pd.DataFrame:
+    """Try loading silver data from this year."""
+    file_path = f"{get_silver_dir(year)}/{table_name}.csv"
+    try:
+        # Try loading the file from this year's data
+        df = pd.read_csv(file_path)
+        return df
+    except FileNotFoundError:
+        print(f"File {file_path} not found.")
 
 
 def load_and_trim(
