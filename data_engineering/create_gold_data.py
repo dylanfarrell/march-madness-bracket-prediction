@@ -25,9 +25,9 @@ def main():
     parser = get_parser()
     args = parser.parse_args()
 
-    gold_data = hf.load_and_trim("MNCAATourneySeeds", DATA_START_YR)[
-        ["TeamID", "Season"]
-    ].rename({"Season": "year"}, axis=1)
+    gold_data = hf.load_and_trim("MNCAATourneySeeds")[["TeamID", "Season"]].rename(
+        {"Season": "year"}, axis=1
+    )
 
     gold_data = iteratively_join_data(gold_data, GENERATED_DATASETS, args.year)
 
