@@ -59,20 +59,20 @@ def load_and_trim(
 
 # load the MTeamSpellings table -- often the backbone for script iteration
 def load_team_spellings(year: int = CURRENT_YR) -> pd.DataFrame:
-    file_name = "MTeamSpellings"
-    encoding = "unicode_escape"
+    table_name = "MTeamSpellings"
+    encoding = "Windows-1252"
     try:
-        return load_kaggle_data(file_name, year, encoding)
+        return load_kaggle_data(table_name, year, encoding)
     except FileNotFoundError:
         try:
-            df = load_kaggle_data(file_name, year - 1, encoding)
+            df = load_kaggle_data(table_name, year - 1, encoding)
             print(
-                f"File for {file_name} from {year} not found. Loaded {year - 1} data instead."
+                f"File for {table_name} from {year} not found. Loaded {year - 1} data instead."
             )
             return df
         except FileNotFoundError:
             print(
-                f"File for {file_name} not found in {year} or {year - 1}. Please check table name spelling."
+                f"File for {table_name} not found in {year} or {year - 1}. Please check table name spelling."
             )
 
 
