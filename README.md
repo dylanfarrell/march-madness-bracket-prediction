@@ -6,12 +6,12 @@
 - Run `./create_data_directories.sh [year]` first to get necessary directories in place.
 - All data generated will write to the `data/[year]/` directory above.
 - To only generate data for this year and append it to last year's data, run the commands without the `--recompute` flag. This approach will be much faster and have less room for error. To recompute/re-scrape data for all years including this one, use the `--recompute` flag.
-  - For example, if you wanted to generate data for 2024 with all years recomputed/re-scraped: `python [file].py [--year 2024] --backfill`.
-  - If you wanted to generate data for 2021 by only compute the newest year of data: `python [file].py --year 2021`.
+  - For example, if you wanted to generate data for 2024 with all years recomputed/re-scraped: `python [file].py --year=2024 --recompute`.
+  - If you wanted to generate data for 2023 by only computing the newest year of data: `python [file].py --year=2023`.
 
 **Generating new raw data**
 - Note: For the following, if a data directory isn't already in place for the past year, you'll have to add the `--recompute` flag to scrape all past years of data as well as this year.
-- The first script to run is `python create_sports_reference_team_stats.py [--year]`
+- The first script to run is `python create_sports_reference_team_data.py [--year]`
   - This will create a pickled dataset of all of the D1 NCAA basketball teams from sports reference. A lot of other models rely on this list to loop through, so it should be first. If this dataset doesn't exist, functions requiring a list of teams will fall back onto last year's team, which could cause problems if the set of D1 teams has changed.
   - This will also scrape some basic team statistics for each team.
 - To generate preseason rankings data, run `python create_preseason_rankings_data.py --year=[year]`.
