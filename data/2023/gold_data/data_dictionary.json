@@ -70,23 +70,23 @@
     },
     "tourneys_car": {
         "display_name": "Coach's Career Tournaments",
-        "description": "The number of tournaments the coach has coached in their career."
+        "description": "The number of NCAA tournaments the coach has made in their career."
     },
     "sw16_car": {
         "display_name": "Coach's Career Sweet 16s",
-        "description": "The number of Sweet 16s the coach has coached in their career."
+        "description": "The number of Sweet 16s the coach has made in their career."
     },
     "ff_car": {
         "display_name": "Coach's Career Final Fours",
-        "description": "The number of Final Fours the coach has coached in their career."
+        "description": "The number of Final Fours the coach has made in their career."
     },
     "champ_car": {
         "display_name": "Coach's Career Championships",
-        "description": "The number of championships the coach has coached in their career."
+        "description": "The number of championships the coach has won in their career."
     },
     "preseason_pts": {
-        "display_name": "Preseason Points",
-        "description": "The number of points the team received in the preseason poll."
+        "display_name": "Preseason Ranking Points (AP Poll)",
+        "description": "The number of points the team received in the AP preseason poll."
     },
     "returning_min_pct": {
         "display_name": "Returning Minutes %",
@@ -98,11 +98,12 @@
     },
     "school_name": {
         "display_name": "School Name",
-        "description": "The name of the school."
+        "description": "The name of the school.",
+        "exclude_from_model": true
     },
     "g": {
         "display_name": "Games",
-        "description": "The number of games played."
+        "description": "The number of games the team played."
     },
     "wins": {
         "display_name": "Wins",
@@ -141,12 +142,12 @@
         "description": "The number of home losses."
     },
     "wins_visitor": {
-        "display_name": "Visitor Wins",
-        "description": "The number of visitor wins."
+        "display_name": "Away Wins",
+        "description": "The number of away wins."
     },
     "losses_visitor": {
-        "display_name": "Visitor Losses",
-        "description": "The number of visitor losses."
+        "display_name": "Away Losses",
+        "description": "The number of away losses."
     },
     "pts": {
         "display_name": "Points",
@@ -154,11 +155,12 @@
     },
     "opp_pts": {
         "display_name": "Opponent Points",
-        "description": "The number of points scored by the opponent."
+        "description": "The number of points given up."
     },
     "mp": {
         "display_name": "Minutes Played",
-        "description": "The number of minutes played."
+        "description": "The number of minutes played.",
+        "exclude_from_model": true
     },
     "fg": {
         "display_name": "Field Goals",
@@ -230,20 +232,20 @@
         "exclude_from_model": true
     },
     "avg_yr": {
-        "display_name": "Average Year",
-        "description": "The average year of the players on the team."
+        "display_name": "Average Weighted Class Year",
+        "description": "The average year of the players on the team, weighted by playing time."
     },
     "avg_height": {
-        "display_name": "Average Height",
-        "description": "The average height of the players on the team."
+        "display_name": "Average Weighted Height",
+        "description": "The average height of the players on the team, weighted by playing time."
     },
     "avg_weight": {
-        "display_name": "Average Weight",
-        "description": "The average weight of the players on the team."
+        "display_name": "Average Weighted Weight",
+        "description": "The average weight of the players on the team, weighted by playing time."
     },
     "pi_i": {
-        "display_name": "Player Impact Index",
-        "description": "The player impact index."
+        "display_name": "Special Sauce",
+        "description": "Internal ranking system created internally by us -- highly predictive :)"
     },
     "total_games": {
         "display_name": "Total Games",
@@ -251,15 +253,18 @@
     },
     "num_wins": {
         "display_name": "Number of Wins",
-        "description": "The number of wins."
+        "description": "The number of wins.",
+        "exclude_from_model": true
     },
     "num_losses": {
         "display_name": "Number of Losses",
-        "description": "The number of losses."
+        "description": "The number of losses.",
+        "exclude_from_model": true
     },
     "win_pct": {
         "display_name": "Win Percentage",
-        "description": "The win percentage."
+        "description": "The win percentage.",
+        "exclude_from_model": true
     },
     "avg_points_for": {
         "display_name": "Average Points For",
@@ -274,8 +279,8 @@
         "description": "The average game margin."
     },
     "std_game_margin": {
-        "display_name": "Standard Game Margin",
-        "description": "The standard game margin."
+        "display_name": "Standard Deviation of Game Margin",
+        "description": "The standard game margin. The lower the number, the more consistent the team is."
     },
     "non_home_wins": {
         "display_name": "Non-Home Wins",
@@ -287,11 +292,11 @@
     },
     "close_wins": {
         "display_name": "Close Wins",
-        "description": "The number of close wins."
+        "description": "The number of games won by 3 or less or in overtime."
     },
     "close_losses": {
         "display_name": "Close Losses",
-        "description": "The number of close losses."
+        "description": "The number of games lost by 3 or less or in overtime."
     },
     "3FGA_pg": {
         "display_name": "3-Point Field Goals Attempted per Game",
@@ -323,23 +328,23 @@
     },
     "avg_pace": {
         "display_name": "Average Pace",
-        "description": "The average pace."
+        "description": "The average pace. Roughly how many possessions per game a team has."
     },
     "off_eff": {
         "display_name": "Offensive Efficiency",
-        "description": "The offensive efficiency."
+        "description": "The offensive efficiency. Roughly how many points scored per possession."
     },
     "def_eff": {
         "display_name": "Defensive Efficiency",
-        "description": "The defensive efficiency."
+        "description": "The defensive efficiency. Roughly how many points given up per possession."
     },
     "pythag_win_pct": {
         "display_name": "Pythagorean Win Percentage",
-        "description": "The pythagorean win percentage."
+        "description": "The pythagorean win percentage. Approximates how many wins a team 'should' have based on points scored and given up."
     },
     "luck": {
         "display_name": "Luck",
-        "description": "The luck."
+        "description": "Luck. The difference between actual wins and expected 'Pythagorean' wins."
     },
     "Seed": {
         "display_name": "Seed",
@@ -347,15 +352,15 @@
     },
     "wins_vs_tourney_teams": {
         "display_name": "Wins vs. Tournament Teams",
-        "description": "The number of wins against tournament teams."
+        "description": "The number of wins against other teams that made the tournament."
     },
     "away_wins_vs_tourney_teams": {
         "display_name": "Away Wins vs. Tournament Teams",
-        "description": "The number of away wins against tournament teams."
+        "description": "The number of away wins against other teams that made the tournament."
     },
     "losses_vs_tourney_teams": {
         "display_name": "Losses vs. Tournament Teams",
-        "description": "The number of losses against tournament teams."
+        "description": "The number of losses against other teams that made the tournament."
     },
     "losses_vs_non_tourney_teams": {
         "display_name": "Losses vs. Non-Tournament Teams",
@@ -363,7 +368,7 @@
     },
     "games_vs_tourney_teams": {
         "display_name": "Games vs. Tournament Teams",
-        "description": "The number of games against tournament teams."
+        "description": "The number of games against other teams that made the tournament."
     },
     "final_net": {
         "display_name": "Final NET",
@@ -371,22 +376,22 @@
     },
     "prev_net": {
         "display_name": "Previous NET",
-        "description": "The previous NET ranking."
+        "description": "The previous NET ranking before the final one."
     },
     "net_improvement": {
         "display_name": "NET Improvement",
-        "description": "The NET improvement."
+        "description": "The NET improvement from the previous ranking to the final one."
     },
     "final_pom": {
         "display_name": "Final POM",
-        "description": "The final POM ranking."
+        "description": "The final Kenpom ranking."
     },
     "prev_pom": {
         "display_name": "Previous POM",
-        "description": "The previous POM ranking."
+        "description": "The previous Kenpom ranking."
     },
     "pom_improvement": {
         "display_name": "POM Improvement",
-        "description": "The POM improvement."
+        "description": "The POM improvement from the previous ranking to the final one."
     }
   }
