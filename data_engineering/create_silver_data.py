@@ -35,15 +35,18 @@ def main():
     datasets_already_silver = ["stationary_probabilities"]
 
     for dataset in GENERATED_DATASETS:
-        df = hf.load_generated_data(dataset, args.year)
-        if dataset not in datasets_already_silver:
-            print(f"Adding kaggle ids to: {dataset}")
-            df_silver = add_kaggle_id(df, args.year)
-        else:
-            print(f"Dataset {dataset} already has kaggle ids.")
-            df_silver = df
-        file_path = f"{hf.get_silver_dir(args.year)}/{dataset}_silver.csv"
-        hf.write_to_csv(df_silver, file_path, args.overwrite)
+        try:
+            df = hf.load_generated_data(dataset, args.year)
+            if dataset not in datasets_already_silver:
+                print(f"Adding kaggle ids to: {dataset}")
+                df_silver = add_kaggle_id(df, args.year)
+            else:
+                print(f"Dataset {dataset} already has kaggle ids.")
+                df_silver = df
+            file_path = f"{hf.get_silver_dir(args.year)}/{dataset}_silver.csv"
+            hf.write_to_csv(df_silver, file_path, args.overwrite)
+        except FileNotFoundError:
+            print(f"File for {dataset} not found in {args.year}.")
 
 
 if __name__ == "__main__":
