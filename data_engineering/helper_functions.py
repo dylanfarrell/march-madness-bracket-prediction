@@ -8,14 +8,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-from constants import (
-    DATA_START_YR,
-    KAGGLE_DIR,
-    KAGGLE_DIR_LAST_YR,
-    CURRENT_YR,
-    GENERATED_DIR,
-    GENERATED_DIR_LAST_YR,
-)
+from constants import DATA_START_YR, CURRENT_YR
 
 ## DATA LOADING
 
@@ -40,11 +33,14 @@ def get_gold_dir(year: int) -> str:
     return f"../data/{year}/gold_data"
 
 
-def load_kaggle_data(table_name: str, year: int = CURRENT_YR) -> pd.DataFrame:
+# load a kaggle dataset, fall back on previous year
+def load_kaggle_data(
+    table_name: str, year: int = CURRENT_YR, encoding: str | None = None
+) -> pd.DataFrame:
     """Try loading kaggle data from this year. If it fails, load from last year."""
     try:
         # Try loading the file from the specified year's data
-        df = pd.read_csv(f"{get_kaggle_dir(year)}/{table_name}.csv")
+        df = pd.read_csv(f"{get_kaggle_dir(year)}/{table_name}.csv", encoding=encoding)
         return df
     except FileNotFoundError:
         print(
@@ -52,13 +48,24 @@ def load_kaggle_data(table_name: str, year: int = CURRENT_YR) -> pd.DataFrame:
         )
 
 
+# load a kaggle dataset and trim it to a given year
+def load_and_trim(
+    table_name: str, start_yr: int = DATA_START_YR, season_col: str = "Season"
+) -> pd.DataFrame:
+    df = load_kaggle_data(table_name)
+    print(f"Trimming data to {start_yr}.")
+    return df[df[season_col] >= start_yr].reset_index(drop=True)
+
+
+# load the MTeamSpellings table -- often the backbone for script iteration
 def load_team_spellings(year: int = CURRENT_YR) -> pd.DataFrame:
     file_name = "MTeamSpellings"
+    encoding = "unicode_escape"
     try:
-        df = load_kaggle_data(file_name, year)
+        return load_kaggle_data(file_name, year, encoding)
     except FileNotFoundError:
         try:
-            df = load_kaggle_data(file_name, year - 1)
+            df = load_kaggle_data(file_name, year - 1, encoding)
             print(
                 f"File for {file_name} from {year} not found. Loaded {year - 1} data instead."
             )
@@ -69,37 +76,29 @@ def load_team_spellings(year: int = CURRENT_YR) -> pd.DataFrame:
             )
 
 
-def load_silver_data(table_name: str, year: int = CURRENT_YR) -> pd.DataFrame:
-    """Try loading silver data from this year."""
-    file_path = f"{get_silver_dir(year)}/{table_name}.csv"
-    try:
-        # Try loading the file from this year's data
-        df = pd.read_csv(file_path)
-        return df
-    except FileNotFoundError:
-        print(f"File {file_path} not found.")
-
-
-def load_and_trim(
-    table_name: str, start_yr: int, season_col: str = "Season"
-) -> pd.DataFrame:
-    df = load_kaggle_data(table_name)
-    print(f"Trimming data to {start_yr}.")
-    return df[df[season_col] >= start_yr].reset_index(drop=True)
-
-
+# load a generated dataset, fall back on previous year
 def load_generated_data(table_name: str, year: int = CURRENT_YR) -> pd.DataFrame:
     """Try loading generated data from this year. If it fails, load from last year."""
     try:
         # Try loading the file from this year's data
-        df = pd.read_csv(f"{get_generated_dir(year)}/{table_name}.csv")
-        return df
+        return pd.read_csv(f"{get_generated_dir(year)}/{table_name}.csv")
     except FileNotFoundError:
         print(
             f"File for {table_name} not found in {year}. Please check table name spelling."
         )
 
 
+# load silver data
+def load_silver_data(table_name: str, year: int = CURRENT_YR) -> pd.DataFrame:
+    """Try loading silver data from this year."""
+    file_path = f"{get_silver_dir(year)}/{table_name}.csv"
+    try:
+        return pd.read_csv(file_path)
+    except FileNotFoundError:
+        print(f"File {file_path} not found.")
+
+
+# get a BeautifulSoup object from a url
 def get_soup(link: str, rate_limit: bool = True) -> BeautifulSoup:
     with urllib.request.urlopen(link) as url:
         page = url.read()
@@ -153,7 +152,7 @@ def write_to_csv(df: pd.DataFrame, file_path: str, overwrite: bool) -> None:
         print(f"Success: data written to {file_path}.")
     else:
         print(
-            "This file already exists. The overwrite flag is set to False so the existing file was not overwritten."
+            f"{file_path} already exists. The overwrite flag is set to False so the existing file was not overwritten."
         )
 
 
@@ -183,14 +182,14 @@ def generate_data_all_years(
 
 
 # retrieve team name by id
-def team_lookup(id: int) -> str:
+def team_lookup(id: int, year: int = CURRENT_YR) -> str:
     """
     Retrieves a team name given its id
 
     :param id_num: kaggle team id (int)
     :return: team name (str)
     """
-    teams = pd.read_csv(f"{KAGGLE_DIR}/MTeams.csv")
+    teams = pd.read_csv(f"{get_kaggle_dir(year)}/MTeams.csv")
     return teams[teams["TeamID"] == id]["TeamName"].values[0]
 
 
@@ -203,9 +202,7 @@ def update_team_spellings_file(unmatched_spellings_lst: list[tuple[str, int]]) -
     :param unmatched_spellings_lst: list of (team spelling, team id) tuples
     :return: nothing, just updates the MTeamSpellings csv
     """
-    team_spellings = pd.read_csv(
-        f"{KAGGLE_DIR}/MTeamSpellings.csv", encoding="unicode_escape"
-    )
+    team_spellings = load_team_spellings()
     unmatched_spellings = pd.DataFrame(
         {
             "TeamNameSpelling": [spelling for spelling, _ in unmatched_spellings_lst],
@@ -214,7 +211,7 @@ def update_team_spellings_file(unmatched_spellings_lst: list[tuple[str, int]]) -
     )
     full_spellings = pd.concat([team_spellings, unmatched_spellings], ignore_index=True)
     full_spellings.drop_duplicates(inplace=True)
-    full_spellings.to_csv(f"{KAGGLE_DIR}/MTeamSpellings.csv", index=False)
+    full_spellings.to_csv(f"{get_kaggle_dir()}/MTeamSpellings.csv", index=False)
 
 
 # outputs the team spellings from the scraped table that don't appear in the kaggle table
