@@ -2,10 +2,11 @@ import pandas as pd
 
 import helper_functions as hf
 from argparser_config import get_parser
+from constants import GENERATED_DATASETS
 
 
-def add_kaggle_id(df, team_col: str = "team") -> pd.DataFrame:
-    team_spellings = hf.load_kaggle_data("MTeamSpellings")
+def add_kaggle_id(df: pd.DataFrame, year: int, team_col: str = "team") -> pd.DataFrame:
+    team_spellings = hf.load_team_spellings(year)
     merged_df = df.merge(
         team_spellings, how="inner", left_on=team_col, right_on="TeamNameSpelling"
     )
@@ -31,21 +32,15 @@ def main():
     parser = get_parser()
     args = parser.parse_args()
 
-    datasets = [
-        "coaches_data",
-        "preseason_rankings",
-        "returning_player_team_stats_tourney",
-        "sports_ref_team_stats",
-        "team_weighted_info_tourney",
-        "stationary_probabilities",
-    ]
+    datasets_already_silver = ["stationary_probabilities"]
 
-    for dataset in datasets:
-        df = hf.load_generated_data(dataset)
-        if dataset != "stationary_probabilities":
+    for dataset in GENERATED_DATASETS:
+        df = hf.load_generated_data(dataset, args.year)
+        if dataset not in datasets_already_silver:
             print(f"Adding kaggle ids to: {dataset}")
-            df_silver = add_kaggle_id(df)
+            df_silver = add_kaggle_id(df, args.year)
         else:
+            print(f"Dataset {dataset} already has kaggle ids.")
             df_silver = df
         file_path = f"{hf.get_silver_dir(args.year)}/{dataset}_silver.csv"
         hf.write_to_csv(df_silver, file_path, args.overwrite)
