@@ -8,6 +8,7 @@
 - To only generate data for this year and append it to last year's data, run the commands without the `--recompute` flag. This approach will be much faster and have less room for error. To recompute/re-scrape data for all years including this one, use the `--recompute` flag.
   - For example, if you wanted to generate data for 2024 with all years recomputed/re-scraped: `python [file].py --year=2024 --recompute`.
   - If you wanted to generate data for 2023 by only computing the newest year of data: `python [file].py --year=2023`.
+  - Upon receiving the kaggle data, run `python team_spellings_helpers.py --year=[year] --overwrite` to update the `MTeamSpellings` table with old manually added team spellings.
 
 **Generating new raw data**
 - Note: For the following, if a data directory isn't already in place for the past year, you'll have to add the `--recompute` flag to scrape all past years of data as well as this year.
