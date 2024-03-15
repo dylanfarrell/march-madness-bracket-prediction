@@ -40,24 +40,32 @@ def get_gold_dir(year: int) -> str:
     return f"../data/{year}/gold_data"
 
 
-def load_kaggle_data(table_name: str) -> pd.DataFrame:
+def load_kaggle_data(table_name: str, year: int = CURRENT_YR) -> pd.DataFrame:
     """Try loading kaggle data from this year. If it fails, load from last year."""
     try:
-        # Try loading the file from this year's data
-        df = pd.read_csv(f"{KAGGLE_DIR}/{table_name}.csv")
+        # Try loading the file from the specified year's data
+        df = pd.read_csv(f"{get_kaggle_dir(year)}/{table_name}.csv")
         return df
     except FileNotFoundError:
-        # If the file is not found, try loading from last year's data
+        print(
+            f"File for {table_name} not found in {year}. Please check table name spelling."
+        )
+
+
+def load_team_spellings(year: int = CURRENT_YR) -> pd.DataFrame:
+    file_name = "MTeamSpellings"
+    try:
+        df = load_kaggle_data(file_name, year)
+    except FileNotFoundError:
         try:
-            df = pd.read_csv(f"{KAGGLE_DIR_LAST_YR}/{table_name}.csv")
+            df = load_kaggle_data(file_name, year - 1)
             print(
-                f"File for {table_name} from {CURRENT_YR} not found. Loaded {CURRENT_YR - 1} data instead."
+                f"File for {file_name} from {year} not found. Loaded {year - 1} data instead."
             )
             return df
-        # If neither is found, let user know
         except FileNotFoundError:
             print(
-                f"File for {table_name} not found in {CURRENT_YR} or {CURRENT_YR - 1}. Please check table name spelling."
+                f"File for {file_name} not found in {year} or {year - 1}. Please check table name spelling."
             )
 
 
@@ -80,25 +88,16 @@ def load_and_trim(
     return df[df[season_col] >= start_yr].reset_index(drop=True)
 
 
-def load_generated_data(table_name: str) -> pd.DataFrame:
+def load_generated_data(table_name: str, year: int = CURRENT_YR) -> pd.DataFrame:
     """Try loading generated data from this year. If it fails, load from last year."""
     try:
         # Try loading the file from this year's data
-        df = pd.read_csv(f"{GENERATED_DIR}/{table_name}.csv")
+        df = pd.read_csv(f"{get_generated_dir(year)}/{table_name}.csv")
         return df
     except FileNotFoundError:
-        # If the file is not found, try loading from last year's data
-        try:
-            df = pd.read_csv(f"{GENERATED_DIR_LAST_YR}/{table_name}.csv")
-            print(
-                f"File for {table_name} from {CURRENT_YR} not found. Loaded {CURRENT_YR - 1} data instead."
-            )
-            return df
-        # If neither is found, let user know
-        except FileNotFoundError:
-            print(
-                f"File for {table_name} not found in {CURRENT_YR} or {CURRENT_YR - 1}. Please check table name spelling."
-            )
+        print(
+            f"File for {table_name} not found in {year}. Please check table name spelling."
+        )
 
 
 def get_soup(link: str, rate_limit: bool = True) -> BeautifulSoup:
@@ -132,7 +131,7 @@ def get_sports_ref_teams(
     if not tourney_teams_only:
         return list(all_teams["team"])
     else:
-        team_spellings = load_kaggle_data("MTeamSpellings")
+        team_spellings = load_team_spellings(year)
         # filter team_spellings down to only the sports ref spellings
         # team_spellings also has kaggle_ids
         df_joined = team_spellings.merge(
