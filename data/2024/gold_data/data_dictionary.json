@@ -269,7 +269,7 @@
     },
     "pi_i": {
         "display_name": "Special Sauce",
-        "description": "Internal ranking system created internally by us -- highly predictive :)"
+        "description": "A ranking derived from modeling NCAA basketball teams as a Markov chain. We implemented the method described here: https://www2.isye.gatech.edu/~jsokol/ncaa.pdf -- this is one of our favorite features and hope you select it!"
     },
     "total_games": {
         "display_name": "Total Games",
