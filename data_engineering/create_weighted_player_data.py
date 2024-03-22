@@ -35,6 +35,8 @@ def get_player_info(soup: BeautifulSoup) -> pd.DataFrame:
     class_years_lst = []
     heights_inches_lst = []
     lbs_lst = []
+    hometowns_lst = []
+    last_names_lst = []
 
     # Iterate through each row in the table body
     for row in table.find_all("tr")[1:]:  # Skipping the header row
@@ -46,12 +48,18 @@ def get_player_info(soup: BeautifulSoup) -> pd.DataFrame:
         height = row.find("td", {"data-stat": "height"}).text
         height_inches = convert_height_to_inches(height)
         lbs_str = row.find("td", {"data-stat": "weight"}).text
-        lbs = hf.try_cast(lbs_str, float, None)
+        lbs = try_cast(lbs_str, float, None)
+        hometown = row.find("td", {"data-stat": "hometown"}).text
+        last_name = (
+            row.find("th", {"data-stat": "player"}).find("a").text.split(" ")[-1]
+        )
 
         player_ids.append(player_id)
         class_years_lst.append(class_year)
         heights_inches_lst.append(height_inches)
         lbs_lst.append(lbs)
+        hometowns_lst.append(hometown)
+        last_names_lst.append(last_name)
 
     # Create a DataFrame
     df_info = pd.DataFrame(
@@ -60,6 +68,8 @@ def get_player_info(soup: BeautifulSoup) -> pd.DataFrame:
             "class_year": class_years_lst,
             "height": heights_inches_lst,
             "weight": lbs_lst,
+            "hometown": hometowns_lst,
+            "last_name": last_names_lst,
         }
     )
 
