@@ -48,7 +48,7 @@ def get_player_info(soup: BeautifulSoup) -> pd.DataFrame:
         height = row.find("td", {"data-stat": "height"}).text
         height_inches = convert_height_to_inches(height)
         lbs_str = row.find("td", {"data-stat": "weight"}).text
-        lbs = try_cast(lbs_str, float, None)
+        lbs = hf.try_cast(lbs_str, float, None)
         hometown = row.find("td", {"data-stat": "hometown"}).text
         last_name = (
             row.find("th", {"data-stat": "player"}).find("a").text.split(" ")[-1]
@@ -74,6 +74,19 @@ def get_player_info(soup: BeautifulSoup) -> pd.DataFrame:
     )
 
     return df_info
+
+
+def team_has_brothers(player_info: pd.DataFrame, check_for_twins=False) -> bool:
+    player_info[(player_info["hometown"] != "") & player_info["last_name"] != ""]
+    if not check_for_twins:
+        duplicates = player_info.duplicated(
+            subset=["last_name", "hometown"], keep=False
+        )
+    else:
+        duplicates = player_info.duplicated(
+            subset=["last_name", "hometown", "class_year"], keep=False
+        )
+    return any(duplicates)
 
 
 def get_minutes_played(soup: BeautifulSoup) -> pd.DataFrame:
@@ -110,6 +123,10 @@ def get_team_info(team: str, year: int = CURRENT_YR) -> Tuple[float, float, floa
     link = f"{SPORTS_REF_STUB}/cbb/schools/{team}/men/{year}.html"
     soup = hf.get_soup(link, rate_limit=True)
     df_info = get_player_info(soup)
+    has_brothers = team_has_brothers(df_info)
+    has_twins = team_has_brothers(df_info, check_for_twins=True)
+    if has_twins:
+        print(f"{team} has twins!")
     df_min = get_minutes_played(soup)
     df_joined = df_info.merge(df_min)
     # comfortable dropping data here -- assumption is that data is MNAR
@@ -117,7 +134,7 @@ def get_team_info(team: str, year: int = CURRENT_YR) -> Tuple[float, float, floa
     avg_yr = get_minute_weighted_avg(df_joined, "class_year")
     avg_height = get_minute_weighted_avg(df_joined, "height")
     avg_weight = get_minute_weighted_avg(df_joined, "weight")
-    return (avg_yr, avg_height, avg_weight)
+    return (avg_yr, avg_height, avg_weight, has_brothers, has_twins)
 
 
 def get_all_team_info(
@@ -139,7 +156,17 @@ def get_all_team_info(
         except Exception as e:
             # Catch any other errors that occur and log the team's name
             failed_teams.append(team)
-    df = pd.DataFrame(team_info, columns=["team", "avg_yr", "avg_height", "avg_weight"])
+    df = pd.DataFrame(
+        team_info,
+        columns=[
+            "team",
+            "avg_yr",
+            "avg_height",
+            "avg_weight",
+            "has_brothers",
+            "has_twins",
+        ],
+    )
     df["year"] = year
 
     if output_failures:
