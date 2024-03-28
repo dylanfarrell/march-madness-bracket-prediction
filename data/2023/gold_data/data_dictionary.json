@@ -103,59 +103,73 @@
     },
     "g": {
         "display_name": "Games",
-        "description": "The number of games the team played."
+        "description": "The number of games the team played.",
+        "exclude_from_model": true
     },
     "wins": {
         "display_name": "Wins",
-        "description": "The number of wins."
+        "description": "The number of wins.",
+        "exclude_from_model": true
     },
     "losses": {
         "display_name": "Losses",
-        "description": "The number of losses."
+        "description": "The number of losses.",
+        "exclude_from_model": true
     },
     "win_loss_pct": {
         "display_name": "Win-Loss %",
-        "description": "The win-loss percentage."
+        "description": "The win-loss percentage.",
+        "exclude_from_model": true
     },
     "srs": {
         "display_name": "Simple Rating System",
-        "description": "A rating that takes into account average point differential and strength of schedule."
+        "description": "A rating that takes into account average point differential and strength of schedule.",
+        "exclude_from_model": true
     },
     "sos": {
         "display_name": "Strength of Schedule",
-        "description": "The average strength of schedule."
+        "description": "The average strength of schedule.",
+        "exclude_from_model": true
     },
     "wins_conf": {
         "display_name": "Conference Wins",
-        "description": "The number of conference wins."
+        "description": "The number of conference wins.",
+        "exclude_from_model": true
     },
     "losses_conf": {
         "display_name": "Conference Losses",
-        "description": "The number of conference losses."
+        "description": "The number of conference losses.",
+        "exclude_from_model": true
     },
     "wins_home": {
         "display_name": "Home Wins",
-        "description": "The number of home wins."
+        "description": "The number of home wins.",
+        "exclude_from_model": true
     },
     "losses_home": {
         "display_name": "Home Losses",
-        "description": "The number of home losses."
+        "description": "The number of home losses.",
+        "exclude_from_model": true
     },
     "wins_visitor": {
         "display_name": "Away Wins",
-        "description": "The number of away wins."
+        "description": "The number of away wins.",
+        "exclude_from_model": true
     },
     "losses_visitor": {
         "display_name": "Away Losses",
-        "description": "The number of away losses."
+        "description": "The number of away losses.",
+        "exclude_from_model": true
     },
     "pts": {
         "display_name": "Points",
-        "description": "The number of points scored."
+        "description": "The number of points scored.",
+        "exclude_from_model": true
     },
     "opp_pts": {
         "display_name": "Opponent Points",
-        "description": "The number of points given up."
+        "description": "The number of points given up.",
+        "exclude_from_model": true
     },
     "mp": {
         "display_name": "Minutes Played",
@@ -164,67 +178,83 @@
     },
     "fg": {
         "display_name": "Field Goals",
-        "description": "The number of field goals made."
+        "description": "The number of field goals made.",
+        "exclude_from_model": true
     },
     "fga": {
         "display_name": "Field Goals Attempted",
-        "description": "The number of field goals attempted."
+        "description": "The number of field goals attempted.",
+        "exclude_from_model": true
     },
     "fg_pct": {
         "display_name": "Field Goal %",
-        "description": "The field goal percentage."
+        "description": "The field goal percentage.",
+        "exclude_from_model": true
     },
     "fg3": {
         "display_name": "3-Point Field Goals",
-        "description": "The number of 3-point field goals made."
+        "description": "The number of 3-point field goals made.",
+        "exclude_from_model": true
     },
     "fg3a": {
         "display_name": "3-Point Field Goals Attempted",
-        "description": "The number of 3-point field goals attempted."
+        "description": "The number of 3-point field goals attempted.",
+        "exclude_from_model": true
     },
     "fg3_pct": {
         "display_name": "3-Point Field Goal %",
-        "description": "The 3-point field goal percentage."
+        "description": "The 3-point field goal percentage.",
+        "exclude_from_model": true
     },
     "ft": {
         "display_name": "Free Throws",
-        "description": "The number of free throws made."
+        "description": "The number of free throws made.",
+        "exclude_from_model": true
     },
     "fta": {
         "display_name": "Free Throws Attempted",
-        "description": "The number of free throws attempted."
+        "description": "The number of free throws attempted.",
+        "exclude_from_model": true
     },
     "ft_pct": {
         "display_name": "Free Throw %",
-        "description": "The free throw percentage."
+        "description": "The free throw percentage.",
+        "exclude_from_model": true
     },
     "orb": {
         "display_name": "Offensive Rebounds",
-        "description": "The number of offensive rebounds."
+        "description": "The number of offensive rebounds.",
+        "exclude_from_model": true
     },
     "trb": {
         "display_name": "Total Rebounds",
-        "description": "The number of total rebounds."
+        "description": "The number of total rebounds.",
+        "exclude_from_model": true
     },
     "ast": {
         "display_name": "Assists",
-        "description": "The number of assists."
+        "description": "The number of assists.",
+        "exclude_from_model": true
     },
     "stl": {
         "display_name": "Steals",
-        "description": "The number of steals."
+        "description": "The number of steals.",
+        "exclude_from_model": true
     },
     "blk": {
         "display_name": "Blocks",
-        "description": "The number of blocks."
+        "description": "The number of blocks.",
+        "exclude_from_model": true
     },
     "tov": {
         "display_name": "Turnovers",
-        "description": "The number of turnovers."
+        "description": "The number of turnovers.",
+        "exclude_from_model": true
     },
     "pf": {
         "display_name": "Personal Fouls",
-        "description": "The number of personal fouls."
+        "description": "The number of personal fouls.",
+        "exclude_from_model": true
     },
     "team": {
         "display_name": "Team",
