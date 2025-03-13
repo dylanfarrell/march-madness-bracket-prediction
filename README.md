@@ -17,8 +17,8 @@
   - This will also scrape some basic team statistics for each team.
 - To generate preseason rankings data, run `python create_preseason_rankings_data.py --year=[year]`.
 - To generate coaching data, run `python create_coaches_data.py --year=[year]`.
-- To generate coaching data, run `python create_returning_player_team_data.py --year=[year] --tourney_teams_only`. The `--tourney_teams_only` flag will only compute this for teams that made the NCAA tournament, cutting runtime from ~20 min --> ~4 min.
-- To generate coaching data, run `python create_weighted_player_data.py --year=[year] --tourney_teams_only`. The `--tourney_teams_only` flag will only compute this for teams that made the NCAA tournament, cutting runtime from ~20 min --> ~4 min.
+- To generate returning player averages data, run `python create_returning_player_team_data.py --year=[year] --tourney_teams_only`. The `--tourney_teams_only` flag will only compute this for teams that made the NCAA tournament, cutting runtime from ~20 min --> ~4 min.
+- To generate player height/weight data, run `python create_weighted_player_data.py --year=[year] --tourney_teams_only`. The `--tourney_teams_only` flag will only compute this for teams that made the NCAA tournament, cutting runtime from ~20 min --> ~4 min.
 
 **Generating "silver" data**
 - The above tables are disentangled from kaggle data as much as possible (with the exception of the `--tourney_teams_only` data, although omitting this flag disentangles it entirely from kaggle data). This is to allow the above to be run before the kaggle data is released for a given year. If we consider the above data "bronze" data, this is "silver" data. It is the same as the above data with kaggle ids joined to it.
