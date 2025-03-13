@@ -7,9 +7,9 @@ import json
 def create_bracket_data(year:int) -> pd.DataFrame:
 
   seeds = pd.read_csv(f"{hf.get_kaggle_dir(year)}/MNCAATourneySeeds.csv")
-  seeds=seeds[seeds['Season']==2024]
+  seeds=seeds[seeds['Season']==year]
   gold_data = pd.read_csv(f'{hf.get_gold_dir(year)}/gold_data_all.csv')
-  gold_data = gold_data[gold_data['year']==2024]
+  gold_data = gold_data[gold_data['year']==year]
 
   with open(f"{hf.get_gold_dir(year)}/data_dictionary.json",'rb') as f:
     metadata = json.load(f)
@@ -24,9 +24,9 @@ def create_bracket_data(year:int) -> pd.DataFrame:
   # create a new dataframe from the combinations list
   combo_df = pd.DataFrame(unique_pairs, columns=['team1', 'team2'])
   combo_df = combo_df[combo_df['team1'] != combo_df['team2']]
-  combo_df['Season']=2024
+  combo_df['Season']=year
 
-  # 2023 matchups
+  # current year matchups
   bracket_data = combo_df.merge(gold_data, left_on=['Season', 'team1'], right_on=['Season', 'TeamID'])\
   .merge(gold_data, left_on=['Season', 'team2'], right_on=['Season', 'TeamID'], suffixes=['_1', '_2'])
 
