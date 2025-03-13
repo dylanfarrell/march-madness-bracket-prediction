@@ -1,5 +1,5 @@
 # Years
-CURRENT_YR = 2024
+CURRENT_YR = 2025
 DATA_START_YR = 2003
 
 # Directories
