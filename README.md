@@ -17,7 +17,6 @@
   - This will also scrape some basic team statistics for each team.
 - To generate preseason rankings data, run `python create_preseason_rankings_data.py --year=[year]`.
 - To generate coaching data, run `python create_coaches_data.py --year=[year]`.
-- To generate sports reference team data, run `python create_sports_reference_team_data.py --year=[year]`.
 - To generate coaching data, run `python create_returning_player_team_data.py --year=[year] --tourney_teams_only`. The `--tourney_teams_only` flag will only compute this for teams that made the NCAA tournament, cutting runtime from ~20 min --> ~4 min.
 - To generate coaching data, run `python create_weighted_player_data.py --year=[year] --tourney_teams_only`. The `--tourney_teams_only` flag will only compute this for teams that made the NCAA tournament, cutting runtime from ~20 min --> ~4 min.
 
