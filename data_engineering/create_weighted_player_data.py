@@ -12,7 +12,7 @@ YR_TO_NUM = {"FR": 1, "SO": 2, "JR": 3, "SR": 4}
 
 
 def get_player_id(row, tag_type: str) -> str:
-    player_link = row.find(tag_type, {"data-stat": "player"}).find("a")["href"]
+    player_link = row.find(tag_type, {"data-stat": "name_display"}).find("a")["href"]
     player_id = player_link.split("/")[-1].replace(".html", "")
     return player_id
 
