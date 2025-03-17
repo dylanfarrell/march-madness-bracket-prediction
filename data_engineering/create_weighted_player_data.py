@@ -91,14 +91,15 @@ def team_has_brothers(player_info: pd.DataFrame, check_for_twins=False) -> bool:
 
 def get_minutes_played(soup: BeautifulSoup) -> pd.DataFrame:
     # Find the table by ID or class
-    table = soup.find("table", {"id": "per_game"})
+    table = soup.find("table", {"id": "players_per_game"})
+    tbody = table.find("tbody")
 
     # Lists to store extracted data
     player_ids = []
     minutes_played = []
 
     # Iterate through each row in the table body
-    for row in table.find_all("tr")[1:]:  # Skipping the header row
+    for row in tbody.find_all("tr"):  # Skipping the header row
         # Extract player's unique part of the URL and MP
         player_id = get_player_id(row, "td")
         mp_str = row.find("td", {"data-stat": "mp_per_g"}).text
