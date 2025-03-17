@@ -11,8 +11,9 @@ from constants import SPORTS_REF_STUB, CURRENT_YR
 YR_TO_NUM = {"FR": 1, "SO": 2, "JR": 3, "SR": 4}
 
 
-def get_player_id(row, tag_type: str) -> str:
-    player_link = row.find(tag_type, {"data-stat": "name_display"}).find("a")["href"]
+def get_player_id(row, tag_type: str, tag_name: str) -> str:
+    # In some tables tag_name is "name_display" and in others it's "player"
+    player_link = row.find(tag_type, {"data-stat": tag_name}).find("a")["href"]
     player_id = player_link.split("/")[-1].replace(".html", "")
     return player_id
 
@@ -29,6 +30,7 @@ def convert_height_to_inches(height: str) -> int | None:
 def get_player_info(soup: BeautifulSoup) -> pd.DataFrame:
     # Find the table by ID or class
     table = soup.find("table", {"id": "roster"})
+    tbody = table.find("tbody")
 
     # Lists to store extracted data
     player_ids = []
@@ -39,8 +41,8 @@ def get_player_info(soup: BeautifulSoup) -> pd.DataFrame:
     last_names_lst = []
 
     # Iterate through each row in the table body
-    for row in table.find_all("tr")[1:]:  # Skipping the header row
-        player_id = get_player_id(row, "th")
+    for row in tbody.find_all("tr"):  # Skipping the header row
+        player_id = get_player_id(row, "th", "player")
 
         class_year_str = row.find("td", {"data-stat": "class"}).text
         # return None in the rare case it's not in the dictionary
@@ -101,7 +103,7 @@ def get_minutes_played(soup: BeautifulSoup) -> pd.DataFrame:
     # Iterate through each row in the table body
     for row in tbody.find_all("tr"):  # Skipping the header row
         # Extract player's unique part of the URL and MP
-        player_id = get_player_id(row, "td")
+        player_id = get_player_id(row, "td", "name_display")
         mp_str = row.find("td", {"data-stat": "mp_per_g"}).text
         mp = hf.try_cast(mp_str, float, None)
 
@@ -135,7 +137,7 @@ def get_team_info(team: str, year: int = CURRENT_YR) -> Tuple[float, float, floa
     avg_yr = get_minute_weighted_avg(df_joined, "class_year")
     avg_height = get_minute_weighted_avg(df_joined, "height")
     avg_weight = get_minute_weighted_avg(df_joined, "weight")
-    return (avg_yr, avg_height, avg_weight, has_brothers, has_twins)
+    return (avg_yr, avg_height, avg_weight)
 
 
 def get_all_team_info(
