@@ -12,12 +12,17 @@ KAGGLE_DIR = f"../data/{CURRENT_YR}/silver_data"
 # Sports Reference
 SPORTS_REF_STUB = "https://www.sports-reference.com"
 
-GENERATED_DATASETS = [
+MENS_GENERATED_DATASETS = [
     "coaches_data",
     "preseason_rankings",
     "returning_player_team_stats_tourney",
     "sports_ref_team_stats",
     "team_weighted_info_tourney",
+    "stationary_probabilities",
+]
+
+# For now, not all scraped Men's data is available on the Women's side
+WOMENS_GENERATED_DATASETS = [
     "stationary_probabilities",
 ]
 
