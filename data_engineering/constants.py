@@ -20,3 +20,5 @@ GENERATED_DATASETS = [
     "team_weighted_info_tourney",
     "stationary_probabilities",
 ]
+
+MODE_DIRECTORY = {"M": "mens", "W": "womens"}
