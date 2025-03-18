@@ -18,6 +18,13 @@ def get_parser() -> argparse.ArgumentParser:
     )
 
     parser.add_argument(
+        "--mode",
+        type=str,
+        help="Run in Women's mode (W) or Men's mode (M). Defaults to M for backwards compatability for now",
+        default="M",
+    )
+
+    parser.add_argument(
         "--recompute",
         action="store_true",
         help="Whether to reprocess data or not. Defaults to False.",
