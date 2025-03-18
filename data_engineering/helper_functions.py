@@ -197,15 +197,18 @@ def generate_data_all_years(
 
 
 # retrieve team name by id
-def team_lookup(id: int, year: int = CURRENT_YR) -> str:
+def team_lookup(id: int, year: int = CURRENT_YR, mode: str = "M") -> str:
     """
     Retrieves a team name given its id
 
     :param id_num: kaggle team id (int)
     :return: team name (str)
     """
-    teams = pd.read_csv(f"{get_kaggle_dir(year)}/MTeams.csv")
-    return teams[teams["TeamID"] == id]["TeamName"].values[0]
+    teams = pd.read_csv(f"{get_kaggle_dir(year, mode)}/{mode}Teams.csv")
+    try:
+        return teams[teams["TeamID"] == id]["TeamName"].values[0]
+    except:
+        print(f"No team found with id {id} in {year}/{MODE_DIRECTORY[mode]} data.")
 
 
 # add team spellings to the team spellings csv
