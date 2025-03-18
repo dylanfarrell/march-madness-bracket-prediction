@@ -104,9 +104,11 @@ def load_generated_data(
 
 
 # load silver data
-def load_silver_data(table_name: str, year: int = CURRENT_YR) -> pd.DataFrame:
+def load_silver_data(
+    table_name: str, year: int = CURRENT_YR, mode: str = "M"
+) -> pd.DataFrame:
     """Try loading silver data from this year."""
-    file_path = f"{get_silver_dir(year)}/{table_name}.csv"
+    file_path = f"{get_silver_dir(year, mode)}/{table_name}.csv"
     try:
         return pd.read_csv(file_path)
     except FileNotFoundError:
