@@ -6,9 +6,9 @@ import helper_functions as hf
 def create_seeds_json(year:int) -> pd.DataFrame:
 
   seeds = pd.read_csv(f"{hf.get_kaggle_dir(year)}/MNCAATourneySeeds.csv")
-  seeds=seeds[seeds['Season']==2024]
+  seeds=seeds[seeds['Season']==year]
   gold_data = pd.read_csv(f'{hf.get_gold_dir(year)}/gold_data_all.csv')
-  gold_data = gold_data[gold_data['year']==2024]
+  gold_data = gold_data[gold_data['year']==year]
   seeds = seeds.merge(gold_data[['TeamID','team_left_1','team_name']],on='TeamID')
   seeds['sr_name'] = seeds['team_left_1']
   seeds = seeds[['Seed','TeamID','sr_name','team_name']]

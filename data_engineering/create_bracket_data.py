@@ -34,7 +34,10 @@ def create_bracket_data(year:int) -> pd.DataFrame:
       try:
           bracket_data['diff_'+col] = bracket_data[col+'_1'] - bracket_data[col+'_2']
       except:
-          bracket_data['diff_'+col] = bracket_data[col+'_1'].map(float) - bracket_data[col+'_2'].map(float)
+          try:
+              bracket_data['diff_'+col] = bracket_data[col+'_1'].map(float) - bracket_data[col+'_2'].map(float)
+          except:
+              print(f"Problem with {col}")
   diff_cols = [col for col in bracket_data.columns if 'diff' in col]
   matchup_cols = ['Season', 'TeamID_1', 'TeamID_2','team_name_1','team_name_2', 'Seed_1', 'Seed_2'] + diff_cols
   bracket_data = bracket_data[matchup_cols]

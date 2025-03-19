@@ -31,9 +31,12 @@ def create_model_data(year:int) -> pd.DataFrame:
           winner_first['diff_'+col] = winner_first[col+'_w'] - winner_first[col+'_l']
           loser_first['diff_'+col] = loser_first[col+'_l'] - loser_first[col+'_w']
       except:
-          print(f'warning, converting {col} to float to calculate difference')
-          winner_first['diff_'+col] = winner_first[col+'_w'].map(float) - winner_first[col+'_l'].map(float)
-          loser_first['diff_'+col] = loser_first[col+'_l'].map(float) - loser_first[col+'_w'].map(float)
+          try:
+            print(f'warning, converting {col} to float to calculate difference')
+            winner_first['diff_'+col] = winner_first[col+'_w'].map(float) - winner_first[col+'_l'].map(float)
+            loser_first['diff_'+col] = loser_first[col+'_l'].map(float) - loser_first[col+'_w'].map(float)
+          except:
+            print(f"Problem with {col}")
 
   model_data = pd.concat([winner_first,loser_first],ignore_index=True)
 
