@@ -2,11 +2,13 @@ import pandas as pd
 
 import helper_functions as hf
 from argparser_config import get_parser
-from constants import SPORTS_REF_STUB
+from constants import SPORTS_REF_STUB, MODE_DIRECTORY
 
 
-def create_coaches_data(year: int) -> pd.DataFrame:
-    link = f"{SPORTS_REF_STUB}/cbb/seasons/{year}-coaches.html"
+def create_coaches_data(year: int, mode: str) -> pd.DataFrame:
+    mode = MODE_DIRECTORY[mode]
+    # Sports Reference uses "men" and "women" instead of the plural, so we lop off the "s"
+    link = f"{SPORTS_REF_STUB}/cbb/seasons/{mode[:-1]}/{year}-coaches.html"
     soup = hf.get_soup(link, rate_limit=True)
     coach_table = soup.find("table", {"id": "coaches"})
     coach_rows = coach_table.find("tbody").find_all("tr")
@@ -129,19 +131,20 @@ def main():
 
     if args.dry_run:
         print(f"Running in dry-run mode for {args.year}.")
-        create_coaches_data(args.year)
+        create_coaches_data(args.year, args.mode)
         return
 
     # call the function with the command-line arguments
     df = hf.generate_data_all_years(
         create_coaches_data,
         year=args.year,
+        mode=args.mode,
         recompute=args.recompute,
         table_name=table_name,
     )
 
     # write the dataframe to a csv
-    file_path = f"{hf.get_generated_dir(args.year)}/{table_name}.csv"
+    file_path = f"{hf.get_generated_dir(args.year, args.mode)}/{table_name}.csv"
     hf.write_to_csv(df, file_path, args.overwrite)
 
 
