@@ -23,6 +23,8 @@ MENS_GENERATED_DATASETS = [
 
 # For now, not all scraped Men's data is available on the Women's side
 WOMENS_GENERATED_DATASETS = [
+    "coaches_data",
+    "preseason_rankings",
     "stationary_probabilities",
 ]
 
