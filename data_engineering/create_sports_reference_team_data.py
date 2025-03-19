@@ -2,11 +2,13 @@ import pandas as pd
 
 import helper_functions as hf
 from argparser_config import get_parser
-from constants import SPORTS_REF_STUB
+from constants import SPORTS_REF_STUB, MODE_DIRECTORY
 
 
-def create_team_stats(year: int) -> pd.DataFrame:
-    link = f"{SPORTS_REF_STUB}/cbb/seasons/men/{year}-school-stats.html"
+def create_team_stats(year: int, mode: str) -> pd.DataFrame:
+    mode = MODE_DIRECTORY[mode]
+    # Sports Reference uses "men" and "women" instead of the plural, so we lop off the "s"
+    link = f"{SPORTS_REF_STUB}/cbb/seasons/{mode[:-1]}/{year}-school-stats.html"
     soup = hf.get_soup(link)
 
     teams_data = []
@@ -64,17 +66,18 @@ def main():
     df = hf.generate_data_all_years(
         create_team_stats,
         year=args.year,
+        mode=args.mode,
         recompute=args.recompute,
         table_name=table_name,
     )
 
     # write the dataframe to a csv
-    file_path = f"{hf.get_generated_dir(args.year)}/{table_name}.csv"
+    file_path = f"{hf.get_generated_dir(args.year, args.mode)}/{table_name}.csv"
     hf.write_to_csv(df, file_path, args.overwrite)
 
     # create a pickled dataframe of all teams for given year
     all_teams = get_all_teams(df, args.year)
-    all_teams.to_pickle(f"{hf.get_generated_dir(args.year)}/all_teams.pkl")
+    all_teams.to_pickle(f"{hf.get_generated_dir(args.year, args.mode)}/all_teams.pkl")
 
 
 if __name__ == "__main__":
