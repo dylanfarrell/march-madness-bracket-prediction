@@ -181,19 +181,20 @@ def generate_data_all_years(
     start_year: int = DATA_START_YR,
     recompute: bool = False,
     table_name: str | None = None,
+    mode: str = "M",
     **kwargs,
 ) -> pd.DataFrame:
     if not recompute and table_name is None:
         raise ValueError("If recompute is False, you must provide a table name.")
     elif recompute:
         print(f"Recomputing data starting from {start_year}.")
-        base_df = function(start_year, **kwargs)
+        base_df = function(start_year, mode=mode, **kwargs)
         for year in tqdm(range(start_year + 1, year + 1), desc="Processing years"):
-            next_year_df = function(year, **kwargs)
+            next_year_df = function(year, mode=mode, **kwargs)
             base_df = pd.concat([base_df, next_year_df], ignore_index=True)
     else:
-        new_year_df = function(year, **kwargs)
-        base_df = pd.read_csv(f"{get_generated_dir(year - 1)}/{table_name}.csv")
+        new_year_df = function(year, mode=mode, **kwargs)
+        base_df = pd.read_csv(f"{get_generated_dir(year - 1, mode)}/{table_name}.csv")
         base_df = pd.concat([base_df, new_year_df], ignore_index=True)
     return base_df
 
