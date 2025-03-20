@@ -1,0 +1,342 @@
+{
+    "W01":{
+        "TeamID":3376,
+        "sr_name":"south-carolina",
+        "team_name":"South Carolina"
+    },
+    "W02":{
+        "TeamID":3181,
+        "sr_name":"duke",
+        "team_name":"Duke"
+    },
+    "W03":{
+        "TeamID":3314,
+        "sr_name":"north-carolina",
+        "team_name":"UNC"
+    },
+    "W04":{
+        "TeamID":3268,
+        "sr_name":"maryland",
+        "team_name":"Maryland"
+    },
+    "W05":{
+        "TeamID":3104,
+        "sr_name":"alabama",
+        "team_name":"Alabama"
+    },
+    "W06":{
+        "TeamID":3452,
+        "sr_name":"west-virginia",
+        "team_name":"West Virginia"
+    },
+    "W07":{
+        "TeamID":3435,
+        "sr_name":"vanderbilt",
+        "team_name":"Vanderbilt"
+    },
+    "W08":{
+        "TeamID":3428,
+        "sr_name":"utah",
+        "team_name":"Utah"
+    },
+    "W09":{
+        "TeamID":3231,
+        "sr_name":"indiana",
+        "team_name":"Indiana"
+    },
+    "W10":{
+        "TeamID":3332,
+        "sr_name":"oregon",
+        "team_name":"Oregon"
+    },
+    "W11a":{
+        "TeamID":3162,
+        "sr_name":"columbia",
+        "team_name":"Columbia"
+    },
+    "W11b":{
+        "TeamID":3449,
+        "sr_name":"washington",
+        "team_name":"Washington"
+    },
+    "W12":{
+        "TeamID":3453,
+        "sr_name":"green-bay",
+        "team_name":"Green Bay"
+    },
+    "W13":{
+        "TeamID":3313,
+        "sr_name":"norfolk-state",
+        "team_name":"Norfolk State"
+    },
+    "W14":{
+        "TeamID":3333,
+        "sr_name":"oregon-state",
+        "team_name":"Oregon State"
+    },
+    "W15":{
+        "TeamID":3250,
+        "sr_name":"lehigh",
+        "team_name":"Lehigh"
+    },
+    "W16":{
+        "TeamID":3399,
+        "sr_name":"tennessee-tech",
+        "team_name":"Tennessee Tech"
+    },
+    "X01":{
+        "TeamID":3400,
+        "sr_name":"texas",
+        "team_name":"Texas"
+    },
+    "X02":{
+        "TeamID":3395,
+        "sr_name":"texas-christian",
+        "team_name":"TCU"
+    },
+    "X03":{
+        "TeamID":3323,
+        "sr_name":"notre-dame",
+        "team_name":"Notre Dame"
+    },
+    "X04":{
+        "TeamID":3326,
+        "sr_name":"ohio-state",
+        "team_name":"Ohio State"
+    },
+    "X05":{
+        "TeamID":3397,
+        "sr_name":"tennessee",
+        "team_name":"Tennessee"
+    },
+    "X06":{
+        "TeamID":3276,
+        "sr_name":"michigan",
+        "team_name":"Michigan"
+    },
+    "X07":{
+        "TeamID":3257,
+        "sr_name":"louisville",
+        "team_name":"Louisville"
+    },
+    "X08":{
+        "TeamID":3228,
+        "sr_name":"illinois",
+        "team_name":"Illinois"
+    },
+    "X09":{
+        "TeamID":3166,
+        "sr_name":"creighton",
+        "team_name":"Creighton"
+    },
+    "X10":{
+        "TeamID":3304,
+        "sr_name":"nebraska",
+        "team_name":"Nebraska"
+    },
+    "X11a":{
+        "TeamID":3235,
+        "sr_name":"iowa-state",
+        "team_name":"Iowa State"
+    },
+    "X11b":{
+        "TeamID":3343,
+        "sr_name":"princeton",
+        "team_name":"Princeton"
+    },
+    "X12":{
+        "TeamID":3378,
+        "sr_name":"south-florida",
+        "team_name":"South Florida"
+    },
+    "X13":{
+        "TeamID":3286,
+        "sr_name":"montana-state",
+        "team_name":"Montana State"
+    },
+    "X14":{
+        "TeamID":3372,
+        "sr_name":"stephen-f-austin",
+        "team_name":"Stephen F. Austin"
+    },
+    "X15":{
+        "TeamID":3192,
+        "sr_name":"fairleigh-dickinson",
+        "team_name":"FDU"
+    },
+    "X16a":{
+        "TeamID":3219,
+        "sr_name":"high-point",
+        "team_name":"High Point"
+    },
+    "X16b":{
+        "TeamID":3456,
+        "sr_name":"william-mary",
+        "team_name":"William & Mary"
+    },
+    "Y01":{
+        "TeamID":3417,
+        "sr_name":"ucla",
+        "team_name":"UCLA"
+    },
+    "Y02":{
+        "TeamID":3301,
+        "sr_name":"north-carolina-state",
+        "team_name":"NC State"
+    },
+    "Y03":{
+        "TeamID":3261,
+        "sr_name":"louisiana-state",
+        "team_name":"LSU"
+    },
+    "Y04":{
+        "TeamID":3124,
+        "sr_name":"baylor",
+        "team_name":"Baylor"
+    },
+    "Y05":{
+        "TeamID":3279,
+        "sr_name":"mississippi",
+        "team_name":"Ole Miss"
+    },
+    "Y06":{
+        "TeamID":3199,
+        "sr_name":"florida-state",
+        "team_name":"Florida State"
+    },
+    "Y07":{
+        "TeamID":3277,
+        "sr_name":"michigan-state",
+        "team_name":"Michigan State"
+    },
+    "Y08":{
+        "TeamID":3350,
+        "sr_name":"richmond",
+        "team_name":"Richmond"
+    },
+    "Y09":{
+        "TeamID":3210,
+        "sr_name":"georgia-tech",
+        "team_name":"Georgia Tech"
+    },
+    "Y10":{
+        "TeamID":3217,
+        "sr_name":"harvard",
+        "team_name":"Harvard"
+    },
+    "Y11":{
+        "TeamID":3206,
+        "sr_name":"george-mason",
+        "team_name":"George Mason"
+    },
+    "Y12":{
+        "TeamID":3123,
+        "sr_name":"ball-state",
+        "team_name":"Ball State"
+    },
+    "Y13":{
+        "TeamID":3213,
+        "sr_name":"grand-canyon",
+        "team_name":"Grand Canyon"
+    },
+    "Y14":{
+        "TeamID":3361,
+        "sr_name":"san-diego-state",
+        "team_name":"San Diego State"
+    },
+    "Y15":{
+        "TeamID":3436,
+        "sr_name":"vermont",
+        "team_name":"Vermont"
+    },
+    "Y16a":{
+        "TeamID":3380,
+        "sr_name":"southern",
+        "team_name":"Southern"
+    },
+    "Y16b":{
+        "TeamID":3471,
+        "sr_name":null,
+        "team_name":null
+    },
+    "Z01":{
+        "TeamID":3425,
+        "sr_name":"southern-california",
+        "team_name":"USC"
+    },
+    "Z02":{
+        "TeamID":3163,
+        "sr_name":"connecticut",
+        "team_name":"UConn"
+    },
+    "Z03":{
+        "TeamID":3328,
+        "sr_name":"oklahoma",
+        "team_name":"Oklahoma"
+    },
+    "Z04":{
+        "TeamID":3246,
+        "sr_name":"kentucky",
+        "team_name":"Kentucky"
+    },
+    "Z05":{
+        "TeamID":3243,
+        "sr_name":"kansas-state",
+        "team_name":"Kansas State"
+    },
+    "Z06":{
+        "TeamID":3234,
+        "sr_name":"iowa",
+        "team_name":"Iowa"
+    },
+    "Z07":{
+        "TeamID":3329,
+        "sr_name":"oklahoma-state",
+        "team_name":"Oklahoma State"
+    },
+    "Z08":{
+        "TeamID":3143,
+        "sr_name":"california",
+        "team_name":"California"
+    },
+    "Z09":{
+        "TeamID":3280,
+        "sr_name":"mississippi-state",
+        "team_name":"Mississippi State"
+    },
+    "Z10":{
+        "TeamID":3355,
+        "sr_name":"south-dakota-state",
+        "team_name":"South Dakota State"
+    },
+    "Z11":{
+        "TeamID":3293,
+        "sr_name":"murray-state",
+        "team_name":"Murray State"
+    },
+    "Z12":{
+        "TeamID":3193,
+        "sr_name":"fairfield",
+        "team_name":"Fairfield"
+    },
+    "Z13":{
+        "TeamID":3251,
+        "sr_name":"liberty",
+        "team_name":"Liberty"
+    },
+    "Z14":{
+        "TeamID":3195,
+        "sr_name":"florida-gulf-coast",
+        "team_name":"Florida Gulf Coast"
+    },
+    "Z15":{
+        "TeamID":3117,
+        "sr_name":"arkansas-state",
+        "team_name":"Arkansas State"
+    },
+    "Z16":{
+        "TeamID":3422,
+        "sr_name":"north-carolina-greensboro",
+        "team_name":"UNC Greensboro"
+    }
+}

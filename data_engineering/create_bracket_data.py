@@ -4,14 +4,16 @@ import helper_functions as hf
 from itertools import combinations
 import json
 
-def create_bracket_data(year:int) -> pd.DataFrame:
+def create_bracket_data(year:int, mode:str) -> pd.DataFrame:
 
-  seeds = pd.read_csv(f"{hf.get_kaggle_dir(year)}/MNCAATourneySeeds.csv")
+  seeds = pd.read_csv(f"{hf.get_kaggle_dir(year, mode)}/{mode}NCAATourneySeeds.csv")
   seeds=seeds[seeds['Season']==year]
-  gold_data = pd.read_csv(f'{hf.get_gold_dir(year)}/gold_data_all.csv')
-  gold_data = gold_data[gold_data['year']==year]
 
-  with open(f"{hf.get_gold_dir(year)}/data_dictionary.json",'rb') as f:
+  gold_data = pd.read_csv(f'{hf.get_gold_dir(year, mode)}/gold_data_all.csv')
+  gold_data = gold_data[gold_data['year']==year]
+  gold_data['Season'] = gold_data['year']
+
+  with open(f"{hf.get_gold_dir(year, mode)}/data_dictionary.json",'rb') as f:
     metadata = json.load(f)
   
   input_features = [k for k,v in metadata.items() if not v.get('exclude_from_model',False)]
@@ -30,11 +32,15 @@ def create_bracket_data(year:int) -> pd.DataFrame:
   bracket_data = combo_df.merge(gold_data, left_on=['Season', 'team1'], right_on=['Season', 'TeamID'])\
   .merge(gold_data, left_on=['Season', 'team2'], right_on=['Season', 'TeamID'], suffixes=['_1', '_2'])
 
+
   for col in input_features:
       try:
           bracket_data['diff_'+col] = bracket_data[col+'_1'] - bracket_data[col+'_2']
       except:
-          bracket_data['diff_'+col] = bracket_data[col+'_1'].map(float) - bracket_data[col+'_2'].map(float)
+          try:
+              bracket_data['diff_'+col] = bracket_data[col+'_1'].map(float) - bracket_data[col+'_2'].map(float)
+          except:
+              print(f"Problem with {col}")
   diff_cols = [col for col in bracket_data.columns if 'diff' in col]
   matchup_cols = ['Season', 'TeamID_1', 'TeamID_2','team_name_1','team_name_2', 'Seed_1', 'Seed_2'] + diff_cols
   bracket_data = bracket_data[matchup_cols]
@@ -44,10 +50,10 @@ def main():
   # parse the command-line arguments
   parser = get_parser()
   args = parser.parse_args()
-  df = create_bracket_data(args.year)
+  df = create_bracket_data(args.year, args.mode)
 
   # write the dataframe to a csv
-  file_path = f"{hf.get_gold_dir(args.year)}/bracket_data.csv"
+  file_path = f"{hf.get_gold_dir(args.year, args.mode)}/bracket_data.csv"
   hf.write_to_csv(df, file_path, args.overwrite)
 
 if __name__ == "__main__":
