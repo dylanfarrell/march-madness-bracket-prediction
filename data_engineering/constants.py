@@ -25,6 +25,7 @@ MENS_GENERATED_DATASETS = [
 WOMENS_GENERATED_DATASETS = [
     "coaches_data",
     "preseason_rankings",
+    "sports_ref_team_stats",
     "stationary_probabilities",
 ]
 
