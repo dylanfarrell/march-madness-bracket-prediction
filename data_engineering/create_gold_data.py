@@ -10,9 +10,13 @@ def iteratively_join_data(
     for i, dataset in enumerate(datasets):
         dataset = dataset + "_silver"
         suffixes = (f"_left_{i}", f"_right_{i}")
+        silver_data = hf.load_silver_data(dataset, year, mode=mode)
+        if silver_data is None:
+            print(f"Skipping {dataset}: not found.")
+            continue
         df = pd.merge(
             df,
-            hf.load_silver_data(dataset, year, mode=mode),
+            silver_data,
             on=["TeamID", "year"],
             how="left",
             suffixes=suffixes,
@@ -42,16 +46,19 @@ def main():
 
     # join features created from kaggle data to gold data
     kaggle_features = hf.load_generated_data("team_season_features", args.year, mode)
-    gold_data_all = pd.merge(
-        gold_data,
-        kaggle_features,
-        how="left",
-        left_on=["TeamID", "year"],
-        right_on=["TeamID", "Season"],
-        suffixes=("_left", "_right"),
-    )
-    file_path = f"{hf.get_gold_dir(args.year, mode)}/gold_data_all.csv"
-    hf.write_to_csv(gold_data_all, file_path, args.overwrite)
+    if kaggle_features is not None:
+        gold_data_all = pd.merge(
+            gold_data,
+            kaggle_features,
+            how="left",
+            left_on=["TeamID", "year"],
+            right_on=["TeamID", "Season"],
+            suffixes=("_left", "_right"),
+        )
+        file_path = f"{hf.get_gold_dir(args.year, mode)}/gold_data_all.csv"
+        hf.write_to_csv(gold_data_all, file_path, args.overwrite)
+    else:
+        print("Skipping gold_data_all: team_season_features not found.")
 
 
 if __name__ == "__main__":

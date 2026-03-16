@@ -42,6 +42,9 @@ def main():
     for dataset in datasets:
         try:
             df = hf.load_generated_data(dataset, args.year, args.mode)
+            if df is None or df.empty:
+                print(f"Skipping {dataset}: no data available.")
+                continue
             if dataset not in datasets_already_silver:
                 print(f"Adding kaggle ids to: {dataset}")
                 df_silver = add_kaggle_id(df, args.year, args.mode)
