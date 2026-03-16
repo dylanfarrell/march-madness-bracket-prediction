@@ -9,6 +9,7 @@ from argparser_config import get_parser
 from constants import SPORTS_REF_STUB, CURRENT_YR
 
 YR_TO_NUM = {"FR": 1, "SO": 2, "JR": 3, "SR": 4}
+MODE_TO_GENDER = {"M": "men", "W": "women"}
 
 
 def get_player_id(row, tag_type: str, tag_name: str) -> str:
@@ -122,8 +123,9 @@ def get_minute_weighted_avg(df: pd.DataFrame, col: str) -> float:
     )
 
 
-def get_team_info(team: str, year: int = CURRENT_YR) -> Tuple[float, float, float]:
-    link = f"{SPORTS_REF_STUB}/cbb/schools/{team}/men/{year}.html"
+def get_team_info(team: str, year: int = CURRENT_YR, mode: str = "M") -> Tuple[float, float, float]:
+    gender = MODE_TO_GENDER[mode]
+    link = f"{SPORTS_REF_STUB}/cbb/schools/{team}/{gender}/{year}.html"
     soup = hf.get_soup(link, rate_limit=True)
     df_info = get_player_info(soup)
     has_brothers = team_has_brothers(df_info)
@@ -137,24 +139,25 @@ def get_team_info(team: str, year: int = CURRENT_YR) -> Tuple[float, float, floa
     avg_yr = get_minute_weighted_avg(df_joined, "class_year")
     avg_height = get_minute_weighted_avg(df_joined, "height")
     avg_weight = get_minute_weighted_avg(df_joined, "weight")
-    return (avg_yr, avg_height, avg_weight)
+    return (avg_yr, avg_height, avg_weight, has_brothers, has_twins)
 
 
 def get_all_team_info(
     year: int = CURRENT_YR,
     output_failures: bool = True,
+    mode: str = "M",
     **kwargs: Any,
 ) -> pd.DataFrame:
     tourney_teams_only = kwargs.get("tourney_teams_only", True)
 
     # if tourney_teams_only is True, then we only want to get the teams that made the tournament
-    all_teams = hf.get_sports_ref_teams(year, tourney_teams_only)
+    all_teams = hf.get_sports_ref_teams(year, mode, tourney_teams_only)
 
     team_info = []
     failed_teams = []
     for team in tqdm(all_teams, desc=f"Getting {year} data"):
         try:
-            info = get_team_info(team, year)
+            info = get_team_info(team, year, mode)
             team_info.append([team, *info])
         except Exception as e:
             # Catch any other errors that occur and log the team's name
@@ -208,10 +211,11 @@ def main():
         recompute=args.recompute,
         tourney_teams_only=args.tourney_teams_only,
         table_name=table_name,
+        mode=args.mode,
     )
 
     # write the dataframe to a csv
-    file_path = f"{hf.get_generated_dir(args.year)}/{table_name}.csv"
+    file_path = f"{hf.get_generated_dir(args.year, args.mode)}/{table_name}.csv"
     hf.write_to_csv(df, file_path, args.overwrite)
 
 
