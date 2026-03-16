@@ -1,0 +1,19 @@
+Mon Mar 16 01:31:41 EDT 2026 - === Starting pipeline ===
+Mon Mar 16 01:31:41 EDT 2026 - Waiting for rate limit to clear...
+Mon Mar 16 01:31:41 EDT 2026 - Still rate limited (429). Retrying in 5 min...
+Mon Mar 16 01:36:41 EDT 2026 - Still rate limited (429). Retrying in 5 min...
+Mon Mar 16 01:41:41 EDT 2026 - Still rate limited (429). Retrying in 5 min...
+Mon Mar 16 02:23:49 EDT 2026 - Rate limit cleared\!
+Mon Mar 16 02:23:49 EDT 2026 - === Mens Data ===
+Mon Mar 16 02:23:53 EDT 2026 - Done: sports_ref (M)
+Mon Mar 16 02:23:57 EDT 2026 - Done: preseason (M)
+Mon Mar 16 02:24:01 EDT 2026 - Done: coaches (M)
+Mon Mar 16 05:10:32 EDT 2026 - Done: returning_player (M)
+Mon Mar 16 07:31:47 EDT 2026 - Done: weighted_player (M)
+Mon Mar 16 07:31:47 EDT 2026 - === Womens Data ===
+Mon Mar 16 07:31:51 EDT 2026 - Done: sports_ref (W)
+Mon Mar 16 07:31:55 EDT 2026 - Done: preseason (W)
+Mon Mar 16 07:31:59 EDT 2026 - Done: coaches (W)
+Mon Mar 16 07:31:59 EDT 2026 - === Silver Data ===
+Mon Mar 16 07:31:59 EDT 2026 - === Gold Data ===
+Mon Mar 16 07:32:00 EDT 2026 - === Git Push ===
