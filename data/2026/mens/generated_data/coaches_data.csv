@@ -1,0 +1,368 @@
+version https://git-lfs.github.com/spec/v1,year,team,coach_name,team_name,coach_since,is_ap_pre_top_5,is_ap_pre_top_15,is_ap_pre_top_25,wins_cur,losses_cur,games_cur,coach_wl_cur,wins_car,losses_car,games_car,coach_wl_car,tourneys_car,sw16_car,ff_car,champ_car
+oid sha256:3886a89f82ba808c38d1875db506eb8029022a62bfc40cfcbc040b7bf4ac44bc,,,,,,,,,,,,,,,,,,,,
+size 869354,,,,,,,,,,,,,,,,,,,,
+,2026.0,abilene-christian,Brette Tanner,Abilene Christian,2021-22,False,False,False,84.0,81.0,165.0,0.509,84.0,81.0,165.0,0.509,0.0,0.0,0.0,0.0
+,2026.0,air-force,Jon Jordan,Air Force,2025-26,False,False,False,0.0,12.0,12.0,0.0,0.0,12.0,12.0,0.0,0.0,0.0,0.0,0.0
+,2026.0,akron,John Groce,Akron,2017-18,False,False,False,197.0,93.0,290.0,0.679,377.0,224.0,601.0,0.627,6.0,1.0,0.0,0.0
+,2026.0,alabama,Nate Oats,Alabama,2019-20,False,True,True,168.0,72.0,240.0,0.7,264.0,115.0,379.0,0.697,8.0,4.0,1.0,0.0
+,2026.0,alabama-am,Donte Jackson,Alabama A&M,2025-26,False,False,False,18.0,15.0,33.0,0.545,150.0,139.0,289.0,0.519,1.0,0.0,0.0,0.0
+,2026.0,alabama-birmingham,Andy Kennedy,UAB,2020-21,False,False,False,145.0,62.0,207.0,0.7,411.0,231.0,642.0,0.64,4.0,0.0,0.0,0.0
+,2026.0,alabama-state,Tony Madlock,Alabama State,2022-23,False,False,False,51.0,80.0,131.0,0.389,67.0,100.0,167.0,0.401,1.0,0.0,0.0,0.0
+,2026.0,albany-ny,Dwayne Killings,Albany (NY),2021-22,False,False,False,62.0,97.0,159.0,0.39,62.0,97.0,159.0,0.39,0.0,0.0,0.0,0.0
+,2026.0,alcorn-state,Jake Morton,Alcorn State,2025-26,False,False,False,9.0,23.0,32.0,0.281,9.0,23.0,32.0,0.281,0.0,0.0,0.0,0.0
+,2026.0,american,Duane Simpkins,American,2023-24,False,False,False,54.0,45.0,99.0,0.545,54.0,45.0,99.0,0.545,1.0,0.0,0.0,0.0
+,2026.0,appalachian-state,Dustin Kerns,Appalachian State,2019-20,False,False,False,133.0,92.0,225.0,0.591,164.0,129.0,293.0,0.56,1.0,0.0,0.0,0.0
+,2026.0,arizona,Tommy Lloyd,Arizona,2021-22,False,True,True,144.0,35.0,179.0,0.804,144.0,35.0,179.0,0.804,4.0,3.0,0.0,0.0
+,2026.0,arizona-state,Bobby Hurley,Arizona State,2015-16,False,False,False,185.0,167.0,352.0,0.526,227.0,187.0,414.0,0.548,4.0,0.0,0.0,0.0
+,2026.0,arkansas,John Calipari *,Arkansas,2024-25,False,True,True,47.0,22.0,69.0,0.681,902.0,285.0,1187.0,0.76,24.0,16.0,6.0,1.0
+,2026.0,arkansas-little-rock,Darrell Walker,Little Rock,2018-19,False,False,False,113.0,133.0,246.0,0.459,113.0,133.0,246.0,0.459,0.0,0.0,0.0,0.0
+,2026.0,arkansas-pine-bluff,Solomon Bozeman,Arkansas-Pine Bluff,2021-22,False,False,False,49.0,107.0,156.0,0.314,49.0,107.0,156.0,0.314,0.0,0.0,0.0,0.0
+,2026.0,arkansas-state,Ryan Pannone,Arkansas State,2025-26,False,False,False,20.0,12.0,32.0,0.625,20.0,12.0,32.0,0.625,0.0,0.0,0.0,0.0
+,2026.0,army,Kevin Kuwik,Army,2023-24,False,False,False,38.0,59.0,97.0,0.392,38.0,59.0,97.0,0.392,0.0,0.0,0.0,0.0
+,2026.0,auburn,Steven Pearl,Auburn,2025-26,False,False,True,17.0,16.0,33.0,0.515,17.0,16.0,33.0,0.515,0.0,0.0,0.0,0.0
+,2026.0,austin-peay,Corey Gipson,Austin Peay,2023-24,False,False,False,55.0,44.0,99.0,0.556,77.0,55.0,132.0,0.583,0.0,0.0,0.0,0.0
+,2026.0,ball-state,Michael Lewis,Ball State,2022-23,False,False,False,61.0,64.0,125.0,0.488,61.0,64.0,125.0,0.488,0.0,0.0,0.0,0.0
+,2026.0,baylor,Scott Drew,Baylor,2003-04,False,False,False,480.0,275.0,755.0,0.636,500.0,286.0,786.0,0.636,13.0,5.0,1.0,1.0
+,2026.0,bellarmine,Doug Davenport,Bellarmine,2025-26,False,False,False,13.0,19.0,32.0,0.406,13.0,19.0,32.0,0.406,0.0,0.0,0.0,0.0
+,2026.0,belmont,Casey Alexander,Belmont,2019-20,False,False,False,166.0,60.0,226.0,0.735,303.0,180.0,483.0,0.627,1.0,0.0,0.0,0.0
+,2026.0,bethune-cookman,Reggie Theus,Bethune-Cookman,2021-22,False,False,False,72.0,89.0,161.0,0.447,166.0,217.0,383.0,0.433,1.0,0.0,0.0,0.0
+,2026.0,binghamton,Levell Sanders,Binghamton,2021-22,False,False,False,63.0,90.0,153.0,0.412,63.0,90.0,153.0,0.412,0.0,0.0,0.0,0.0
+,2026.0,boise-state,Leon Rice,Boise State,2010-11,False,False,False,336.0,189.0,525.0,0.64,336.0,189.0,525.0,0.64,5.0,0.0,0.0,0.0
+,2026.0,boston-college,Earl Grant,Boston College,2021-22,False,False,False,72.0,92.0,164.0,0.439,199.0,181.0,380.0,0.524,1.0,0.0,0.0,0.0
+,2026.0,boston-university,Joe Jones,Boston University,2011-12,False,False,False,251.0,224.0,475.0,0.528,337.0,332.0,669.0,0.504,0.0,0.0,0.0,0.0
+,2026.0,bowling-green-state,Todd Simon,Bowling Green,2023-24,False,False,False,52.0,46.0,98.0,0.531,179.0,160.0,339.0,0.528,0.0,0.0,0.0,0.0
+,2026.0,bradley,Brian Wardle,Bradley,2015-16,False,False,False,207.0,159.0,366.0,0.566,302.0,224.0,526.0,0.574,1.0,0.0,0.0,0.0
+,2026.0,brigham-young,Kevin Young,BYU,2024-25,False,True,True,49.0,21.0,70.0,0.7,49.0,21.0,70.0,0.7,1.0,1.0,0.0,0.0
+,2026.0,brown,Mike Martin,Brown,2012-13,False,False,False,171.0,202.0,373.0,0.458,171.0,202.0,373.0,0.458,0.0,0.0,0.0,0.0
+,2026.0,bryant,Jamion Christian,Bryant,2025-26,False,False,False,9.0,22.0,31.0,0.29,156.0,183.0,339.0,0.46,2.0,0.0,0.0,0.0
+,2026.0,bucknell,John Griffin III,Bucknell,2023-24,False,False,False,42.0,57.0,99.0,0.424,42.0,57.0,99.0,0.424,0.0,0.0,0.0,0.0
+,2026.0,buffalo,George Halcovage III,Buffalo,2023-24,False,False,False,30.0,64.0,94.0,0.319,30.0,64.0,94.0,0.319,0.0,0.0,0.0,0.0
+,2026.0,butler,Thad Matta,Butler,2000-01,False,False,False,87.0,77.0,164.0,0.53,502.0,223.0,725.0,0.692,13.0,6.0,2.0,0.0
+,2026.0,cal-poly,Mike DeGeorge,Cal Poly,2024-25,False,False,False,30.0,38.0,68.0,0.441,30.0,38.0,68.0,0.441,0.0,0.0,0.0,0.0
+,2026.0,cal-state-bakersfield,Mike Scott,Cal State Bakersfield,2025-26,False,False,False,8.0,24.0,32.0,0.25,8.0,24.0,32.0,0.25,0.0,0.0,0.0,0.0
+,2026.0,cal-state-fullerton,Dedrique Taylor,Cal State Fullerton,2013-14,False,False,False,179.0,221.0,400.0,0.448,179.0,221.0,400.0,0.448,2.0,0.0,0.0,0.0
+,2026.0,cal-state-northridge,Andy Newman,Cal State Northridge,2023-24,False,False,False,61.0,40.0,101.0,0.604,75.0,58.0,133.0,0.564,0.0,0.0,0.0,0.0
+,2026.0,california,Mark Madsen,California,2023-24,False,False,False,48.0,49.0,97.0,0.495,118.0,100.0,218.0,0.541,0.0,0.0,0.0,0.0
+,2026.0,california-baptist,Rick Croy,California Baptist,2018-19,False,False,False,142.0,107.0,249.0,0.57,142.0,107.0,249.0,0.57,0.0,0.0,0.0,0.0
+,2026.0,california-davis,Jim Les,UC-Davis,2011-12,False,False,False,229.0,230.0,459.0,0.499,383.0,370.0,753.0,0.509,2.0,1.0,0.0,0.0
+,2026.0,california-irvine,Russ Turner,UC-Irvine,2010-11,False,False,False,344.0,198.0,542.0,0.635,344.0,198.0,542.0,0.635,2.0,0.0,0.0,0.0
+,2026.0,california-riverside,Gus Argenal,UC-Riverside,2025-26,False,False,False,10.0,22.0,32.0,0.312,10.0,22.0,32.0,0.312,0.0,0.0,0.0,0.0
+,2026.0,california-san-diego,Clint Allard,UC-San Diego,2025-26,False,False,False,23.0,11.0,34.0,0.676,23.0,11.0,34.0,0.676,0.0,0.0,0.0,0.0
+,2026.0,california-santa-barbara,Joe Pasternack,UCSB,2017-18,False,False,False,187.0,95.0,282.0,0.663,225.0,149.0,374.0,0.602,2.0,0.0,0.0,0.0
+,2026.0,campbell,John Andrzejek,Campbell,2025-26,False,False,False,16.0,18.0,34.0,0.471,16.0,18.0,34.0,0.471,0.0,0.0,0.0,0.0
+,2026.0,canisius,Jim Christian,Canisius,2024-25,False,False,False,13.0,49.0,62.0,0.21,333.0,335.0,668.0,0.499,2.0,0.0,0.0,0.0
+,2026.0,central-arkansas,John Shulman,Central Arkansas,2024-25,False,False,False,31.0,36.0,67.0,0.463,176.0,182.0,358.0,0.492,2.0,0.0,0.0,0.0
+,2026.0,central-connecticut-state,Patrick Sellers,Central Connecticut,2021-22,False,False,False,81.0,76.0,157.0,0.516,81.0,76.0,157.0,0.516,0.0,0.0,0.0,0.0
+,2026.0,central-florida,Johnny Dawkins Jr,UCF,2016-17,False,False,False,189.0,131.0,320.0,0.591,345.0,246.0,591.0,0.584,2.0,1.0,0.0,0.0
+,2026.0,central-michigan,Andy Bronkema,Central Michigan,2025-26,False,False,False,10.0,21.0,31.0,0.323,10.0,21.0,31.0,0.323,0.0,0.0,0.0,0.0
+,2026.0,charleston-southern,Saah Nimley,Charleston Southern,2023-24,False,False,False,33.0,54.0,87.0,0.379,33.0,54.0,87.0,0.379,0.0,0.0,0.0,0.0
+,2026.0,charlotte,Aaron Fearne,Charlotte,2023-24,False,False,False,47.0,51.0,98.0,0.48,47.0,51.0,98.0,0.48,0.0,0.0,0.0,0.0
+,2026.0,chattanooga,Dan Earl,Chattanooga,2022-23,False,False,False,81.0,57.0,138.0,0.587,154.0,196.0,350.0,0.44,0.0,0.0,0.0,0.0
+,2026.0,chicago-state,Landon Bussie,Chicago State,2025-26,False,False,False,7.0,25.0,32.0,0.219,73.0,108.0,181.0,0.403,0.0,0.0,0.0,0.0
+,2026.0,cincinnati,Wes Miller,Cincinnati,2021-22,False,False,False,100.0,74.0,174.0,0.575,285.0,209.0,494.0,0.577,2.0,0.0,0.0,0.0
+,2026.0,citadel,Ed Conroy,The Citadel,2006-07,False,False,False,86.0,166.0,252.0,0.341,178.0,269.0,447.0,0.398,0.0,0.0,0.0,0.0
+,2026.0,clemson,Brad Brownell,Clemson,2010-11,False,False,False,316.0,206.0,522.0,0.605,483.0,291.0,774.0,0.624,8.0,2.0,0.0,0.0
+,2026.0,cleveland-state,Rob Summers,Cleveland State,2025-26,False,False,False,11.0,22.0,33.0,0.333,11.0,22.0,33.0,0.333,0.0,0.0,0.0,0.0
+,2026.0,coastal-carolina,Justin Gray,Coastal Carolina,2024-25,False,False,False,29.0,35.0,64.0,0.453,80.0,82.0,162.0,0.494,0.0,0.0,0.0,0.0
+,2026.0,colgate,Matt Langel,Colgate,2011-12,False,False,False,259.0,218.0,477.0,0.543,259.0,218.0,477.0,0.543,5.0,0.0,0.0,0.0
+,2026.0,college-of-charleston,Chris Mack,College of Charleston,2024-25,False,False,False,45.0,20.0,65.0,0.692,323.0,153.0,476.0,0.679,9.0,4.0,0.0,0.0
+,2026.0,colorado,Tad Boyle,Colorado,2010-11,False,False,False,329.0,219.0,548.0,0.6,385.0,285.0,670.0,0.575,6.0,0.0,0.0,0.0
+,2026.0,colorado-state,Ali Farokhmanesh,Colorado State,2025-26,False,False,False,21.0,12.0,33.0,0.636,21.0,12.0,33.0,0.636,0.0,0.0,0.0,0.0
+,2026.0,columbia,Kevin Hovde,Columbia,2025-26,False,False,False,16.0,12.0,28.0,0.571,16.0,12.0,28.0,0.571,0.0,0.0,0.0,0.0
+,2026.0,connecticut,Dan Hurley,UConn,2018-19,True,True,True,194.0,74.0,268.0,0.724,345.0,179.0,524.0,0.658,7.0,2.0,2.0,2.0
+,2026.0,coppin-state,Larry Stewart,Coppin State,2023-24,False,False,False,15.0,75.0,90.0,0.167,15.0,75.0,90.0,0.167,0.0,0.0,0.0,0.0
+,2026.0,cornell,Jon Jaques,Cornell,2024-25,False,False,False,33.0,24.0,57.0,0.579,33.0,24.0,57.0,0.579,0.0,0.0,0.0,0.0
+,2026.0,creighton,Greg McDermott,Creighton,2010-11,False,False,True,365.0,188.0,553.0,0.66,514.0,319.0,833.0,0.617,13.0,3.0,0.0,0.0
+,2026.0,dartmouth,David McLaughlin,Dartmouth,2016-17,False,False,False,87.0,161.0,248.0,0.351,87.0,161.0,248.0,0.351,0.0,0.0,0.0,0.0
+,2026.0,davidson,Matt McKillop,Davidson,2022-23,False,False,False,68.0,62.0,130.0,0.523,68.0,62.0,130.0,0.523,0.0,0.0,0.0,0.0
+,2026.0,dayton,Anthony Grant,Dayton,2017-18,False,False,False,195.0,93.0,288.0,0.677,388.0,203.0,591.0,0.657,4.0,0.0,0.0,0.0
+,2026.0,delaware,Martin Ingelsby,Delaware,2016-17,False,False,False,157.0,158.0,315.0,0.498,157.0,158.0,315.0,0.498,1.0,0.0,0.0,0.0
+,2026.0,delaware-state,Stan Waterman,Delaware State,2021-22,False,False,False,47.0,106.0,153.0,0.307,47.0,106.0,153.0,0.307,0.0,0.0,0.0,0.0
+,2026.0,denver,Tim Bergstraser,Denver,2025-26,False,False,False,15.0,17.0,32.0,0.469,15.0,17.0,32.0,0.469,0.0,0.0,0.0,0.0
+,2026.0,depaul,Chris Holtmann,DePaul,2024-25,False,False,False,30.0,36.0,66.0,0.455,281.0,207.0,488.0,0.576,7.0,1.0,0.0,0.0
+,2026.0,detroit-mercy,Mark Montgomery,Detroit Mercy,2024-25,False,False,False,25.0,39.0,64.0,0.391,151.0,218.0,369.0,0.409,0.0,0.0,0.0,0.0
+,2026.0,dixie-state,Jon Judkins,Utah Tech,2020-21,False,False,False,72.0,111.0,183.0,0.393,72.0,111.0,183.0,0.393,0.0,0.0,0.0,0.0
+,2026.0,drake,Eric Henderson,Drake,2025-26,False,False,False,14.0,20.0,34.0,0.412,143.0,80.0,223.0,0.641,2.0,0.0,0.0,0.0
+,2026.0,drexel,Zach Spiker,Drexel,2016-17,False,False,False,148.0,161.0,309.0,0.479,250.0,273.0,523.0,0.478,1.0,0.0,0.0,0.0
+,2026.0,duke,Jon Scheyer,Duke,2022-23,False,True,True,121.0,24.0,145.0,0.834,121.0,24.0,145.0,0.834,3.0,2.0,1.0,0.0
+,2026.0,duquesne,Dru Joyce III,Duquesne,2024-25,False,False,False,31.0,34.0,65.0,0.477,31.0,34.0,65.0,0.477,0.0,0.0,0.0,0.0
+,2026.0,east-carolina,Michael Schwartz,East Carolina,2022-23,False,False,False,61.0,69.0,130.0,0.469,61.0,69.0,130.0,0.469,0.0,0.0,0.0,0.0
+,2026.0,east-tennessee-state,Brooks Savage,ETSU,2023-24,False,False,False,61.0,40.0,101.0,0.604,61.0,40.0,101.0,0.604,0.0,0.0,0.0,0.0
+,2026.0,eastern-illinois,Marty Simmons,Eastern Illinois,2021-22,False,False,False,53.0,105.0,158.0,0.335,237.0,280.0,517.0,0.458,0.0,0.0,0.0,0.0
+,2026.0,eastern-kentucky,A.W. Hamilton,Eastern Kentucky,2018-19,False,False,False,133.0,123.0,256.0,0.52,133.0,123.0,256.0,0.52,0.0,0.0,0.0,0.0
+,2026.0,eastern-michigan,Stan Heath,Eastern Michigan,2021-22,False,False,False,57.0,99.0,156.0,0.365,266.0,306.0,572.0,0.465,4.0,1.0,0.0,0.0
+,2026.0,eastern-washington,Dan Monson,Eastern Washington,2024-25,False,False,False,24.0,41.0,65.0,0.369,469.0,437.0,906.0,0.518,4.0,1.0,0.0,0.0
+,2026.0,elon,Billy Taylor,Elon,2022-23,False,False,False,52.0,77.0,129.0,0.403,217.0,245.0,462.0,0.47,1.0,0.0,0.0,0.0
+,2026.0,evansville,David Ragland,Evansville,2022-23,False,False,False,40.0,91.0,131.0,0.305,40.0,91.0,131.0,0.305,0.0,0.0,0.0,0.0
+,2026.0,fairfield,Chris Casey,Fairfield,2023-24,False,False,False,57.0,46.0,103.0,0.553,121.0,175.0,296.0,0.409,0.0,0.0,0.0,0.0
+,2026.0,fairleigh-dickinson,Jack Castleberry,FDU,2023-24,False,False,False,39.0,58.0,97.0,0.402,39.0,58.0,97.0,0.402,0.0,0.0,0.0,0.0
+,2026.0,florida,Todd Golden,Florida,2022-23,True,True,True,102.0,40.0,142.0,0.718,159.0,76.0,235.0,0.677,3.0,1.0,1.0,1.0
+,2026.0,florida-am,Charlie Ward Jr.,Florida A&M,2025-26,False,False,False,15.0,16.0,31.0,0.484,15.0,16.0,31.0,0.484,0.0,0.0,0.0,0.0
+,2026.0,florida-atlantic,John Jakus,Florida Atlantic,2024-25,False,False,False,36.0,31.0,67.0,0.537,36.0,31.0,67.0,0.537,0.0,0.0,0.0,0.0
+,2026.0,florida-gulf-coast,Patrick Chambers,Florida Gulf Coast,2022-23,False,False,False,66.0,66.0,132.0,0.5,256.0,244.0,500.0,0.512,1.0,0.0,0.0,0.0
+,2026.0,florida-international,Jeremy Ballard,Florida International,2018-19,False,False,False,113.0,141.0,254.0,0.445,113.0,141.0,254.0,0.445,0.0,0.0,0.0,0.0
+,2026.0,florida-state,Luke Loucks,Florida State,2025-26,False,False,False,18.0,15.0,33.0,0.545,18.0,15.0,33.0,0.545,0.0,0.0,0.0,0.0
+,2026.0,fordham,Mike Magpayo,Fordham,2025-26,False,False,False,17.0,15.0,32.0,0.531,106.0,78.0,184.0,0.576,0.0,0.0,0.0,0.0
+,2026.0,fresno-state,Vance Walberg,Fresno State,2024-25,False,False,False,19.0,45.0,64.0,0.297,33.0,80.0,113.0,0.292,0.0,0.0,0.0,0.0
+,2026.0,furman,Bob Richey,Furman,2017-18,False,False,False,203.0,92.0,295.0,0.688,203.0,92.0,295.0,0.688,1.0,0.0,0.0,0.0
+,2026.0,gardner-webb,Jeremy Luther,Gardner-Webb,2024-25,False,False,False,15.0,49.0,64.0,0.234,15.0,49.0,64.0,0.234,0.0,0.0,0.0,0.0
+,2026.0,george-mason,Tony Skinn,George Mason,2023-24,False,False,False,70.0,30.0,100.0,0.7,70.0,30.0,100.0,0.7,0.0,0.0,0.0,0.0
+,2026.0,george-washington,Chris Caputo,George Washington,2022-23,False,False,False,70.0,61.0,131.0,0.534,70.0,61.0,131.0,0.534,0.0,0.0,0.0,0.0
+,2026.0,georgetown,Ed Cooley,Georgetown,2023-24,False,False,False,43.0,57.0,100.0,0.43,377.0,279.0,656.0,0.575,7.0,1.0,0.0,0.0
+,2026.0,georgia,Michael White,Georgia,2022-23,False,False,False,78.0,56.0,134.0,0.582,321.0,184.0,505.0,0.636,5.0,1.0,0.0,0.0
+,2026.0,georgia-southern,Charlie Henry,Georgia Southern,2023-24,False,False,False,47.0,56.0,103.0,0.456,47.0,56.0,103.0,0.456,0.0,0.0,0.0,0.0
+,2026.0,georgia-state,Jonas Hayes,Georgia State,2022-23,False,False,False,48.0,79.0,127.0,0.378,52.0,79.0,131.0,0.397,0.0,0.0,0.0,0.0
+,2026.0,georgia-tech,Damon Stoudamire,Georgia Tech,2023-24,False,False,False,42.0,55.0,97.0,0.433,113.0,132.0,245.0,0.461,0.0,0.0,0.0,0.0
+,2026.0,gonzaga,Mark Few,Gonzaga,1999-00,False,False,True,772.0,155.0,927.0,0.833,772.0,155.0,927.0,0.833,25.0,13.0,2.0,0.0
+,2026.0,grambling,Patrick Crarey II,Grambling,2025-26,False,False,False,14.0,19.0,33.0,0.424,28.0,36.0,64.0,0.438,0.0,0.0,0.0,0.0
+,2026.0,grand-canyon,Bryce Drew,Grand Canyon,2020-21,False,False,False,140.0,52.0,192.0,0.729,304.0,160.0,464.0,0.655,7.0,0.0,0.0,0.0
+,2026.0,green-bay,Doug Gottlieb,Green Bay,2024-25,False,False,False,22.0,43.0,65.0,0.338,22.0,43.0,65.0,0.338,0.0,0.0,0.0,0.0
+,2026.0,hampton,Ivan Thomas,Hampton,2024-25,False,False,False,30.0,35.0,65.0,0.462,30.0,35.0,65.0,0.462,0.0,0.0,0.0,0.0
+,2026.0,harvard,Tommy Amaker,Harvard,2007-08,False,False,False,321.0,206.0,527.0,0.609,497.0,345.0,842.0,0.59,5.0,1.0,0.0,0.0
+,2026.0,hawaii,Eran Ganot,Hawaii,2015-16,False,False,False,195.0,126.0,321.0,0.607,198.0,128.0,326.0,0.607,1.0,0.0,0.0,0.0
+,2026.0,high-point,Flynn Clayman,High Point,2025-26,False,False,False,30.0,4.0,34.0,0.882,32.0,5.0,37.0,0.865,0.0,0.0,0.0,0.0
+,2026.0,hofstra,Speedy Claxton,Hofstra,2021-22,False,False,False,105.0,62.0,167.0,0.629,105.0,62.0,167.0,0.629,0.0,0.0,0.0,0.0
+,2026.0,holy-cross,Dave Paulsen,Holy Cross,2023-24,False,False,False,34.0,64.0,98.0,0.347,263.0,249.0,512.0,0.514,2.0,0.0,0.0,0.0
+,2026.0,houston,Kelvin Sampson,Houston,2014-15,True,True,True,327.0,90.0,417.0,0.784,752.0,317.0,1069.0,0.703,21.0,9.0,3.0,0.0
+,2026.0,houston-baptist,Craig Doty,Houston Christian,2024-25,False,False,False,24.0,40.0,64.0,0.375,24.0,40.0,64.0,0.375,0.0,0.0,0.0,0.0
+,2026.0,howard,Kenneth Blakeney,Howard,2019-20,False,False,False,96.0,106.0,202.0,0.475,96.0,106.0,202.0,0.475,2.0,0.0,0.0,0.0
+,2026.0,idaho,Alex Pribble,Idaho,2023-24,False,False,False,46.0,54.0,100.0,0.46,46.0,54.0,100.0,0.46,0.0,0.0,0.0,0.0
+,2026.0,idaho-state,Ryan Looney,Idaho State,2019-20,False,False,False,81.0,132.0,213.0,0.38,81.0,132.0,213.0,0.38,0.0,0.0,0.0,0.0
+,2026.0,illinois,Brad Underwood *,Illinois,2017-18,False,False,True,189.0,109.0,298.0,0.634,298.0,136.0,434.0,0.687,9.0,1.0,0.0,0.0
+,2026.0,illinois-chicago,Rob Ehsan,UIC,2024-25,False,False,False,36.0,29.0,65.0,0.554,112.0,86.0,198.0,0.566,0.0,0.0,0.0,0.0
+,2026.0,illinois-state,Ryan Pedon,Illinois State,2022-23,False,False,False,68.0,64.0,132.0,0.515,68.0,64.0,132.0,0.515,0.0,0.0,0.0,0.0
+,2026.0,incarnate-word,Shane Heirman,Incarnate Word,2023-24,False,False,False,39.0,59.0,98.0,0.398,39.0,59.0,98.0,0.398,0.0,0.0,0.0,0.0
+,2026.0,indiana,Darian DeVries,Indiana,2025-26,False,False,False,18.0,14.0,32.0,0.562,187.0,82.0,269.0,0.695,3.0,0.0,0.0,0.0
+,2026.0,indiana-state,Matthew Graves,Indiana State,2024-25,False,False,False,25.0,39.0,64.0,0.391,90.0,135.0,225.0,0.4,0.0,0.0,0.0,0.0
+,2026.0,iona,Dan Geriot,Iona,2025-26,False,False,False,18.0,14.0,32.0,0.562,18.0,14.0,32.0,0.562,0.0,0.0,0.0,0.0
+,2026.0,iowa,Ben McCollum,Iowa,2025-26,False,False,False,21.0,12.0,33.0,0.636,52.0,16.0,68.0,0.765,1.0,0.0,0.0,0.0
+,2026.0,iowa-state,T.J. Otzelberger,Iowa State,2021-22,False,False,True,122.0,52.0,174.0,0.701,221.0,115.0,336.0,0.658,6.0,2.0,0.0,0.0
+,2026.0,ipfw,Jon Coffman,Purdue Fort Wayne,2014-15,False,False,False,215.0,170.0,385.0,0.558,215.0,170.0,385.0,0.558,0.0,0.0,0.0,0.0
+,2026.0,iupui,Ben Howlett,IU Indianapolis,2025-26,False,False,False,7.0,25.0,32.0,0.219,7.0,25.0,32.0,0.219,0.0,0.0,0.0,0.0
+,2026.0,jackson-state,Mo Williams,Jackson State,2022-23,False,False,False,57.0,75.0,132.0,0.432,71.0,110.0,181.0,0.392,0.0,0.0,0.0,0.0
+,2026.0,jacksonville,Jordan Mincy,Jacksonville,2021-22,False,False,False,81.0,77.0,158.0,0.513,81.0,77.0,158.0,0.513,0.0,0.0,0.0,0.0
+,2026.0,jacksonville-state,Ray Harper,Jacksonville State,2016-17,False,False,False,184.0,142.0,326.0,0.564,273.0,206.0,479.0,0.57,4.0,0.0,0.0,0.0
+,2026.0,james-madison,Preston Spradlin,James Madison,2024-25,False,False,False,38.0,27.0,65.0,0.585,178.0,136.0,314.0,0.567,2.0,0.0,0.0,0.0
+,2026.0,kansas,Bill Self,Kansas,2003-04,False,False,True,647.0,166.0,813.0,0.796,854.0,271.0,1125.0,0.759,26.0,14.0,4.0,2.0
+,2026.0,kansas-state,Matthew Driscoll,Kansas State,2025-26,False,False,False,2.0,5.0,7.0,0.286,250.0,269.0,519.0,0.482,1.0,0.0,0.0,0.0
+,2026.0,kennesaw-state,Antoine Pettway,Kennesaw State,2023-24,False,False,False,55.0,43.0,98.0,0.561,55.0,43.0,98.0,0.561,0.0,0.0,0.0,0.0
+,2026.0,kent-state,Rob Senderoff,Kent State,2011-12,False,False,False,312.0,185.0,497.0,0.628,312.0,185.0,497.0,0.628,2.0,0.0,0.0,0.0
+,2026.0,kentucky,Mark Pope,Kentucky,2024-25,False,True,True,45.0,25.0,70.0,0.643,232.0,133.0,365.0,0.636,3.0,1.0,0.0,0.0
+,2026.0,la-salle,Darris Nichols,La Salle,2025-26,False,False,False,9.0,23.0,32.0,0.281,77.0,86.0,163.0,0.472,0.0,0.0,0.0,0.0
+,2026.0,lafayette,Mike McGarvey,Lafayette,2022-23,False,False,False,37.0,65.0,102.0,0.363,37.0,65.0,102.0,0.363,0.0,0.0,0.0,0.0
+,2026.0,lamar,Alvin Brooks,Lamar,2021-22,False,False,False,62.0,95.0,157.0,0.395,116.0,179.0,295.0,0.393,0.0,0.0,0.0,0.0
+,2026.0,le-moyne,Nate Champion,Le Moyne,2023-24,False,False,False,39.0,57.0,96.0,0.406,39.0,57.0,96.0,0.406,0.0,0.0,0.0,0.0
+,2026.0,lehigh,Brett Reed,Lehigh,2007-08,False,False,False,305.0,275.0,580.0,0.526,305.0,275.0,580.0,0.526,2.0,0.0,0.0,0.0
+,2026.0,liberty,Ritchie McKay,Liberty,2007-08,False,False,False,297.0,141.0,438.0,0.678,462.0,299.0,761.0,0.607,4.0,0.0,0.0,0.0
+,2026.0,lindenwood,Kyle Gerdeman,Lindenwood,2022-23,False,False,False,54.0,75.0,129.0,0.419,54.0,75.0,129.0,0.419,0.0,0.0,0.0,0.0
+,2026.0,lipscomb,Kevin Carroll,Lipscomb,2025-26,False,False,False,19.0,13.0,32.0,0.594,19.0,13.0,32.0,0.594,0.0,0.0,0.0,0.0
+,2026.0,long-beach-state,Chris Acker,Long Beach State,2024-25,False,False,False,17.0,47.0,64.0,0.266,17.0,47.0,64.0,0.266,0.0,0.0,0.0,0.0
+,2026.0,long-island-university,Rod Strickland,LIU,2022-23,False,False,False,51.0,74.0,125.0,0.408,51.0,74.0,125.0,0.408,0.0,0.0,0.0,0.0
+,2026.0,longwood,Ronnie Thomas,Longwood,2025-26,False,False,False,16.0,16.0,32.0,0.5,16.0,16.0,32.0,0.5,0.0,0.0,0.0,0.0
+,2026.0,louisiana-lafayette,Quannas White,Louisiana,2025-26,False,False,False,11.0,22.0,33.0,0.333,11.0,22.0,33.0,0.333,0.0,0.0,0.0,0.0
+,2026.0,louisiana-monroe,Phil Cunningham,Louisiana-Monroe,2025-26,False,False,False,4.0,28.0,32.0,0.125,84.0,139.0,223.0,0.377,1.0,0.0,0.0,0.0
+,2026.0,louisiana-state,Matt McMahon,LSU,2022-23,False,False,False,60.0,70.0,130.0,0.462,214.0,137.0,351.0,0.61,3.0,0.0,0.0,0.0
+,2026.0,louisiana-tech,Talvin Hester,Louisiana Tech,2022-23,False,False,False,77.0,54.0,131.0,0.588,77.0,54.0,131.0,0.588,0.0,0.0,0.0,0.0
+,2026.0,louisville,Pat Kelsey,Louisville,2024-25,False,True,True,50.0,18.0,68.0,0.735,311.0,140.0,451.0,0.69,5.0,0.0,0.0,0.0
+,2026.0,loyola-il,Drew Valentine,Loyola (IL),2021-22,False,False,False,92.0,75.0,167.0,0.551,92.0,75.0,167.0,0.551,1.0,0.0,0.0,0.0
+,2026.0,loyola-marymount,Stan Johnson,Loyola Marymount,2020-21,False,False,False,87.0,90.0,177.0,0.492,87.0,90.0,177.0,0.492,0.0,0.0,0.0,0.0
+,2026.0,loyola-md,Josh Loeffler,Loyola (MD),2024-25,False,False,False,24.0,39.0,63.0,0.381,24.0,39.0,63.0,0.381,0.0,0.0,0.0,0.0
+,2026.0,maine,Chris Markwood,Maine,2022-23,False,False,False,56.0,72.0,128.0,0.438,56.0,72.0,128.0,0.438,0.0,0.0,0.0,0.0
+,2026.0,manhattan,John Gallagher,Manhattan,2023-24,False,False,False,36.0,57.0,93.0,0.387,205.0,264.0,469.0,0.437,1.0,0.0,0.0,0.0
+,2026.0,marist,John Dunne,Marist,2018-19,False,False,False,115.0,122.0,237.0,0.485,268.0,347.0,615.0,0.436,1.0,0.0,0.0,0.0
+,2026.0,marquette,Shaka Smart,Marquette,2021-22,False,False,False,110.0,61.0,171.0,0.643,382.0,203.0,585.0,0.653,12.0,2.0,1.0,0.0
+,2026.0,marshall,Cornelius Jackson,Marshall,2024-25,False,False,False,39.0,26.0,65.0,0.6,39.0,26.0,65.0,0.6,0.0,0.0,0.0,0.0
+,2026.0,maryland,Buzz Williams,Maryland,2025-26,False,False,False,12.0,21.0,33.0,0.364,385.0,249.0,634.0,0.607,11.0,4.0,0.0,0.0
+,2026.0,maryland-baltimore-county,Jim Ferry,UMBC,2021-22,False,False,False,84.0,76.0,160.0,0.525,305.0,336.0,641.0,0.476,2.0,0.0,0.0,0.0
+,2026.0,maryland-eastern-shore,Cleo Hill Jr.,Maryland-Eastern Shore,2024-25,False,False,False,15.0,48.0,63.0,0.238,15.0,48.0,63.0,0.238,0.0,0.0,0.0,0.0
+,2026.0,massachusetts,Frank Martin,UMass,2022-23,False,False,False,64.0,63.0,127.0,0.504,352.0,264.0,616.0,0.571,5.0,2.0,1.0,0.0
+,2026.0,massachusetts-lowell,Pat Duquette,UMass-Lowell,2013-14,False,False,False,190.0,206.0,396.0,0.48,190.0,206.0,396.0,0.48,0.0,0.0,0.0,0.0
+,2026.0,mcneese-state,Bill Armstrong,McNeese State,2025-26,False,False,False,28.0,5.0,33.0,0.848,28.0,5.0,33.0,0.848,0.0,0.0,0.0,0.0
+,2026.0,memphis,Anfernee Hardaway,Memphis,2018-19,False,False,False,175.0,87.0,262.0,0.668,175.0,87.0,262.0,0.668,3.0,0.0,0.0,0.0
+,2026.0,mercer,Ryan Ridder,Mercer,2024-25,False,False,False,33.0,32.0,65.0,0.508,129.0,124.0,253.0,0.51,0.0,0.0,0.0,0.0
+,2026.0,mercyhurst,Gary Manchel,Mercyhurst,2024-25,False,False,False,32.0,33.0,65.0,0.492,32.0,33.0,65.0,0.492,0.0,0.0,0.0,0.0
+,2026.0,merrimack,Joe Gallo,Merrimack,2019-20,False,False,False,123.0,90.0,213.0,0.577,123.0,90.0,213.0,0.577,0.0,0.0,0.0,0.0
+,2026.0,miami-fl,Jai Lucas,Miami (FL),2025-26,False,False,False,25.0,8.0,33.0,0.758,25.0,8.0,33.0,0.758,0.0,0.0,0.0,0.0
+,2026.0,miami-oh,Travis Steele,Miami (OH),2022-23,False,False,False,83.0,47.0,130.0,0.638,153.0,97.0,250.0,0.612,0.0,0.0,0.0,0.0
+,2026.0,michigan,Dusty May,Michigan,2024-25,False,True,True,58.0,12.0,70.0,0.829,184.0,81.0,265.0,0.694,3.0,2.0,1.0,0.0
+,2026.0,michigan-state,Tom Izzo,Michigan State,1995-96,False,False,True,762.0,309.0,1071.0,0.711,762.0,309.0,1071.0,0.711,27.0,16.0,8.0,1.0
+,2026.0,middle-tennessee,Nick McDevitt,Middle Tennessee,2018-19,False,False,False,122.0,133.0,255.0,0.478,220.0,199.0,419.0,0.525,1.0,0.0,0.0,0.0
+,2026.0,milwaukee,Bart Lundy,Milwaukee,2022-23,False,False,False,75.0,58.0,133.0,0.564,171.0,145.0,316.0,0.541,0.0,0.0,0.0,0.0
+,2026.0,minnesota,Niko Medved,Minnesota,2025-26,False,False,False,15.0,17.0,32.0,0.469,237.0,190.0,427.0,0.555,3.0,0.0,0.0,0.0
+,2026.0,mississippi,Chris Beard,Ole Miss,2023-24,False,False,False,59.0,44.0,103.0,0.573,230.0,117.0,347.0,0.663,7.0,4.0,1.0,0.0
+,2026.0,mississippi-state,Chris Jans,Mississippi State,2022-23,False,False,False,76.0,59.0,135.0,0.563,219.0,103.0,322.0,0.68,6.0,0.0,0.0,0.0
+,2026.0,mississippi-valley-state,George Ivory,Mississippi Valley State,2022-23,False,False,False,12.0,115.0,127.0,0.094,152.0,384.0,536.0,0.284,1.0,0.0,0.0,0.0
+,2026.0,missouri,Dennis Gates,Missouri,2022-23,False,False,False,75.0,58.0,133.0,0.564,125.0,98.0,223.0,0.561,3.0,0.0,0.0,0.0
+,2026.0,missouri-kansas-city,Marvin Menzies,Kansas City,2022-23,False,False,False,44.0,84.0,128.0,0.344,290.0,243.0,533.0,0.544,5.0,0.0,0.0,0.0
+,2026.0,missouri-state,Cuonzo Martin,Missouri State,2008-09,False,False,False,86.0,82.0,168.0,0.512,289.0,239.0,528.0,0.547,4.0,1.0,0.0,0.0
+,2026.0,monmouth,King Rice,Monmouth,2011-12,False,False,False,239.0,243.0,482.0,0.496,239.0,243.0,482.0,0.496,0.0,0.0,0.0,0.0
+,2026.0,montana,Travis DeCuire,Montana,2014-15,False,False,False,244.0,150.0,394.0,0.619,244.0,150.0,394.0,0.619,3.0,0.0,0.0,0.0
+,2026.0,montana-state,Matt Logie,Montana State,2023-24,False,False,False,50.0,50.0,100.0,0.5,50.0,50.0,100.0,0.5,1.0,0.0,0.0,0.0
+,2026.0,morehead-state,Jonathan Mattox,Morehead State,2024-25,False,False,False,35.0,30.0,65.0,0.538,35.0,30.0,65.0,0.538,0.0,0.0,0.0,0.0
+,2026.0,morgan-state,Kevin Broadus,Morgan State,2019-20,False,False,False,96.0,109.0,205.0,0.468,133.0,134.0,267.0,0.498,1.0,0.0,0.0,0.0
+,2026.0,mount-st-marys,Donny Lind,Mount St. Mary's,2024-25,False,False,False,38.0,30.0,68.0,0.559,38.0,30.0,68.0,0.559,1.0,0.0,0.0,0.0
+,2026.0,murray-state,Ryan Miller,Murray State,2025-26,False,False,False,20.0,12.0,32.0,0.625,20.0,12.0,32.0,0.625,0.0,0.0,0.0,0.0
+,2026.0,navy,Jon Perry,Navy,2025-26,False,False,False,26.0,7.0,33.0,0.788,26.0,7.0,33.0,0.788,0.0,0.0,0.0,0.0
+,2026.0,nebraska,Fred Hoiberg,Nebraska,2019-20,False,False,False,110.0,114.0,224.0,0.491,225.0,170.0,395.0,0.57,5.0,1.0,0.0,0.0
+,2026.0,nebraska-omaha,Chris Crutchfield,Omaha,2022-23,False,False,False,62.0,71.0,133.0,0.466,62.0,71.0,133.0,0.466,1.0,0.0,0.0,0.0
+,2026.0,nevada,Steve Alford,Nevada,2019-20,False,False,False,135.0,87.0,222.0,0.608,644.0,356.0,1000.0,0.644,13.0,4.0,0.0,0.0
+,2026.0,nevada-las-vegas,Josh Pastner *,UNLV,2025-26,False,False,False,17.0,16.0,33.0,0.515,293.0,203.0,496.0,0.591,5.0,0.0,0.0,0.0
+,2026.0,new-hampshire,Nathan Davis,New Hampshire,2023-24,False,False,False,33.0,60.0,93.0,0.355,162.0,175.0,337.0,0.481,2.0,0.0,0.0,0.0
+,2026.0,new-haven,Ted Hotaling,New Haven,2025-26,False,False,False,14.0,17.0,31.0,0.452,14.0,17.0,31.0,0.452,0.0,0.0,0.0,0.0
+,2026.0,new-mexico,Eric Olen,New Mexico,2025-26,False,False,False,23.0,10.0,33.0,0.697,104.0,73.0,177.0,0.588,1.0,0.0,0.0,0.0
+,2026.0,new-mexico-state,Jason Hooten,New Mexico State,2023-24,False,False,False,46.0,50.0,96.0,0.479,307.0,219.0,526.0,0.584,0.0,0.0,0.0,0.0
+,2026.0,new-orleans,Stacy Hollowell,New Orleans,2024-25,False,False,False,19.0,45.0,64.0,0.297,19.0,45.0,64.0,0.297,0.0,0.0,0.0,0.0
+,2026.0,niagara,Greg Paulus,Niagara,2019-20,False,False,False,86.0,120.0,206.0,0.417,86.0,120.0,206.0,0.417,0.0,0.0,0.0,0.0
+,2026.0,nicholls-state,Tevon Saddler,Nicholls State,2023-24,False,False,False,54.0,46.0,100.0,0.54,54.0,46.0,100.0,0.54,0.0,0.0,0.0,0.0
+,2026.0,njit,Grant Billmeier,NJIT,2023-24,False,False,False,29.0,63.0,92.0,0.315,30.0,63.0,93.0,0.323,0.0,0.0,0.0,0.0
+,2026.0,norfolk-state,Robert Jones,Norfolk State,2013-14,False,False,False,251.0,176.0,427.0,0.588,251.0,176.0,427.0,0.588,3.0,0.0,0.0,0.0
+,2026.0,north-alabama,Tony Pujol,North Alabama,2018-19,False,False,False,111.0,135.0,246.0,0.451,111.0,135.0,246.0,0.451,0.0,0.0,0.0,0.0
+,2026.0,north-carolina,Hubert Davis,UNC,2021-22,False,False,True,125.0,53.0,178.0,0.702,125.0,53.0,178.0,0.702,3.0,2.0,1.0,0.0
+,2026.0,north-carolina-asheville,Mike Morrell,UNC Asheville,2018-19,False,False,False,131.0,116.0,247.0,0.53,131.0,116.0,247.0,0.53,1.0,0.0,0.0,0.0
+,2026.0,north-carolina-at,Monte Ross,North Carolina A&T,2023-24,False,False,False,25.0,69.0,94.0,0.266,157.0,253.0,410.0,0.383,1.0,0.0,0.0,0.0
+,2026.0,north-carolina-central,LeVelle Moton,North Carolina Central,2009-10,False,False,False,292.0,234.0,526.0,0.555,292.0,234.0,526.0,0.555,4.0,0.0,0.0,0.0
+,2026.0,north-carolina-greensboro,Mike Jones,UNC Greensboro,2021-22,False,False,False,93.0,69.0,162.0,0.574,267.0,219.0,486.0,0.549,1.0,0.0,0.0,0.0
+,2026.0,north-carolina-state,Will Wade,NC State,2025-26,False,False,False,20.0,13.0,33.0,0.606,266.0,118.0,384.0,0.693,7.0,1.0,0.0,0.0
+,2026.0,north-carolina-wilmington,Takayo Siddle,UNC Wilmington,2020-21,False,False,False,132.0,53.0,185.0,0.714,132.0,53.0,185.0,0.714,1.0,0.0,0.0,0.0
+,2026.0,north-dakota,Paul Sather,North Dakota,2019-20,False,False,False,91.0,132.0,223.0,0.408,91.0,132.0,223.0,0.408,0.0,0.0,0.0,0.0
+,2026.0,north-dakota-state,David Richman,North Dakota State,2014-15,False,False,False,238.0,149.0,387.0,0.615,238.0,149.0,387.0,0.615,2.0,0.0,0.0,0.0
+,2026.0,north-florida,Bobby Kennen,North Florida,2025-26,False,False,False,7.0,25.0,32.0,0.219,7.0,25.0,32.0,0.219,0.0,0.0,0.0,0.0
+,2026.0,north-texas,Daniyal Robinson,North Texas,2025-26,False,False,False,19.0,14.0,33.0,0.576,84.0,56.0,140.0,0.6,0.0,0.0,0.0,0.0
+,2026.0,northeastern,Bill Coen,Northeastern,2006-07,False,False,False,306.0,323.0,629.0,0.486,306.0,323.0,629.0,0.486,2.0,0.0,0.0,0.0
+,2026.0,northern-arizona,Shane Burcar,Northern Arizona,2019-20,False,False,False,85.0,133.0,218.0,0.39,85.0,133.0,218.0,0.39,0.0,0.0,0.0,0.0
+,2026.0,northern-colorado,Steve Smiley,Northern Colorado,2020-21,False,False,False,109.0,83.0,192.0,0.568,109.0,83.0,192.0,0.568,0.0,0.0,0.0,0.0
+,2026.0,northern-illinois,Rashon Burno,Northern Illinois,2021-22,False,False,False,48.0,106.0,154.0,0.312,48.0,106.0,154.0,0.312,0.0,0.0,0.0,0.0
+,2026.0,northern-iowa,Ben Jacobson,Northern Iowa,2006-07,False,False,False,397.0,258.0,655.0,0.606,397.0,258.0,655.0,0.606,4.0,1.0,0.0,0.0
+,2026.0,northern-kentucky,Darrin Horn,Northern Kentucky,2019-20,False,False,False,134.0,90.0,224.0,0.598,305.0,201.0,506.0,0.603,2.0,1.0,0.0,0.0
+,2026.0,northwestern,Chris Collins,Northwestern,2013-14,False,False,False,209.0,209.0,418.0,0.5,209.0,209.0,418.0,0.5,3.0,0.0,0.0,0.0
+,2026.0,northwestern-state,Rick Cabrera,Northwestern State,2023-24,False,False,False,35.0,61.0,96.0,0.365,35.0,61.0,96.0,0.365,0.0,0.0,0.0,0.0
+,2026.0,notre-dame,Micah Shrewsberry,Notre Dame,2023-24,False,False,False,41.0,56.0,97.0,0.423,78.0,87.0,165.0,0.473,1.0,0.0,0.0,0.0
+,2026.0,oakland,Greg Kampe,Oakland,1999-00,False,False,False,469.0,407.0,876.0,0.535,469.0,407.0,876.0,0.535,4.0,0.0,0.0,0.0
+,2026.0,ohio,Jeff Boals,Ohio,2019-20,False,False,False,129.0,93.0,222.0,0.581,184.0,135.0,319.0,0.577,1.0,0.0,0.0,0.0
+,2026.0,ohio-state,Jake Diebler,Ohio State,2023-24,False,False,False,46.0,30.0,76.0,0.605,46.0,30.0,76.0,0.605,0.0,0.0,0.0,0.0
+,2026.0,oklahoma,Porter Moser,Oklahoma,2021-22,False,False,False,93.0,74.0,167.0,0.557,386.0,316.0,702.0,0.55,3.0,2.0,1.0,0.0
+,2026.0,oklahoma-state,Steve Lutz,Oklahoma State,2024-25,False,False,False,36.0,32.0,68.0,0.529,105.0,67.0,172.0,0.61,3.0,0.0,0.0,0.0
+,2026.0,old-dominion,Mike Jones,Old Dominion,2024-25,False,False,False,27.0,41.0,68.0,0.397,27.0,41.0,68.0,0.397,0.0,0.0,0.0,0.0
+,2026.0,oral-roberts,Kory Barnett,Oral Roberts,2025-26,False,False,False,10.0,23.0,33.0,0.303,10.0,23.0,33.0,0.303,0.0,0.0,0.0,0.0
+,2026.0,oregon,Dana Altman,Oregon,2010-11,False,False,False,382.0,182.0,564.0,0.677,792.0,425.0,1217.0,0.651,17.0,5.0,1.0,0.0
+,2026.0,oregon-state,Wayne Tinkle,Oregon State,2014-15,False,False,False,177.0,206.0,383.0,0.462,335.0,297.0,632.0,0.53,5.0,1.0,0.0,0.0
+,2026.0,pacific,Dave Smart,Pacific,2024-25,False,False,False,27.0,39.0,66.0,0.409,27.0,39.0,66.0,0.409,0.0,0.0,0.0,0.0
+,2026.0,penn-state,Mike Rhoades,Penn State,2023-24,False,False,False,44.0,52.0,96.0,0.458,220.0,165.0,385.0,0.571,3.0,0.0,0.0,0.0
+,2026.0,pennsylvania,Fran McCaffery,Penn,2025-26,False,False,False,17.0,11.0,28.0,0.607,565.0,395.0,960.0,0.589,12.0,0.0,0.0,0.0
+,2026.0,pepperdine,Ed Schilling,Pepperdine,2024-25,False,False,False,22.0,45.0,67.0,0.328,97.0,138.0,235.0,0.413,0.0,0.0,0.0,0.0
+,2026.0,pittsburgh,Jeff Capel III *,Pitt,2018-19,False,False,False,127.0,127.0,254.0,0.5,302.0,237.0,539.0,0.56,4.0,1.0,0.0,0.0
+,2026.0,portland,Shantay Legans,Portland,2021-22,False,False,False,72.0,94.0,166.0,0.434,147.0,143.0,290.0,0.507,1.0,0.0,0.0,0.0
+,2026.0,portland-state,Jase Coburn,Portland State,2021-22,False,False,False,82.0,75.0,157.0,0.522,82.0,75.0,157.0,0.522,0.0,0.0,0.0,0.0
+,2026.0,prairie-view,Byron Smith,Prairie View,2015-16,False,False,False,146.0,178.0,324.0,0.451,146.0,178.0,324.0,0.451,1.0,0.0,0.0,0.0
+,2026.0,presbyterian,Quinton Ferrell,Presbyterian,2019-20,False,False,False,77.0,140.0,217.0,0.355,77.0,140.0,217.0,0.355,0.0,0.0,0.0,0.0
+,2026.0,princeton,Mitch Henderson,Princeton,2011-12,False,False,False,260.0,153.0,413.0,0.63,260.0,153.0,413.0,0.63,2.0,1.0,0.0,0.0
+,2026.0,providence,Kim English,Providence,2023-24,False,False,False,48.0,52.0,100.0,0.48,82.0,81.0,163.0,0.503,0.0,0.0,0.0,0.0
+,2026.0,purdue,Matt Painter,Purdue,2005-06,True,True,True,497.0,223.0,720.0,0.69,522.0,228.0,750.0,0.696,17.0,8.0,1.0,0.0
+,2026.0,queens-nc,Grant Leonard,Queens (NC),2022-23,False,False,False,73.0,62.0,135.0,0.541,73.0,62.0,135.0,0.541,0.0,0.0,0.0,0.0
+,2026.0,quinnipiac,Tom Pecora,Quinnipiac,2023-24,False,False,False,63.0,36.0,99.0,0.636,262.0,268.0,530.0,0.494,0.0,0.0,0.0,0.0
+,2026.0,radford,Zach Chu,Radford,2025-26,False,False,False,16.0,16.0,32.0,0.5,16.0,16.0,32.0,0.5,0.0,0.0,0.0,0.0
+,2026.0,rhode-island,Archie Miller,Rhode Island,2022-23,False,False,False,55.0,71.0,126.0,0.437,261.0,192.0,453.0,0.576,4.0,1.0,0.0,0.0
+,2026.0,rice,Rob Lanier,Rice,2024-25,False,False,False,26.0,37.0,63.0,0.413,167.0,172.0,339.0,0.493,2.0,0.0,0.0,0.0
+,2026.0,richmond,Chris Mooney,Richmond,2005-06,False,False,False,373.0,307.0,680.0,0.549,391.0,319.0,710.0,0.551,3.0,1.0,0.0,0.0
+,2026.0,rider,Kevin Baggett,Rider,2012-13,False,False,False,210.0,227.0,437.0,0.481,210.0,227.0,437.0,0.481,0.0,0.0,0.0,0.0
+,2026.0,robert-morris,Andrew Toole,Robert Morris,2010-11,False,False,False,274.0,252.0,526.0,0.521,274.0,252.0,526.0,0.521,2.0,0.0,0.0,0.0
+,2026.0,rutgers,Steve Pikiell,Rutgers,2016-17,False,False,False,161.0,159.0,320.0,0.503,353.0,315.0,668.0,0.528,3.0,0.0,0.0,0.0
+,2026.0,sacramento-state,Mike Bibby,Sacramento State,2025-26,False,False,False,10.0,21.0,31.0,0.323,10.0,21.0,31.0,0.323,0.0,0.0,0.0,0.0
+,2026.0,sacred-heart,Anthony Latina,Sacred Heart,2013-14,False,False,False,170.0,230.0,400.0,0.425,170.0,230.0,400.0,0.425,0.0,0.0,0.0,0.0
+,2026.0,saint-francis-pa,Luke McConnell,Saint Francis (PA),2025-26,False,False,False,7.0,24.0,31.0,0.226,7.0,24.0,31.0,0.226,0.0,0.0,0.0,0.0
+,2026.0,saint-josephs,Steve Donahue,St. Joseph's,2025-26,False,False,False,22.0,11.0,33.0,0.667,353.0,355.0,708.0,0.499,4.0,1.0,0.0,0.0
+,2026.0,saint-louis,Josh Schertz,Saint Louis,2024-25,False,False,False,47.0,20.0,67.0,0.701,113.0,60.0,173.0,0.653,0.0,0.0,0.0,0.0
+,2026.0,saint-marys-ca,Randy Bennett,Saint Mary's,2001-02,False,False,False,589.0,227.0,816.0,0.722,589.0,227.0,816.0,0.722,11.0,1.0,0.0,0.0
+,2026.0,saint-peters,Bashir Mason,St. Peter's,2022-23,False,False,False,62.0,60.0,122.0,0.508,227.0,190.0,417.0,0.544,1.0,0.0,0.0,0.0
+,2026.0,sam-houston-state,Chris Mudge,Sam Houston,2023-24,False,False,False,56.0,42.0,98.0,0.571,56.0,42.0,98.0,0.571,0.0,0.0,0.0,0.0
+,2026.0,samford,Lennie Acuff,Samford,2025-26,False,False,False,18.0,14.0,32.0,0.562,128.0,96.0,224.0,0.571,1.0,0.0,0.0,0.0
+,2026.0,san-diego,Steve Lavin,San Diego,2022-23,False,False,False,47.0,83.0,130.0,0.362,284.0,233.0,517.0,0.549,8.0,5.0,0.0,0.0
+,2026.0,san-diego-state,Brian Dutcher,San Diego State,2017-18,False,False,False,220.0,79.0,299.0,0.736,220.0,79.0,299.0,0.736,6.0,2.0,1.0,0.0
+,2026.0,san-francisco,Chris Gerlufsen,San Francisco,2022-23,False,False,False,85.0,51.0,136.0,0.625,93.0,56.0,149.0,0.624,0.0,0.0,0.0,0.0
+,2026.0,san-jose-state,Tim Miles,San Jose State,2021-22,False,False,False,62.0,104.0,166.0,0.373,285.0,326.0,611.0,0.466,2.0,0.0,0.0,0.0
+,2026.0,santa-clara,Herb Sendek,Santa Clara,2016-17,False,False,False,187.0,128.0,315.0,0.594,600.0,423.0,1023.0,0.587,8.0,1.0,0.0,0.0
+,2026.0,seattle,Chris Victor,Seattle,2021-22,False,False,False,100.0,66.0,166.0,0.602,100.0,66.0,166.0,0.602,0.0,0.0,0.0,0.0
+,2026.0,seton-hall,Shaheen Holloway,Seton Hall,2022-23,False,False,False,70.0,65.0,135.0,0.519,134.0,119.0,253.0,0.53,1.0,1.0,0.0,0.0
+,2026.0,siena,Gerry McNamara,Siena,2024-25,False,False,False,37.0,29.0,66.0,0.561,37.0,29.0,66.0,0.561,0.0,0.0,0.0,0.0
+,2026.0,south-alabama,Richie Riley,South Alabama,2018-19,False,False,False,152.0,105.0,257.0,0.591,187.0,133.0,320.0,0.584,0.0,0.0,0.0,0.0
+,2026.0,south-carolina,Lamont Paris,South Carolina,2022-23,False,False,False,62.0,68.0,130.0,0.477,149.0,140.0,289.0,0.516,2.0,0.0,0.0,0.0
+,2026.0,south-carolina-state,Erik Martin,South Carolina State,2022-23,False,False,False,49.0,79.0,128.0,0.383,49.0,79.0,128.0,0.383,0.0,0.0,0.0,0.0
+,2026.0,south-carolina-upstate,Marty Richter,USC Upstate,2024-25,False,False,False,19.0,45.0,64.0,0.297,19.0,45.0,64.0,0.297,0.0,0.0,0.0,0.0
+,2026.0,south-dakota,Eric Peterson,South Dakota,2022-23,False,False,False,59.0,69.0,128.0,0.461,59.0,69.0,128.0,0.461,0.0,0.0,0.0,0.0
+,2026.0,south-dakota-state,Bryan Petersen,South Dakota State,2025-26,False,False,False,14.0,18.0,32.0,0.438,14.0,18.0,32.0,0.438,0.0,0.0,0.0,0.0
+,2026.0,south-florida,Bryan Hodgson,South Florida,2025-26,False,False,False,24.0,8.0,32.0,0.75,69.0,36.0,105.0,0.657,0.0,0.0,0.0,0.0
+,2026.0,southeast-missouri-state,Brad Korn,Southeast Missouri State,2020-21,False,False,False,94.0,98.0,192.0,0.49,94.0,98.0,192.0,0.49,1.0,0.0,0.0,0.0
+,2026.0,southeastern-louisiana,David Kiefer,Southeastern Louisiana,2019-20,False,False,False,95.0,123.0,218.0,0.436,95.0,123.0,218.0,0.436,0.0,0.0,0.0,0.0
+,2026.0,southern,Kevin Johnson,Southern,2023-24,False,False,False,55.0,43.0,98.0,0.561,120.0,143.0,263.0,0.456,0.0,0.0,0.0,0.0
+,2026.0,southern-california,Eric Musselman,USC,2024-25,False,False,False,35.0,32.0,67.0,0.522,256.0,125.0,381.0,0.672,6.0,4.0,0.0,0.0
+,2026.0,southern-illinois,Scott Nagy,Southern Illinois,2024-25,False,False,False,30.0,35.0,65.0,0.462,387.0,290.0,677.0,0.572,5.0,0.0,0.0,0.0
+,2026.0,southern-illinois-edwardsville,Brian Barone,SIU-Edwardsville,2019-20,False,False,False,105.0,116.0,221.0,0.475,105.0,116.0,221.0,0.475,1.0,0.0,0.0,0.0
+,2026.0,southern-indiana,Stan Gouard,Southern Indiana,2022-23,False,False,False,41.0,84.0,125.0,0.328,41.0,84.0,125.0,0.328,0.0,0.0,0.0,0.0
+,2026.0,southern-methodist,Andy Enfield,SMU,2024-25,False,False,False,44.0,24.0,68.0,0.647,305.0,199.0,504.0,0.605,6.0,2.0,0.0,0.0
+,2026.0,southern-mississippi,Jay Ladner,Southern Miss,2019-20,False,False,False,95.0,127.0,222.0,0.428,171.0,215.0,386.0,0.443,0.0,0.0,0.0,0.0
+,2026.0,southern-utah,Rob Jeter,Southern Utah,2023-24,False,False,False,32.0,62.0,94.0,0.34,255.0,277.0,532.0,0.479,2.0,0.0,0.0,0.0
+,2026.0,st-bonaventure,Mark Schmidt,St. Bonaventure,2007-08,False,False,False,341.0,255.0,596.0,0.572,423.0,345.0,768.0,0.551,3.0,0.0,0.0,0.0
+,2026.0,st-johns-ny,Rick Pitino *,St. John's (NY),2023-24,True,True,True,79.0,24.0,103.0,0.767,913.0,317.0,1230.0,0.742,24.0,13.0,7.0,2.0
+,2026.0,st-thomas-mn,John Tauer,St. Thomas,2021-22,False,False,False,97.0,66.0,163.0,0.595,97.0,66.0,163.0,0.595,0.0,0.0,0.0,0.0
+,2026.0,stanford,Kyle Smith,Stanford,2024-25,False,False,False,41.0,26.0,67.0,0.612,299.0,219.0,518.0,0.577,1.0,0.0,0.0,0.0
+,2026.0,stephen-f-austin,Matt Braeuer,Stephen F. Austin,2025-26,False,False,False,28.0,5.0,33.0,0.848,28.0,5.0,33.0,0.848,0.0,0.0,0.0,0.0
+,2026.0,stetson,Donnie Jones *,Stetson,2019-20,False,False,False,98.0,123.0,221.0,0.443,253.0,252.0,505.0,0.501,1.0,0.0,0.0,0.0
+,2026.0,stonehill,Chris Kraus,Stonehill,2022-23,False,False,False,45.0,82.0,127.0,0.354,45.0,82.0,127.0,0.354,0.0,0.0,0.0,0.0
+,2026.0,stony-brook,Geno Ford,Stony Brook,2019-20,False,False,False,103.0,116.0,219.0,0.47,217.0,239.0,456.0,0.476,0.0,0.0,0.0,0.0
+,2026.0,syracuse,Adrian Autry,Syracuse,2023-24,False,False,False,49.0,48.0,97.0,0.505,49.0,48.0,97.0,0.505,0.0,0.0,0.0,0.0
+,2026.0,tarleton-state,Billy Gillispie,Tarleton State,2020-21,False,False,False,92.0,92.0,184.0,0.5,240.0,200.0,440.0,0.545,4.0,1.0,0.0,0.0
+,2026.0,temple,Adam Fisher,Temple,2023-24,False,False,False,49.0,51.0,100.0,0.49,49.0,51.0,100.0,0.49,0.0,0.0,0.0,0.0
+,2026.0,tennessee,Rick Barnes,Tennessee,2015-16,False,False,True,254.0,120.0,374.0,0.679,858.0,434.0,1292.0,0.664,29.0,10.0,1.0,0.0
+,2026.0,tennessee-martin,Jeremy Shulman,UT-Martin,2024-25,False,False,False,36.0,30.0,66.0,0.545,36.0,30.0,66.0,0.545,0.0,0.0,0.0,0.0
+,2026.0,tennessee-state,Nolan Smith,Tennessee State,2025-26,False,False,False,23.0,9.0,32.0,0.719,23.0,9.0,32.0,0.719,0.0,0.0,0.0,0.0
+,2026.0,tennessee-tech,John Pelphrey,Tennessee Tech,2019-20,False,False,False,79.0,138.0,217.0,0.364,228.0,264.0,492.0,0.463,2.0,0.0,0.0,0.0
+,2026.0,texas,Sean Miller *,Texas,2025-26,False,False,False,18.0,14.0,32.0,0.562,505.0,210.0,715.0,0.706,13.0,8.0,0.0,0.0
+,2026.0,texas-am,Bucky McMillan,Texas A&M,2025-26,False,False,False,21.0,11.0,32.0,0.656,120.0,63.0,183.0,0.656,1.0,0.0,0.0,0.0
+,2026.0,texas-am-commerce,Jaret von Rosenberg,East Texas A&M,2022-23,False,False,False,42.0,87.0,129.0,0.326,42.0,87.0,129.0,0.326,0.0,0.0,0.0,0.0
+,2026.0,texas-am-corpus-christi,Jim Shaw,Texas A&M-Corpus Christi,2023-24,False,False,False,59.0,41.0,100.0,0.59,59.0,41.0,100.0,0.59,0.0,0.0,0.0,0.0
+,2026.0,texas-arlington,KT Turner,UT Arlington,2023-24,False,False,False,51.0,46.0,97.0,0.526,51.0,46.0,97.0,0.526,0.0,0.0,0.0,0.0
+,2026.0,texas-christian,Jamie Dixon,TCU,2016-17,False,False,False,198.0,137.0,335.0,0.591,526.0,260.0,786.0,0.669,15.0,3.0,0.0,0.0
+,2026.0,texas-el-paso,Joe Golding,UTEP,2021-22,False,False,False,81.0,83.0,164.0,0.494,215.0,197.0,412.0,0.522,2.0,0.0,0.0,0.0
+,2026.0,texas-pan-american,Kahil Fennell,Texas-Rio Grande Valley,2024-25,False,False,False,35.0,29.0,64.0,0.547,35.0,29.0,64.0,0.547,0.0,0.0,0.0,0.0
+,2026.0,texas-san-antonio,Austin Claunch,UTSA,2024-25,False,False,False,17.0,44.0,61.0,0.279,107.0,105.0,212.0,0.505,0.0,0.0,0.0,0.0
+,2026.0,texas-southern,Johnny Jones,Texas Southern,2018-19,False,False,False,133.0,125.0,258.0,0.516,428.0,359.0,787.0,0.544,6.0,0.0,0.0,0.0
+,2026.0,texas-state,Terrence Johnson,Texas State,2020-21,False,False,False,107.0,81.0,188.0,0.569,107.0,81.0,188.0,0.569,0.0,0.0,0.0,0.0
+,2026.0,texas-tech,Grant McCasland,Texas Tech,2023-24,False,True,True,73.0,30.0,103.0,0.709,228.0,107.0,335.0,0.681,3.0,1.0,0.0,0.0
+,2026.0,toledo,Tod Kowalczyk,Toledo,2010-11,False,False,False,315.0,211.0,526.0,0.599,451.0,323.0,774.0,0.583,0.0,0.0,0.0,0.0
+,2026.0,towson,Pat Skerry,Towson,2011-12,False,False,False,254.0,225.0,479.0,0.53,254.0,225.0,479.0,0.53,0.0,0.0,0.0,0.0
+,2026.0,troy,Scott Cross,Troy,2019-20,False,False,False,125.0,98.0,223.0,0.561,350.0,259.0,609.0,0.575,2.0,0.0,0.0,0.0
+,2026.0,tulane,Ron Hunter,Tulane,2019-20,False,False,False,107.0,104.0,211.0,0.507,499.0,378.0,877.0,0.569,4.0,0.0,0.0,0.0
+,2026.0,tulsa,Eric Konkol,Tulsa,2022-23,False,False,False,60.0,67.0,127.0,0.472,213.0,142.0,355.0,0.6,0.0,0.0,0.0,0.0
+,2026.0,ucla,Mick Cronin,UCLA,2019-20,False,True,True,161.0,75.0,236.0,0.682,526.0,246.0,772.0,0.681,15.0,4.0,1.0,0.0
+,2026.0,utah,Alex Jensen,Utah,2025-26,False,False,False,10.0,22.0,32.0,0.312,10.0,22.0,32.0,0.312,0.0,0.0,0.0,0.0
+,2026.0,utah-state,Jerrod Calhoun,Utah State,2024-25,False,False,False,54.0,14.0,68.0,0.794,172.0,120.0,292.0,0.589,1.0,0.0,0.0,0.0
+,2026.0,utah-valley,Todd Phillips,Utah Valley,2023-24,False,False,False,66.0,32.0,98.0,0.673,66.0,32.0,98.0,0.673,0.0,0.0,0.0,0.0
+,2026.0,valparaiso,Roger Powell Jr.,Valparaiso,2023-24,False,False,False,40.0,59.0,99.0,0.404,40.0,59.0,99.0,0.404,0.0,0.0,0.0,0.0
+,2026.0,vanderbilt,Mark Byington,Vanderbilt,2024-25,False,False,False,46.0,20.0,66.0,0.697,259.0,153.0,412.0,0.629,2.0,0.0,0.0,0.0
+,2026.0,vermont,John Becker,Vermont,2011-12,False,False,False,351.0,144.0,495.0,0.709,351.0,144.0,495.0,0.709,6.0,0.0,0.0,0.0
+,2026.0,villanova,Kevin Willard,Villanova,2025-26,False,False,False,24.0,8.0,32.0,0.75,359.0,257.0,616.0,0.583,7.0,1.0,0.0,0.0
+,2026.0,virginia,Ryan Odom,Virginia,2025-26,False,False,False,29.0,5.0,34.0,0.853,230.0,122.0,352.0,0.653,3.0,0.0,0.0,0.0
+,2026.0,virginia-commonwealth,Phil Martelli Jr.,VCU,2025-26,False,False,False,26.0,7.0,33.0,0.788,69.0,32.0,101.0,0.683,1.0,0.0,0.0,0.0
+,2026.0,virginia-military-institute,Andrew Wilson,VMI,2022-23,False,False,False,32.0,98.0,130.0,0.246,32.0,98.0,130.0,0.246,0.0,0.0,0.0,0.0
+,2026.0,virginia-tech,Mike Young,Virginia Tech,2019-20,False,False,False,124.0,98.0,222.0,0.559,423.0,342.0,765.0,0.553,7.0,0.0,0.0,0.0
+,2026.0,wagner,Donald Copeland,Wagner,2022-23,False,False,False,60.0,62.0,122.0,0.492,60.0,62.0,122.0,0.492,1.0,0.0,0.0,0.0
+,2026.0,wake-forest,Steve Forbes,Wake Forest,2020-21,False,False,False,109.0,81.0,190.0,0.574,239.0,124.0,363.0,0.658,1.0,0.0,0.0,0.0
+,2026.0,washington,Danny Sprinkle,Washington,2024-25,False,False,False,29.0,35.0,64.0,0.453,138.0,85.0,223.0,0.619,3.0,0.0,0.0,0.0
+,2026.0,washington-state,David Riley,Washington State,2024-25,False,False,False,31.0,35.0,66.0,0.47,93.0,73.0,166.0,0.56,0.0,0.0,0.0,0.0
+,2026.0,weber-state,Eric Duft,Weber State,2022-23,False,False,False,66.0,65.0,131.0,0.504,66.0,65.0,131.0,0.504,0.0,0.0,0.0,0.0
+,2026.0,west-georgia,Dave Moore,West Georgia,2024-25,False,False,False,21.0,42.0,63.0,0.333,21.0,42.0,63.0,0.333,0.0,0.0,0.0,0.0
+,2026.0,west-virginia,Ross Hodge,West Virginia,2025-26,False,False,False,18.0,14.0,32.0,0.562,64.0,38.0,102.0,0.627,0.0,0.0,0.0,0.0
+,2026.0,western-carolina,Tim Craft,Western Carolina,2024-25,False,False,False,23.0,38.0,61.0,0.377,211.0,204.0,415.0,0.508,1.0,0.0,0.0,0.0
+,2026.0,western-illinois,Chad Boudreau,Western Illinois,2023-24,False,False,False,38.0,57.0,95.0,0.4,38.0,57.0,95.0,0.4,0.0,0.0,0.0,0.0
+,2026.0,western-kentucky,Hank Plona,Western Kentucky,2024-25,False,False,False,35.0,29.0,64.0,0.547,35.0,29.0,64.0,0.547,0.0,0.0,0.0,0.0
+,2026.0,western-michigan,Dwayne Stephens,Western Michigan,2022-23,False,False,False,42.0,84.0,126.0,0.333,42.0,84.0,126.0,0.333,0.0,0.0,0.0,0.0
+,2026.0,wichita-state,Paul Mills,Wichita State,2023-24,False,False,False,56.0,44.0,100.0,0.56,162.0,128.0,290.0,0.559,2.0,1.0,0.0,0.0
+,2026.0,william-mary,Brian Earl,William & Mary,2024-25,False,False,False,37.0,27.0,64.0,0.578,133.0,130.0,263.0,0.506,0.0,0.0,0.0,0.0
+,2026.0,winthrop,Mark Prosser,Winthrop,2021-22,False,False,False,101.0,63.0,164.0,0.616,138.0,116.0,254.0,0.543,0.0,0.0,0.0,0.0
+,2026.0,wisconsin,Greg Gard,Wisconsin,2015-16,False,False,True,237.0,127.0,364.0,0.651,237.0,127.0,364.0,0.651,7.0,2.0,0.0,0.0
+,2026.0,wofford,Kevin Giltner,Wofford,2025-26,False,False,False,19.0,13.0,32.0,0.594,19.0,13.0,32.0,0.594,0.0,0.0,0.0,0.0
+,2026.0,wright-state,Clint Sargent,Wright State,2024-25,False,False,False,38.0,29.0,67.0,0.567,38.0,29.0,67.0,0.567,0.0,0.0,0.0,0.0
+,2026.0,wyoming,Sundance Wicks,Wyoming,2024-25,False,False,False,30.0,34.0,64.0,0.469,48.0,48.0,96.0,0.5,0.0,0.0,0.0,0.0
+,2026.0,xavier,Richard Pitino,Xavier,2025-26,False,False,False,15.0,18.0,33.0,0.455,262.0,204.0,466.0,0.562,4.0,0.0,0.0,0.0
+,2026.0,yale,James Jones,Yale,1999-00,False,False,False,442.0,324.0,766.0,0.577,442.0,324.0,766.0,0.577,5.0,0.0,0.0,0.0
+,2026.0,youngstown-state,Ethan Faulkner,Youngstown State,2024-25,False,False,False,36.0,30.0,66.0,0.545,36.0,30.0,66.0,0.545,0.0,0.0,0.0,0.0
