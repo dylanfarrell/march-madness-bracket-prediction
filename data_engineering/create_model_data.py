@@ -7,6 +7,9 @@ import helper_functions as hf
 def create_model_data(year:int, mode:str) -> pd.DataFrame:
   # read in gold data
   data = pd.read_csv(f"{hf.get_gold_dir(year, mode)}/gold_data_all.csv")
+  if mode == 'W':
+    data = data[data['year']>=2010].copy()
+
   data['Season'] = data['year']
   # read in feature metadata
   with open(f"{hf.get_gold_dir(year, mode)}/data_dictionary.json",'rb') as f:

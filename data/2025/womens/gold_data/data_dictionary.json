@@ -135,33 +135,27 @@
     },
     "wins_conf": {
         "display_name": "Conference Wins",
-        "description": "The number of conference wins.",
-        "exclude_from_model": true
+        "description": "The number of conference wins."
     },
     "losses_conf": {
         "display_name": "Conference Losses",
-        "description": "The number of conference losses.",
-        "exclude_from_model": true
+        "description": "The number of conference losses."
     },
     "wins_home": {
         "display_name": "Home Wins",
-        "description": "The number of home wins.",
-        "exclude_from_model": true
+        "description": "The number of home wins."
     },
     "losses_home": {
         "display_name": "Home Losses",
-        "description": "The number of home losses.",
-        "exclude_from_model": true
+        "description": "The number of home losses."
     },
     "wins_visitor": {
         "display_name": "Away Wins",
-        "description": "The number of away wins.",
-        "exclude_from_model": true
+        "description": "The number of away wins."
     },
     "losses_visitor": {
         "display_name": "Away Losses",
-        "description": "The number of away losses.",
-        "exclude_from_model": true
+        "description": "The number of away losses."
     },
     "pts": {
         "display_name": "Points",
@@ -284,123 +278,99 @@
     },
     "total_games": {
         "display_name": "Total Games",
-        "description": "The total number of games played.",
-        "exclude_from_model": true
+        "description": "The total number of games played."
     },
     "num_wins": {
         "display_name": "Number of Wins",
-        "description": "The number of wins.",
-        "exclude_from_model": true
+        "description": "The number of wins."
     },
     "num_losses": {
         "display_name": "Number of Losses",
-        "description": "The number of losses.",
-        "exclude_from_model": true
+        "description": "The number of losses."
     },
     "win_pct": {
         "display_name": "Win Percentage",
-        "description": "The win percentage.",
-        "exclude_from_model": true
+        "description": "The win percentage."
     },
     "avg_points_for": {
         "display_name": "Average Points For",
-        "description": "The average number of points scored.",
-        "exclude_from_model": true
+        "description": "The average number of points scored."
     },
     "avg_points_against": {
         "display_name": "Average Points Against",
-        "description": "The average number of points scored by the opponent.",
-        "exclude_from_model": true
+        "description": "The average number of points scored by the opponent."
     },
     "avg_game_margin": {
         "display_name": "Average Game Margin",
-        "description": "The average game margin.",
-        "exclude_from_model": true
+        "description": "The average game margin."
     },
     "std_game_margin": {
         "display_name": "Standard Deviation of Game Margin",
-        "description": "The standard game margin. The lower the number, the more consistent the team is.",
-        "exclude_from_model": true
+        "description": "The standard game margin. The lower the number, the more consistent the team is."
     },
     "non_home_wins": {
         "display_name": "Non-Home Wins",
-        "description": "The number of non-home wins.",
-        "exclude_from_model": true
+        "description": "The number of non-home wins."
     },
     "home_losses": {
         "display_name": "Home Losses",
-        "description": "The number of home losses.",
-        "exclude_from_model": true
+        "description": "The number of home losses."
     },
     "close_wins": {
         "display_name": "Close Wins",
-        "description": "The number of games won by 3 or less or in overtime.",
-        "exclude_from_model": true
+        "description": "The number of games won by 3 or less or in overtime."
     },
     "close_losses": {
         "display_name": "Close Losses",
-        "description": "The number of games lost by 3 or less or in overtime.",
-        "exclude_from_model": true
+        "description": "The number of games lost by 3 or less or in overtime."
     },
     "3FGA_pg": {
         "display_name": "3-Point Field Goals Attempted per Game",
-        "description": "The number of 3-point field goals attempted per game.",
-        "exclude_from_model": true
+        "description": "The number of 3-point field goals attempted per game."
     },
     "3FGM_pg": {
         "display_name": "3-Point Field Goals Made per Game",
-        "description": "The number of 3-point field goals made per game.",
-        "exclude_from_model": true
+        "description": "The number of 3-point field goals made per game."
     },
     "3_pct": {
         "display_name": "3-Point %",
-        "description": "The 3-point percentage.",
-        "exclude_from_model": true
+        "description": "The 3-point percentage."
     },
     "FTM_pg": {
         "display_name": "Free Throws Made per Game",
-        "description": "The number of free throws made per game.",
-        "exclude_from_model": true
+        "description": "The number of free throws made per game."
     },
     "FTA_pg": {
         "display_name": "Free Throws Attempted per Game",
-        "description": "The number of free throws attempted per game.",
-        "exclude_from_model": true
+        "description": "The number of free throws attempted per game."
     },
     "FT_pct": {
         "display_name": "Free Throw %",
-        "description": "The free throw percentage.",
-        "exclude_from_model": true
+        "description": "The free throw percentage."
     },
     "TOV_pg": {
         "display_name": "Turnovers per Game",
-        "description": "The number of turnovers per game.",
-        "exclude_from_model": true
+        "description": "The number of turnovers per game."
     },
     "avg_pace": {
         "display_name": "Average Pace",
-        "description": "The average pace. Roughly how many possessions per game a team has.",
-        "exclude_from_model": true
+        "description": "The average pace. Roughly how many possessions per game a team has."
     },
     "off_eff": {
         "display_name": "Offensive Efficiency",
-        "description": "The offensive efficiency. Roughly how many points scored per possession.",
-        "exclude_from_model": true
+        "description": "The offensive efficiency. Roughly how many points scored per possession."
     },
     "def_eff": {
         "display_name": "Defensive Efficiency",
-        "description": "The defensive efficiency. Roughly how many points given up per possession.",
-        "exclude_from_model": true
+        "description": "The defensive efficiency. Roughly how many points given up per possession."
     },
     "pythag_win_pct": {
         "display_name": "Pythagorean Win Percentage",
-        "description": "The pythagorean win percentage. Approximates how many wins a team 'should' have based on points scored and given up.",
-        "exclude_from_model": true
+        "description": "The pythagorean win percentage. Approximates how many wins a team 'should' have based on points scored and given up."
     },
     "luck": {
         "display_name": "Luck",
-        "description": "Luck. The difference between actual wins and expected 'Pythagorean' wins.",
-        "exclude_from_model": true
+        "description": "Luck. The difference between actual wins and expected 'Pythagorean' wins."
     },
     "Seed": {
         "display_name": "Seed",
@@ -409,28 +379,23 @@
     },
     "wins_vs_tourney_teams": {
         "display_name": "Wins vs. Tournament Teams",
-        "description": "The number of wins against other teams that made the tournament.",
-        "exclude_from_model": true
+        "description": "The number of wins against other teams that made the tournament."
     },
     "away_wins_vs_tourney_teams": {
         "display_name": "Away Wins vs. Tournament Teams",
-        "description": "The number of away wins against other teams that made the tournament.",
-        "exclude_from_model": true
+        "description": "The number of away wins against other teams that made the tournament."
     },
     "losses_vs_tourney_teams": {
         "display_name": "Losses vs. Tournament Teams",
-        "description": "The number of losses against other teams that made the tournament.",
-        "exclude_from_model": true
+        "description": "The number of losses against other teams that made the tournament."
     },
     "losses_vs_non_tourney_teams": {
         "display_name": "Losses vs. Non-Tournament Teams",
-        "description": "The number of losses against non-tournament teams.",
-        "exclude_from_model": true
+        "description": "The number of losses against non-tournament teams."
     },
     "games_vs_tourney_teams": {
         "display_name": "Games vs. Tournament Teams",
-        "description": "The number of games against other teams that made the tournament.",
-        "exclude_from_model": true
+        "description": "The number of games against other teams that made the tournament."
     },
     "final_net": {
         "display_name": "Final NET",
