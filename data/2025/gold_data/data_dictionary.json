@@ -1,0 +1,422 @@
+{
+    "TeamID": {
+        "display_name": "Kaggle Team ID",
+        "description": "Kaggle unique team ID.",
+        "exclude_from_model": true   
+    },
+    "year": {
+        "display_name": "Season",
+        "description": "The year the season ended in. For the current 2023-24 season, the 'Season' is 2024.",
+        "exclude_from_model": true
+    },
+    "coach_name": {
+        "display_name": "Coach Name",
+        "description": "The name of the coach.",
+        "exclude_from_model": true
+    },
+    "team_name": {
+        "display_name": "Team Name",
+        "description": "Team/School Name.",
+        "exclude_from_model": true
+    },
+    "coach_since": {
+        "display_name": "Coach Since",
+        "description": "The coach's first season coaching the team.",
+        "exclude_from_model": true
+    },
+    "is_ap_pre_top_5": {
+        "display_name": "AP Preseason Top 5",
+        "description": "Whether the team was ranked in the top 5 in the AP preseason poll."
+    },
+    "is_ap_pre_top_15": {
+        "display_name": "AP Preseason Top 15",
+        "description": "Whether the team was ranked in the top 15 in the AP preseason poll."
+    },
+    "is_ap_pre_top_25": {
+        "display_name": "AP Preseason Top 25",
+        "description": "Whether the team was ranked in the top 25 in the AP preseason poll."
+    },
+    "wins_cur": {
+        "display_name": "Coach's Wins at Current School",
+        "description": "The number of wins the coach has at the current school."
+    },
+    "losses_cur": {
+        "display_name": "Coach's Losses at Current School",
+        "description": "The number of losses the coach has at the current school."
+    },
+    "games_cur": {
+        "display_name": "Coach's Games at Current School",
+        "description": "The number of games the coach has coached at the current school."
+    },
+    "coach_wl_cur": {
+        "display_name": "Coach's Win-Loss % at Current School",
+        "description": "The coach's win-loss percentage at the current school."
+    },
+    "wins_car": {
+        "display_name": "Coach's Career Wins",
+        "description": "The number of wins the coach has in their career."
+    },
+    "losses_car": {
+        "display_name": "Coach's Career Losses",
+        "description": "The number of losses the coach has in their career."
+    },
+    "games_car": {
+        "display_name": "Coach's Career Games",
+        "description": "The number of games the coach has coached in their career."
+    },
+    "coach_wl_car": {
+        "display_name": "Coach's Career Win-Loss %",
+        "description": "The coach's win-loss percentage in their career."
+    },
+    "tourneys_car": {
+        "display_name": "Coach's Career Tournaments",
+        "description": "The number of NCAA tournaments the coach has made in their career."
+    },
+    "sw16_car": {
+        "display_name": "Coach's Career Sweet 16s",
+        "description": "The number of Sweet 16s the coach has made in their career."
+    },
+    "ff_car": {
+        "display_name": "Coach's Career Final Fours",
+        "description": "The number of Final Fours the coach has made in their career."
+    },
+    "champ_car": {
+        "display_name": "Coach's Career Championships",
+        "description": "The number of championships the coach has won in their career."
+    },
+    "preseason_pts": {
+        "display_name": "Preseason Ranking Points (AP Poll)",
+        "description": "The number of points the team received in the AP preseason poll."
+    },
+    "returning_min_pct": {
+        "display_name": "Returning Minutes %",
+        "description": "The percentage of minutes played by returning players."
+    },
+    "returning_score_pct": {
+        "display_name": "Returning Scoring %",
+        "description": "The percentage of points scored by returning players."
+    },
+    "school_name": {
+        "display_name": "School Name",
+        "description": "The name of the school.",
+        "exclude_from_model": true
+    },
+    "g": {
+        "display_name": "Games",
+        "description": "The number of games the team played.",
+        "exclude_from_model": true
+    },
+    "wins": {
+        "display_name": "Wins",
+        "description": "The number of wins.",
+        "exclude_from_model": true
+    },
+    "losses": {
+        "display_name": "Losses",
+        "description": "The number of losses.",
+        "exclude_from_model": true
+    },
+    "win_loss_pct": {
+        "display_name": "Win-Loss %",
+        "description": "The win-loss percentage.",
+        "exclude_from_model": true
+    },
+    "srs": {
+        "display_name": "Simple Rating System",
+        "description": "A rating that takes into account average point differential and strength of schedule.",
+        "exclude_from_model": true
+    },
+    "sos": {
+        "display_name": "Strength of Schedule",
+        "description": "The average strength of schedule.",
+        "exclude_from_model": true
+    },
+    "wins_conf": {
+        "display_name": "Conference Wins",
+        "description": "The number of conference wins."
+    },
+    "losses_conf": {
+        "display_name": "Conference Losses",
+        "description": "The number of conference losses."
+    },
+    "wins_home": {
+        "display_name": "Home Wins",
+        "description": "The number of home wins."
+    },
+    "losses_home": {
+        "display_name": "Home Losses",
+        "description": "The number of home losses."
+    },
+    "wins_visitor": {
+        "display_name": "Away Wins",
+        "description": "The number of away wins."
+    },
+    "losses_visitor": {
+        "display_name": "Away Losses",
+        "description": "The number of away losses."
+    },
+    "pts": {
+        "display_name": "Points",
+        "description": "The number of points scored.",
+        "exclude_from_model": true
+    },
+    "opp_pts": {
+        "display_name": "Opponent Points",
+        "description": "The number of points given up.",
+        "exclude_from_model": true
+    },
+    "mp": {
+        "display_name": "Minutes Played",
+        "description": "The number of minutes played.",
+        "exclude_from_model": true
+    },
+    "fg": {
+        "display_name": "Field Goals",
+        "description": "The number of field goals made.",
+        "exclude_from_model": true
+    },
+    "fga": {
+        "display_name": "Field Goals Attempted",
+        "description": "The number of field goals attempted.",
+        "exclude_from_model": true
+    },
+    "fg_pct": {
+        "display_name": "Field Goal %",
+        "description": "The field goal percentage.",
+        "exclude_from_model": true
+    },
+    "fg3": {
+        "display_name": "3-Point Field Goals",
+        "description": "The number of 3-point field goals made.",
+        "exclude_from_model": true
+    },
+    "fg3a": {
+        "display_name": "3-Point Field Goals Attempted",
+        "description": "The number of 3-point field goals attempted.",
+        "exclude_from_model": true
+    },
+    "fg3_pct": {
+        "display_name": "3-Point Field Goal %",
+        "description": "The 3-point field goal percentage.",
+        "exclude_from_model": true
+    },
+    "ft": {
+        "display_name": "Free Throws",
+        "description": "The number of free throws made.",
+        "exclude_from_model": true
+    },
+    "fta": {
+        "display_name": "Free Throws Attempted",
+        "description": "The number of free throws attempted.",
+        "exclude_from_model": true
+    },
+    "ft_pct": {
+        "display_name": "Free Throw %",
+        "description": "The free throw percentage.",
+        "exclude_from_model": true
+    },
+    "orb": {
+        "display_name": "Offensive Rebounds",
+        "description": "The number of offensive rebounds.",
+        "exclude_from_model": true
+    },
+    "trb": {
+        "display_name": "Total Rebounds",
+        "description": "The number of total rebounds.",
+        "exclude_from_model": true
+    },
+    "ast": {
+        "display_name": "Assists",
+        "description": "The number of assists.",
+        "exclude_from_model": true
+    },
+    "stl": {
+        "display_name": "Steals",
+        "description": "The number of steals.",
+        "exclude_from_model": true
+    },
+    "blk": {
+        "display_name": "Blocks",
+        "description": "The number of blocks.",
+        "exclude_from_model": true
+    },
+    "tov": {
+        "display_name": "Turnovers",
+        "description": "The number of turnovers.",
+        "exclude_from_model": true
+    },
+    "pf": {
+        "display_name": "Personal Fouls",
+        "description": "The number of personal fouls.",
+        "exclude_from_model": true
+    },
+    "team": {
+        "display_name": "Team",
+        "description": "The team name as per sports-reference id.",
+        "exclude_from_model": true
+    },
+    "avg_yr": {
+        "display_name": "Average Weighted Class Year",
+        "description": "The average year of the players on the team, weighted by playing time."
+    },
+    "avg_height": {
+        "display_name": "Average Weighted Height",
+        "description": "The average height of the players on the team, weighted by playing time."
+    },
+    "avg_weight": {
+        "display_name": "Average Weighted Weight",
+        "description": "The average weight of the players on the team, weighted by playing time."
+    },
+    "pi_i": {
+        "display_name": "Special Sauce",
+        "description": "A ranking derived from modeling NCAA basketball teams as a Markov chain. We implemented the method described here: https://www2.isye.gatech.edu/~jsokol/ncaa.pdf -- this is one of our favorite features and hope you select it!"
+    },
+    "total_games": {
+        "display_name": "Total Games",
+        "description": "The total number of games played."
+    },
+    "num_wins": {
+        "display_name": "Number of Wins",
+        "description": "The number of wins.",
+        "exclude_from_model": true
+    },
+    "num_losses": {
+        "display_name": "Number of Losses",
+        "description": "The number of losses.",
+        "exclude_from_model": true
+    },
+    "win_pct": {
+        "display_name": "Win Percentage",
+        "description": "The win percentage.",
+        "exclude_from_model": true
+    },
+    "avg_points_for": {
+        "display_name": "Average Points For",
+        "description": "The average number of points scored."
+    },
+    "avg_points_against": {
+        "display_name": "Average Points Against",
+        "description": "The average number of points scored by the opponent."
+    },
+    "avg_game_margin": {
+        "display_name": "Average Game Margin",
+        "description": "The average game margin."
+    },
+    "std_game_margin": {
+        "display_name": "Standard Deviation of Game Margin",
+        "description": "The standard game margin. The lower the number, the more consistent the team is."
+    },
+    "non_home_wins": {
+        "display_name": "Non-Home Wins",
+        "description": "The number of non-home wins."
+    },
+    "home_losses": {
+        "display_name": "Home Losses",
+        "description": "The number of home losses."
+    },
+    "close_wins": {
+        "display_name": "Close Wins",
+        "description": "The number of games won by 3 or less or in overtime."
+    },
+    "close_losses": {
+        "display_name": "Close Losses",
+        "description": "The number of games lost by 3 or less or in overtime."
+    },
+    "3FGA_pg": {
+        "display_name": "3-Point Field Goals Attempted per Game",
+        "description": "The number of 3-point field goals attempted per game."
+    },
+    "3FGM_pg": {
+        "display_name": "3-Point Field Goals Made per Game",
+        "description": "The number of 3-point field goals made per game."
+    },
+    "3_pct": {
+        "display_name": "3-Point %",
+        "description": "The 3-point percentage."
+    },
+    "FTM_pg": {
+        "display_name": "Free Throws Made per Game",
+        "description": "The number of free throws made per game."
+    },
+    "FTA_pg": {
+        "display_name": "Free Throws Attempted per Game",
+        "description": "The number of free throws attempted per game."
+    },
+    "FT_pct": {
+        "display_name": "Free Throw %",
+        "description": "The free throw percentage."
+    },
+    "TOV_pg": {
+        "display_name": "Turnovers per Game",
+        "description": "The number of turnovers per game."
+    },
+    "avg_pace": {
+        "display_name": "Average Pace",
+        "description": "The average pace. Roughly how many possessions per game a team has."
+    },
+    "off_eff": {
+        "display_name": "Offensive Efficiency",
+        "description": "The offensive efficiency. Roughly how many points scored per possession."
+    },
+    "def_eff": {
+        "display_name": "Defensive Efficiency",
+        "description": "The defensive efficiency. Roughly how many points given up per possession."
+    },
+    "pythag_win_pct": {
+        "display_name": "Pythagorean Win Percentage",
+        "description": "The pythagorean win percentage. Approximates how many wins a team 'should' have based on points scored and given up."
+    },
+    "luck": {
+        "display_name": "Luck",
+        "description": "Luck. The difference between actual wins and expected 'Pythagorean' wins."
+    },
+    "Seed": {
+        "display_name": "Seed",
+        "description": "The seed in the NCAA tournament.",
+        "exclude_from_model": true
+    },
+    "wins_vs_tourney_teams": {
+        "display_name": "Wins vs. Tournament Teams",
+        "description": "The number of wins against other teams that made the tournament."
+    },
+    "away_wins_vs_tourney_teams": {
+        "display_name": "Away Wins vs. Tournament Teams",
+        "description": "The number of away wins against other teams that made the tournament."
+    },
+    "losses_vs_tourney_teams": {
+        "display_name": "Losses vs. Tournament Teams",
+        "description": "The number of losses against other teams that made the tournament."
+    },
+    "losses_vs_non_tourney_teams": {
+        "display_name": "Losses vs. Non-Tournament Teams",
+        "description": "The number of losses against non-tournament teams."
+    },
+    "games_vs_tourney_teams": {
+        "display_name": "Games vs. Tournament Teams",
+        "description": "The number of games against other teams that made the tournament."
+    },
+    "final_net": {
+        "display_name": "Final NET",
+        "description": "The final NET ranking."
+    },
+    "prev_net": {
+        "display_name": "Previous NET",
+        "description": "The previous NET ranking before the final one."
+    },
+    "net_improvement": {
+        "display_name": "NET Improvement",
+        "description": "The NET improvement from the previous ranking to the final one."
+    },
+    "final_pom": {
+        "display_name": "Final POM",
+        "description": "The final Kenpom ranking."
+    },
+    "prev_pom": {
+        "display_name": "Previous POM",
+        "description": "The previous Kenpom ranking."
+    },
+    "pom_improvement": {
+        "display_name": "POM Improvement",
+        "description": "The POM improvement from the previous ranking to the final one."
+    }
+  }
