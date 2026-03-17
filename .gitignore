@@ -10,3 +10,4 @@
 *.db-journal
 data_engineering/logs/
 data_analysis/
+**/MMasseyOrdinals*.csv

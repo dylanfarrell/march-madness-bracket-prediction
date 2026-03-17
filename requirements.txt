@@ -1,0 +1,11 @@
+pandas
+numpy
+beautifulsoup4
+tqdm
+pandasql
+xgboost
+scikit-learn
+joblib
+hyperopt
+matplotlib
+scipy

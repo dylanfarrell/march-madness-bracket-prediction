@@ -2,10 +2,12 @@ import pandas as pd
 
 import helper_functions as hf
 from argparser_config import get_parser
+from constants import MODE_DIRECTORY
 
 
-def get_preseason_rankings(year: int) -> pd.DataFrame:
-    link = f"https://www.espn.com/mens-college-basketball/rankings/_/week/1/year/{year}/seasontype/2"
+def get_preseason_rankings(year: int, mode: str) -> pd.DataFrame:
+    mode = MODE_DIRECTORY[mode]
+    link = f"https://www.espn.com/{mode}-college-basketball/rankings/_/week/1/year/{year}/seasontype/2"
     soup = hf.get_soup(link)
     rk_tables = soup.find_all("table", {"class": "Table"})
     # for some reason 2011 doesn't have an AP preseason poll
@@ -50,12 +52,13 @@ def main():
     df = hf.generate_data_all_years(
         get_preseason_rankings,
         year=args.year,
+        mode=args.mode,
         recompute=args.recompute,
         table_name=table_name,
     )
 
     # write the dataframe to a csv
-    file_path = f"{hf.get_generated_dir(args.year)}/{table_name}.csv"
+    file_path = f"{hf.get_generated_dir(args.year, args.mode)}/{table_name}.csv"
     hf.write_to_csv(df, file_path, args.overwrite)
 
 
